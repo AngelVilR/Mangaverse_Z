@@ -1,0 +1,12 @@
+.Estilo-Logo {    
+    width: 10%;
+    height: auto;
+    padding-right: 1em;
+}
+
+@media (width <= 992px) {
+    .Estilo-Logo{
+        width: 25%;
+        height: auto;            
+    }
+} 
