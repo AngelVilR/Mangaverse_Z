@@ -55,8 +55,8 @@
 
 
 .titulo{
-    text-align: center;
-    margin: 2.5% auto;
+    /* text-align: center; */
+    margin: 2.5% 1em;
 }
 
 .contenedor{
@@ -86,6 +86,10 @@
 
     .contenedor .info{
         max-width: 30%;
+    }
+
+    .titulo{
+        text-align: center;
     }
 
 }
