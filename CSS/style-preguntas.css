@@ -3,7 +3,13 @@ main h1{
     padding-top: 1%;
     padding-left: 2.5%;
 }
-
+h6{
+    color: rgb(89,49,150);
+    font-size: 1em;
+}
+.pregunta{
+    color: rgb(89,49,150);
+}
 
 @media(width >= 992px){
     main{
