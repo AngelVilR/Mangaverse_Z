@@ -12,6 +12,16 @@
     <!-- Link del estilo de la página inicio -->
      <link rel="stylesheet" href="./CSS/style-Inicio.css">
      <!-- Link de style contacto -->
+      <link rel="stylesheet" href="./CSS/style-contacto.css">
+
+      <!-- link del leaflet -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""/>
+      <!-- Make sure you put this AFTER Leaflet's CSS -->
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""></script>
 </head>
 
 <body>
@@ -50,7 +60,102 @@
         </nav>
     </header>
 
-    <main><br><br><br></main>
+    <main>
+
+      <aside class="contenedor-form">
+        <form class="formulario">
+            <!-- <fieldset> -->
+                <legend >Contactanos</legend>
+                
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Correo</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Juan Santamaria Aguilar">
+                </div>
+
+                <div class="mb-3">
+                  <label for="fecha" class="form-label">Fecha de nacimiento</label>
+                  <input type="date" name="fecha1" class="form-control" />
+                </div>
+
+                <label for="chk-box" class="form-label">Sexo</label>
+                <div class="mb-3 caja-rdb" id="chk-box">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                    <label class="form-check-label" for="optionsRadios1">
+                      Femenino
+                    </label>
+
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                    <label class="form-check-label" for="optionsRadios2">
+                      Masculino
+                    </label>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Telefono</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="(+506) 888888888">
+              </div>
+
+              <div class="mb-3">
+                <label for="motivo" class="form-label">Motivo de contacto</label>
+                <select class="form-select" id="motivo">
+                  <option>--Seleccionar</option>
+                  <option>Informacion</option>
+                  <option>Devolucion</option>
+                  <option>Pedido NAMEKIANO</option>
+                  <option>Consulta de envio</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleTextarea" class="form-label ">Dejanos un mensaje</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+              </div>
+              <div>
+
+              <button type="submit" class="btn btn-primary">Enviar</button>
+            <!-- </fieldset> -->
+          </form>
+      </aside>
+
+      <section class="info">
+        
+        <h3 class="text-primary">Puedes contactarnos a nuestro correo o telefonos, donde te atenderemos de la mejor manera!</h3>
+
+        <p>
+          <b class="text-primary">Correo</b> 
+          <br>
+          mangaversez777@gmail.com
+        </p>
+
+        <p>
+            <b class="text-primary">Telefonos</b>
+            <br> 
+            +506 8312-3456 
+            <br>
+            +506 2510-5678
+        </p>
+      </section>
+
+      <section class="mapa">
+
+        <h3 class="text-primary">Donde estamos ubicados</h3>
+
+        <div id="map"></div>
+
+    </section>
+
+
+    </main>
 
     <!-- Footer -->
     <footer
@@ -180,7 +285,9 @@
       <!-- Copyright -->
     </footer>
     <!-- Footer -->
-    
+     
+    <!-- link mapa.js -->
+    <script src="./JS/mapa.js"></script>
 
     <!-- Link del bootstrap JS-->
     <script src="./Bootstrap/js/bootstrap.min.js"></script>

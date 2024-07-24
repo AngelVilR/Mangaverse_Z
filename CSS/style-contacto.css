@@ -1,0 +1,61 @@
+.contenedor-form{
+/*     background-color: rgb(218, 187, 246); */
+/*     display: flex;
+    justify-content: center;
+
+    padding-top: 8%;
+    padding-bottom: 10%; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(https://wallpapers.com/images/hd/anime-collage-aesthetic-ictg913y1mtjrgku.jpg);
+
+    background-repeat:no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 1.5em 5%;
+}
+
+
+.caja-rdb{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+.info{
+    padding: 1.5em 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mapa{
+    padding: 1.5em 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+/*     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url(https://m.media-amazon.com/images/I/A1KPtvIMiPL._AC_UF1000,1000_QL80_.jpg);
+
+    background-repeat:no-repeat;
+    background-size: cover; */
+}
+
+#map{
+    height: 20em; 
+}
+
+
+@media(width >= 992px){
+
+    .formulario{
+        width: 50%;
+    }
+
+    #map{
+        height: 30rem;
+        width: 60%;
+    }
+
+}
