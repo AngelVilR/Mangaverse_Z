@@ -2,295 +2,275 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mangaverse Z</title>
-    <!-- Link del bootstrap CSS-->
-    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
-    <!-- Link del estilo de bootstrap estándar CSS -->
-    <link rel="stylesheet" href="./CSS/bootstrap.min.css">
-    <!-- Link del estilo de la página inicio -->
-     <link rel="stylesheet" href="./CSS/style-Inicio.css">
-     <!-- Link de style contacto -->
-      <link rel="stylesheet" href="./CSS/style-contacto.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mangaverse Z</title>
+  <!-- Link del bootstrap CSS-->
+  <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+  <!-- Link del estilo de bootstrap estándar CSS -->
+  <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+  <!-- Link del estilo de la página inicio -->
+  <link rel="stylesheet" href="./CSS/style-Inicio.css">
+  <!-- Link de style contacto -->
+  <link rel="stylesheet" href="./CSS/style-contacto.css">
 
-      <!-- link del leaflet -->
-      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""/>
-      <!-- Make sure you put this AFTER Leaflet's CSS -->
-      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""></script>
+  <!-- link del leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-            <div class="container-fluid">
-                <img class="Estilo-Logo" src="./IMG/Mangaverse_Z_V3.png" alt="Logo de Mangaverse_Z">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
-                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarColor01">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html">Inicio
-                                
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="Contacto.html">Contacto
-                                <span class="visually-hidden">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Preguntas-Frecuentes.html">Preguntas frecuentes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="Acerca-de.html">Acerca de</a>
-                        </li>                        
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <img class="Estilo-Logo" src="./IMG/Mangaverse_Z_V3.png" alt="Logo de Mangaverse_Z">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+          aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Inicio
 
-    <main>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="Contacto.html">Contacto
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Preguntas-Frecuentes.html">Preguntas frecuentes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Acerca-de.html">Acerca de</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-      <aside class="contenedor-form">
-        <form class="formulario">
-            <!-- <fieldset> -->
-                <legend >Contactanos</legend>
-                
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Correo</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>
+  <main class="contenedor-form">
 
-                <div class="mb-3">
-                    <label for="nombre" class="form-label">Nombre Completo</label>
-                    <input type="text" class="form-control" id="nombre" placeholder="Juan Santamaria Aguilar">
-                </div>
+    <section class="info">
 
-                <div class="mb-3">
-                  <label for="fecha" class="form-label">Fecha de nacimiento</label>
-                  <input type="date" name="fecha1" class="form-control" />
-                </div>
+      <h3>Contáctenas a nuestro correo, teléfonos o llena nuestro formulario de contacto</h3>
+      <h3>Cualquier consulta ¡Te la responderemos lo más rápido posible!</h3>
 
-                <label for="chk-box" class="form-label">Sexo</label>
-                <div class="mb-3 caja-rdb" id="chk-box">
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                    <label class="form-check-label" for="optionsRadios1">
-                      Femenino
-                    </label>
+      <h4><b>Correo</b></h4>
+      <p>                
+        mangaversez777@gmail.com
+      </p>
 
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                    <label class="form-check-label" for="optionsRadios2">
-                      Masculino
-                    </label>
-                  </div>
-                </div>
+      <h4><b>Teléfonos</b></h4>        
+      <p>        
+        +506 8312-3456
+        <br><br>
+        +506 2510-5678
+      </p>
+    </section>
 
-                <div class="mb-3">
-                  <label for="nombre" class="form-label">Telefono</label>
-                  <input type="text" class="form-control" id="nombre" placeholder="(+506) 888888888">
-              </div>
-
-              <div class="mb-3">
-                <label for="motivo" class="form-label">Motivo de contacto</label>
-                <select class="form-select" id="motivo">
-                  <option>--Seleccionar</option>
-                  <option>Informacion</option>
-                  <option>Devolucion</option>
-                  <option>Pedido NAMEKIANO</option>
-                  <option>Consulta de envio</option>
-                  <option>Otro</option>
-                </select>
-              </div>
-
-              <div class="mb-3">
-                <label for="exampleTextarea" class="form-label ">Dejanos un mensaje</label>
-                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-              </div>
-              <div>
-
-              <button type="submit" class="btn btn-primary">Enviar</button>
-            <!-- </fieldset> -->
-          </form>
-      </aside>
-
-      <section class="info">
-        
-        <h3 class="text-primary">Puedes contactarnos a nuestro correo o telefonos, donde te atenderemos de la mejor manera!</h3>
-
-        <p>
-          <b class="text-primary">Correo</b> 
-          <br>
-          mangaversez777@gmail.com
-        </p>
-
-        <p>
-            <b class="text-primary">Telefonos</b>
-            <br> 
-            +506 8312-3456 
-            <br>
-            +506 2510-5678
-        </p>
-      </section>
-
-      <section class="mapa">
-
-        <h3 class="text-primary">Donde estamos ubicados</h3>
-
-        <div id="map"></div>
+    <section class="mapa">
+      <h3>Ubicación de nuestra tienda</h3>
+      <div id="map"></div>
 
     </section>
 
-
-    </main>
-
-    <!-- Footer -->
-    <footer
-            class="text-center text-lg-start text-white"
-            style="background-color: rgb(23,20,31)"
-            >
-      <!-- Section: Social media -->
-      <section
-               class="d-flex justify-content-between p-4"
-               style="background-color: rgb(89,49,150)"
-               >
-        <!-- Left -->
-        <div class="me-5">
-          <span>¡Conoce nuestras redes sociales!</span>
-        </div>
-        <!-- Left -->
-  
-        <!-- Right -->
-        <div>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-google"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="" class="text-white me-4">
-            <i class="fab fa-github"></i>
-          </a>
-        </div>
-        <!-- Right -->
-      </section>
-      <!-- Section: Social media -->
-  
-      <!-- Section: Links  -->
-      <section class="">
-        <div class="container text-center text-md-start mt-5">
-          <!-- Grid row -->
-          <div class="row mt-3">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-              <!-- Content -->
-              <h6 class="text-uppercase fw-bold">Mangaverse Z</h6>
-              <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
-                  <p>Tu tienda especializada en mangas y cómics en Costa Rica.
-                    Visita nuestra página web y sumérgete en el emocionante mundo del manga y los cómics con Mangaverse Z.
-
-                  </p>
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Contenido</h6>
-              <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
-                  <p>
-                    <a href="#!" class="text-white">Inicio</a>
-                  </p>
-                  <p>
-                <a href="#!" class="text-white">Productos</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">Contacto</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">Preguntas frecuentes</a>
-              </p>
-              <p>
-                <a href="#!" class="text-white">Acerca de</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-  
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <!-- Links -->
-              <h6 class="text-uppercase fw-bold">Contact</h6>
-              <hr
-                  class="mb-4 mt-0 d-inline-block mx-auto"
-                  style="width: 60px; background-color: #7c4dff; height: 2px"
-                  />
-              <p><i class="fas fa-home mr-3"></i>Dirección:</p>
-              <p><i class="fas fa-envelope mr-3"></i>mangaversez777@gmail.com</p>
-              <p><i class="fas fa-phone mr-3"></i> +506 8312 3456</p>
-              <p><i class="fas fa-print mr-3"></i> +506 2510 5678</p>
-            </div>
-            <!-- Grid column -->
+    <section id="Formulario">
+      <aside>
+        <h3><b>Formulario de contacto</b></h3>
+        <form class="formulario">
+          <!-- <fieldset> -->        
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="correo@ejemplo.com">
           </div>
-          <!-- Grid row -->
+
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre Completo</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Nombre completo">
+          </div>
+
+          <div class="mb-3">
+            <label for="fecha" class="form-label">Fecha de nacimiento</label>
+            <input type="date" name="fecha1" class="form-control" />
+          </div>
+
+          <label for="chk-box" class="form-label">Género</label>
+          <div class="mb-3 caja-rdb" id="chk-box">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+              <label class="form-check-label" for="optionsRadios1">
+                Masculino
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2"
+                >
+              <label class="form-check-label" for="optionsRadios2">
+                Femenino
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios3" value="option3"
+                >
+              <label class="form-check-label" for="optionsRadios3">
+                Otro
+              </label>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Telefono</label>
+            <input type="text" class="form-control" id="nombre" placeholder="(+506) 88888888">
+          </div>
+
+          <div class="mb-3">
+            <label for="motivo" class="form-label">Razón del contacto</label>
+            <select class="form-select" id="motivo">
+              <option>-Seleccionar</option>
+              <option>Información</option>
+              <option>Devolución</option>
+              <option>Pedido NAMEKIANO</option>
+              <option>Consulta de envío</option>
+              <option>Otro</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleTextarea" class="form-label">Motivo</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+          </div>
+          <div>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <!-- </fieldset> -->
+        </form>
+      </aside>
+    </section>
+
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-lg-start text-white" style="background-color: rgb(23,20,31)">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-between p-4" style="background-color: rgb(89,49,150)">
+      <!-- Left -->
+      <div class="me-5">
+        <span>¡Conoce nuestras redes sociales!</span>
+      </div>
+      <!-- Left -->
+
+      <!-- Right -->
+      <div>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="text-white me-4">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold">Mangaverse Z</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p>Tu tienda especializada en mangas y cómics en Costa Rica.
+              Visita nuestra página web y sumérgete en el emocionante mundo del manga y los cómics con Mangaverse Z.
+
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contenido</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p>
+              <a href="#!" class="text-white">Inicio</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Productos</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Contacto</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Preguntas frecuentes</a>
+            </p>
+            <p>
+              <a href="#!" class="text-white">Acerca de</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+            <p><i class="fas fa-home mr-3"></i>Dirección:</p>
+            <p><i class="fas fa-envelope mr-3"></i>mangaversez777@gmail.com</p>
+            <p><i class="fas fa-phone mr-3"></i> +506 8312 3456</p>
+            <p><i class="fas fa-print mr-3"></i> +506 2510 5678</p>
+          </div>
+          <!-- Grid column -->
         </div>
-      </section>
-      <!-- Section: Links  -->
-  
-      <!-- Copyright -->
-      <div
-           class="text-center p-3"
-           style="background-color: rgba(0, 0, 0, 0.2)"
-           >
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/"
-           >MDBootstrap.com</a
-          >
+        <!-- Grid row -->
       </div>
+    </section>
+    <!-- Section: Links  -->
 
-      <div
-           class="text-center p-3"
-           style="background-color: rgba(0, 0, 0, 0.2)"
-           >
-        © 2024 Copyright:
-        <p class="text-white">Mangaverse Z</p>
-      </div>
-      <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-     
-    <!-- link mapa.js -->
-    <script src="./JS/mapa.js"></script>
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2020 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
 
-    <!-- Link del bootstrap JS-->
-    <script src="./Bootstrap/js/bootstrap.min.js"></script>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2024 Copyright:
+      <p class="text-white">Mangaverse Z</p>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+  <!-- link mapa.js -->
+  <script src="./JS/mapa.js"></script>
+
+  <!-- Link del bootstrap JS-->
+  <script src="./Bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
