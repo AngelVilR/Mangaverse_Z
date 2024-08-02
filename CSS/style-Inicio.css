@@ -17,14 +17,6 @@
     font-weight: bold;
 }
 
-.Pag_Actual{
-    color: white;
-}
-
-.Pag_No_Actual{
-    color: rgb(180, 162, 208);
-}
-
 @media (width <= 992px) {
     .Estilo-Logo{
         width: 25%;

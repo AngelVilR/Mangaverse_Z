@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="./CSS/bootstrap.min.css">
   <!-- Link del estilo de la página inicio -->
   <link rel="stylesheet" href="./CSS/style-Inicio.css">
+  <!-- Link del estilo de la pagina productos -->
+   <link rel="stylesheet" href="./CSS/style-productos.css">
 </head>
 <body>
   <header>
@@ -51,8 +53,45 @@
     </nav>
   </header>
 
+  <main>
+    <nav>
+      <section id="SelecCategorias">
+        <div class="mb-3">
+          <label for="filter">Filtrar por categoría:</label>
+          <select id="filter" class="form-select">
+              <option value="all">Todos</option>
+              <!-- Opciones de categorías se añadirán dinámicamente aquí -->
+          </select>
+      </div>
+      </section>
+    </nav>
 
-      <!-- Footer -->
+    <nav>
+      <section id="ListaProductos">
+        <div id="Lista-Libros" class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+          <!-- Inicio libro -->
+        <div class="col">
+          <div class="card mb-3 Caja_Cards_Princ">
+            <h3 class="card-header">Nombre libro</h3>          
+            <svg xmlns="http://www.w3.org/2000/svg" class="d-block user-select-none" width="100%" height="200" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle">
+              <rect width="100%" height="100%" fill="#868e96"></rect>
+              <text x="50%" y="50%" fill="#dee2e6" dy=".3em">Imagen del libro</text>
+            </svg>
+            <div class="card-body Caja_Cards_Body">
+              <p class="card-text">&#x20a1;10000</p>
+              <button type="button" class="btn btn-secondary Button_Detalle">Ver más detalles</button>
+              <button type="button" class="btn btn-secondary Button_Compra">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+        <!-- Final libro -->
+        </div>
+      </section>
+    </nav>
+
+  </main>
+
+      
   <footer class="text-center text-lg-start text-white" style="background-color: rgb(23,20,31)">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-between p-4" style="background-color: rgb(89,49,150)">

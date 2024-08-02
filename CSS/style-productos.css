@@ -1,0 +1,54 @@
+main nav{
+    margin: 1% 1%;
+    margin-bottom: 1.5em;
+}
+
+/* ----------------------------------------------------------------- */
+
+#SelecCategorias label{
+    margin-bottom: 0.5em;
+}
+
+#SelecCategorias select{
+    border: 1px solid rgb(0, 0, 0);
+}
+
+/* ----------------------------------------------------------------- */
+
+.Caja_Cards_Princ {
+    width: 100%;
+    height: auto;
+}
+
+.Caja_Cards_Princ h3 {
+    text-align: center;
+}
+
+.Caja_Cards_Body button {
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.Caja_Cards_Body p {
+    text-align: center;
+    font-size: 27px;
+}
+
+/* ----------------------------------------------------------------- */
+
+.Button_Detalle, .Button_Compra {
+    border: 2px solid rgb(122, 122, 122);
+    transition: all 100ms linear;
+}
+
+.Button_Detalle:hover {
+    background-color: rgb(89, 49, 150);
+    color: white;
+    font-weight: bold;        
+}
+
+.Button_Compra:hover{
+    background-color: rgb(3, 200, 52);
+    color: black;
+    font-weight: bold;
+}
