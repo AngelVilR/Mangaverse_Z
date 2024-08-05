@@ -1,0 +1,85 @@
+main {
+    margin: 2em 1.5em;
+}
+
+main nav {
+    margin-top: 2em;
+}
+
+.Bordeado {
+    border: 1px solid rgb(37, 37, 37);
+}
+
+.Linea {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgb(37, 37, 37);
+}
+
+.Carusel_Items_Icon {
+    background-color: rgb(20, 20, 20);
+}
+
+#Caja_Comprar {
+    padding: 1em 1.5em;
+    text-align: center;
+}
+
+#Caja_Comprar h4{
+    padding-bottom: 0.5em;    
+}
+
+.Button_Compra {
+    border: 2px solid rgb(122, 122, 122);
+    transition: all 100ms linear;
+}
+
+.Button_Compra:hover {
+    background-color: rgb(3, 200, 52);
+    color: black;
+    font-weight: bold;
+}
+
+#floatingInput {
+    border: 1px solid rgb(122, 122, 122);
+}
+
+#Caracteristicas,
+#Descripcion,
+#Mas {
+    padding: 1em 0em;
+}
+
+@media (width >=992px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);        
+        gap: 1em;
+    }
+
+    .Contenedor_CaruselImg{
+        width: 100%;
+        height: auto;
+        margin: 0em 0em;
+    }
+
+    .Contenedor_ProductoInfo{
+        width: 100%;    
+        height: auto;  
+        margin-top: 0em;    
+        margin-right: 38em; 
+    }
+    
+    #Caja_Comprar{
+        width: 100%;
+        height: auto;
+        padding-top: 1.5em;
+        padding-bottom: 2em;
+    }
+
+    .Contenedor_AgregarCompra{
+        width: 100%;
+        height: auto;
+        margin-top: 0em;
+    }
+}

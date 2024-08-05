@@ -1,7 +1,20 @@
 .Estilo-Logo {    
     width: 10%;
-    height: auto;
-    padding-right: 1em;
+    height: auto;    
+    margin-left: 0.5em;
+}
+
+.Separacion_Carrito{
+    padding-right: 0.5em;
+}
+
+.Separacion_Pantalla{
+    margin-right: 1em;
+}
+
+.Botones_Navegacion{
+    font-size: 22px;
+    font-weight: bold;
 }
 
 @media (width <= 992px) {
