@@ -87,24 +87,39 @@
     <section id="Formulario">
       <aside>
         <h3><b>Formulario de contacto</b></h3>
-        <form class="formulario">
+        <form class="formulario  needs-validation" novalidate>
           <!-- <fieldset> -->        
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Correo</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="correo@ejemplo.com">
-          </div>
-
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre Completo</label>
-            <input type="text" class="form-control" id="nombre" placeholder="Nombre completo">
-          </div>
-
-          <div class="mb-3">
-            <label for="fecha" class="form-label">Fecha de nacimiento</label>
-            <input type="date" name="fecha1" class="form-control" />
-          </div>
-
-          <label for="chk-box" class="form-label">Género</label>
+            <div class="mb-3">
+              <label for="Iemail" class="form-label">Correo electronico</label>
+              <div class="input-group has-validation">
+                <input type="email" class="form-control" id="Iemail" aria-describedby="inputGroupPrepend" placeholder="correo@ejemplo.com" required>
+                <div class="invalid-feedback">
+                  Este campo es obligatorio
+                </div>
+              </div>
+            </div>
+      
+            <div class="mb-3">
+              <label for="Inombre" class="form-label">Nombre completo</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="Inombre" aria-describedby="inputGroupPrepend" placeholder="Nombre completo" required>
+                <div class="invalid-feedback">
+                  Este campo es obligatorio
+                </div>
+              </div>
+            </div>
+      
+            <div class="mb-3">
+              <label for="Ifecha" class="form-label">Fecha de nacimiento</label>
+              <div class="input-group has-validation">
+                <input type="date" class="form-control" id="Ifecha" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Este campo es obligatorio
+                </div>
+              </div>
+            </div>
+      
+            <label for="chk-box" class="form-label">Género</label>
           <div class="mb-3 caja-rdb" id="chk-box">
             <div class="form-check">
               <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
@@ -113,8 +128,7 @@
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2"
-                >
+              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
               <label class="form-check-label" for="optionsRadios2">
                 Femenino
               </label>
@@ -127,31 +141,43 @@
               </label>
             </div>
           </div>
-
+      
           <div class="mb-3">
-            <label for="nombre" class="form-label">Telefono</label>
-            <input type="text" class="form-control" id="nombre" placeholder="(+506) 88888888">
+            <label for="Itelefono" class="form-label">Telefono</label>
+            <div class="input-group has-validation">
+              <input type="tel" class="form-control" id="Itelefono" aria-describedby="inputGroupPrepend" placeholder="(+506) 88888888" required>
+              <div id="Errtelefono"  class="invalid-feedback">
+                Este campo es obligatorio
+              </div>
+            </div>
           </div>
-
+      
           <div class="mb-3">
-            <label for="motivo" class="form-label">Razón del contacto</label>
-            <select class="form-select" id="motivo">
-              <option>-Seleccionar</option>
+            <label for="cmbMotivo" class="form-label">Motivo de contacto</label>
+            <select class="form-select" id="cmbMotivo" required>
+              <option selected disabled value="">--Seleccionar</option>
               <option>Información</option>
               <option>Devolución</option>
               <option>Pedido NAMEKIANO</option>
               <option>Consulta de envío</option>
               <option>Otro</option>
             </select>
+            <div class="invalid-feedback">
+              Debe seleccioanr una opcion
+            </div>
           </div>
+      
+            <div class="mb-3">
+              <label for="Imensaje" class="form-label">Mensaje</label>
+              <div class="input-group has-validation">
+                <textarea class="form-control" id="Imensaje" aria-describedby="inputGroupPrepend" rows="3" required></textarea>
+                <div class="invalid-feedback">
+                  Este campo es obligatorio
+                </div>
+              </div>
+            </div>
 
-          <div class="mb-3">
-            <label for="exampleTextarea" class="form-label">Motivo</label>
-            <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
-          </div>
-          <div>
-
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button id="enviar" type="submit" class="btn btn-primary">Enviar</button>
             <!-- </fieldset> -->
         </form>
       </aside>
@@ -266,6 +292,9 @@
   </footer>
   <!-- Footer -->
 
+
+  <!-- link js form -->
+   <script src="./JS/form.js"></script>
   <!-- link mapa.js -->
   <script src="./JS/mapa.js"></script>
 
