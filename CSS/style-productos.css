@@ -1,9 +1,14 @@
 main nav {
-    margin: 1% 1%;
-    margin-bottom: 1.5em;
+    margin: 1em 1em;
+    margin-bottom: 1em;
 }
 
 /* ----------------------------------------------------------------- */
+
+#SelectoresContainer{
+    display: grid;    
+    grid-template-columns: repeat(2,1fr);    
+}
 
 #SelecCategorias label,
 #SelecIdioma label {
@@ -12,7 +17,7 @@ main nav {
 
 #SelecCategorias select,
 #SelecIdioma select {
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);    
 }
 
 /* ----------------------------------------------------------------- */
@@ -20,10 +25,16 @@ main nav {
 .Caja_Cards_Princ {
     width: 100%;
     height: auto;
+    border: 1px solid rgb(65, 65, 65);
 }
 
 .Caja_Cards_Princ h3 {
     text-align: center;
+    border-bottom: 1px solid rgb(65, 65, 65);
+}
+
+.Caja_Cards_Body{
+    border-top: 1px solid rgb(65, 65, 65);
 }
 
 .Caja_Cards_Body button {
@@ -58,14 +69,25 @@ main nav {
 
 /* ----------------------------------------------------------------- */
 
+#ImagenLibro {
+    width: 100%;
+    height: auto;
+}
+
+/* ----------------------------------------------------------------- */
+
 @media (width <= 992px) {
     main nav {
-        margin: 3% 3%;
-        margin-bottom: 1.5em;
+        margin: 1em 1em;
+        margin-bottom: 1em;
     }
 
     #ImagenLibro {
         width: 100%;
         height: 500px;
+    }
+
+    #SelectoresContainer{
+     display: block;   
     }
 }
