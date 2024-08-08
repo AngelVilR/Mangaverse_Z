@@ -1,15 +1,17 @@
-main nav{
+main nav {
     margin: 1% 1%;
     margin-bottom: 1.5em;
 }
 
 /* ----------------------------------------------------------------- */
 
-#SelecCategorias label{
+#SelecCategorias label,
+#SelecIdioma label {
     margin-bottom: 0.5em;
 }
 
-#SelecCategorias select{
+#SelecCategorias select,
+#SelecIdioma select {
     border: 1px solid rgb(0, 0, 0);
 }
 
@@ -36,7 +38,8 @@ main nav{
 
 /* ----------------------------------------------------------------- */
 
-.Button_Detalle, .Button_Compra {
+.Button_Detalle,
+.Button_Compra {
     border: 2px solid rgb(122, 122, 122);
     transition: all 100ms linear;
 }
@@ -44,11 +47,25 @@ main nav{
 .Button_Detalle:hover {
     background-color: rgb(89, 49, 150);
     color: white;
-    font-weight: bold;        
+    font-weight: bold;
 }
 
-.Button_Compra:hover{
+.Button_Compra:hover {
     background-color: rgb(3, 200, 52);
     color: black;
     font-weight: bold;
+}
+
+/* ----------------------------------------------------------------- */
+
+@media (width <= 992px) {
+    main nav {
+        margin: 3% 3%;
+        margin-bottom: 1.5em;
+    }
+
+    #ImagenLibro {
+        width: 100%;
+        height: 500px;
+    }
 }

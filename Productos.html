@@ -67,17 +67,29 @@
     </nav>
 
     <nav>
+      <section id="SelecIdioma">
+        <div class="mb-3">
+          <label for="filter">Filtrar por Idioma:</label>
+          <select id="filter" class="form-select">
+              <option value="all">Todos</option>
+              <!-- Opciones de categorías se añadirán dinámicamente aquí -->
+          </select>
+      </div>
+      </section>
+    </nav>
+
+    <nav>
       <section id="ListaProductos">
         <div id="Lista-Libros" class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
           <!-- Inicio libro -->
         <div class="col">
-          <div class="card mb-3 Caja_Cards_Princ">
-            <h3 class="card-header">Nombre libro</h3>          
-            <img src="./IMG/Imagen_No_Encontrada.png" alt="Imagen no encontrada">
+          <div id="ContenedorLibro" class="card mb-3 Caja_Cards_Princ">
+            <h3 id="TituloLibro" class="card-header">Nombre libro</h3>          
+            <img id="ImagenLibro" src="./IMG/Imagen_No_Encontrada.png" alt="Imagen no encontrada" style="background-color: aqua;">
             <div class="card-body Caja_Cards_Body">
-              <p class="card-text">&#x20a1;10000</p>
-              <button type="button" class="btn btn-secondary Button_Detalle">Ver más detalles</button>
-              <button type="button" class="btn btn-secondary Button_Compra">Agregar al carrito</button>
+              <p id="PrecioLibro" class="card-text">&#x20a1;10000</p>
+              <button id="VerMas" type="button" class="btn btn-secondary Button_Detalle">Ver más detalles</button>
+              <button id="AgregarCarrito" type="button" class="btn btn-secondary Button_Compra">Agregar al carrito</button>
             </div>
           </div>
         </div>
