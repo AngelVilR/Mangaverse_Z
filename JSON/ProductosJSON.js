@@ -14,8 +14,7 @@ const ListaProductos =
             "ImagenDestacada": "https://m.media-amazon.com/images/I/81oiYDSaoVL._SL1500_.jpg",
             "Stock": "Disponible online",
             "GaleriaImg": ["https://m.media-amazon.com/images/I/81oiYDSaoVL._SL1500_.jpg","https://m.media-amazon.com/images/I/81UsnOXb5zL._AC_UF1000,1000_QL80_.jpg","https://i5.walmartimages.com/seo/All-Star-Superman-Paperback-9781401232054_4d5856f7-91ed-432a-a0ca-583e6ffa7e8b_1.d253c8f89f3879735cafccc1c1fa5ab6.jpeg"], 
-            "TiempoEntrega": "4 días",
-            "GastosEnvio": "Dentro de GAM: 2500. Fuera de GAM: 5620",
+            "TiempoEntrega": "4 días",            
             "OpcionesEntrega": "Envío postal",
             "Garantia": "24 horas",
             "Resenna": "./IMG/4_5_Estrellas.png"
@@ -35,7 +34,6 @@ const ListaProductos =
             "Stock": "Disponible online o en tienda física",
             "GaleriaImg": ["https://www.libreriainternacional.com/media/catalog/product/9/7/9781401232597_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000","https://upload.wikimedia.org/wikipedia/en/5/52/Batman_thelonghalloween.jpg","https://static.dc.com/sites/default/files/imce/2014/10-OCT/BM.Halloween_580_5445b72ba3a792.05974488.jpg"],
             "TiempoEntrega": "4 días",
-            "GastosEnvio": "Dentro de GAM: 2500. Fuera de GAM: 5620",
             "OpcionesEntrega": "Envío postal o recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/5_Estrellas.png"
@@ -55,7 +53,6 @@ const ListaProductos =
             "Stock": "Disponible online",
             "GaleriaImg": ["https://www.panini.es/media/catalog/product/cache/a87cfc69c89e7921deea3a8e066ac416/s/b/sbema001y_0.jpg","https://www.panini.es/media/catalog/product/cache/a87cfc69c89e7921deea3a8e066ac416/s/b/sbema001y_0_1.jpg","https://www.panini.es/media/catalog/product/cache/a87cfc69c89e7921deea3a8e066ac416/s/b/sbema001y_1_1.jpg"],
             "TiempoEntrega": "4 días",
-            "GastosEnvio": "Dentro de GAM: 2500. Fuera de GAM: 5620",
             "OpcionesEntrega": "Envío postal",
             "Garantia": "24 horas",
             "Resenna": "./IMG/4_5_Estrellas.png"
@@ -75,7 +72,6 @@ const ListaProductos =
             "Stock": "Solo tienda física",
             "GaleriaImg": ["https://www.libreriainternacional.com/media/catalog/product/9/7/9781974743605_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000","https://cdn11.bigcommerce.com/s-89ffd/images/stencil/1280x1280/products/147451/541184/9784088834702_1898da2044c82ec5dffa9060ced64c64__59879.1716431806.jpg?c=2?imbypass=on","https://www.libreriainternacional.com/media/catalog/product/9/7/9781974743605_2.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000"],
             "TiempoEntrega": "4 días",
-            "GastosEnvio": "Dentro de GAM: 2500. Fuera de GAM: 5620",
             "OpcionesEntrega": "Recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/5_Estrellas.png"
@@ -95,7 +91,6 @@ const ListaProductos =
             "Stock": "Disponible online",
             "GaleriaImg": ["https://m.media-amazon.com/images/I/81ZwggSh1zL._SY466_.jpg","https://static.wikia.nocookie.net/jujutsu-kaisen/images/6/6b/Volume_14_Illustration.png/revision/latest?cb=20210607173940","https://static.wikia.nocookie.net/jujutsu-kaisen/images/2/2c/Chapter_116.png/revision/latest?cb=20210218001926"],
             "TiempoEntrega": "4 días",
-            "GastosEnvio": "Dentro de GAM: 2500. Fuera de GAM: 5620",
             "OpcionesEntrega": "Envío postal",
             "Garantia": "24 horas",
             "Resenna": "./IMG/5_Estrellas.png"
@@ -115,7 +110,6 @@ const ListaProductos =
             "Stock": "Disponible online o en tienda física",
             "GaleriaImg": ["https://www.panini.es/media/catalog/product/cache/a87cfc69c89e7921deea3a8e066ac416/s/l/sluxe071_0.jpg", "https://www.panini.es/media/catalog/product/cache/a87cfc69c89e7921deea3a8e066ac416/S/L/SLUXE071_0.jpg", "https://www.panini.es/media/catalog/product/cache/a87cfc69c89e7921deea3a8e066ac416/S/L/SLUXE071_1.jpg" ],
             "TiempoEntrega": "4 días",
-            "GastosEnvio": "Dentro de GAM: 2500. Fuera de GAM: 5620",
             "OpcionesEntrega": "Envío postal o recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/4_5_Estrellas.png"
@@ -135,7 +129,6 @@ const ListaProductos =
             "Stock": "Disponible online o en tienda física",
             "GaleriaImg": ["https://www.panini.es/media/catalog/product/cache/a87cfc69c89e7921deea3a8e066ac416/s/m/smain002.jpg","https://www.panini.es/media/catalog/product/cache/a87cfc69c89e7921deea3a8e066ac416/S/M/SMAIN002_0.jpg","https://www.panini.es/media/catalog/product/cache/a87cfc69c89e7921deea3a8e066ac416/S/M/SMAIN002_1.jpg"],
             "TiempoEntrega": "4 días",
-            "GastosEnvio": "Dentro de GAM: 2500. Fuera de GAM: 5620",
             "OpcionesEntrega": "Envío postal o recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/4_5_Estrellas.png"
@@ -155,7 +148,6 @@ const ListaProductos =
             "Stock": "Disponible online",
             "GaleriaImg": ["https://www.libreriainternacional.com/media/catalog/product/9/7/9788411500609_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000","https://www.panini.es/media/catalog/product/cache/a87cfc69c89e7921deea3a8e066ac416/s/m/smust072_0.jpg","https://www.panini.es/media/catalog/product/cache/a87cfc69c89e7921deea3a8e066ac416/s/m/smust072_3.jpg"],
             "TiempoEntrega": "4 días",
-            "GastosEnvio": "Dentro de GAM: 2500. Fuera de GAM: 5620",
             "OpcionesEntrega": "Envío postal",
             "Garantia": "24 horas",
             "Resenna": "./IMG/4_5_Estrellas.png"
@@ -175,7 +167,6 @@ const ListaProductos =
             "Stock": "Disponible online o en tienda física",
             "GaleriaImg": ["https://www.libreriainternacional.com/media/catalog/product/9/7/9788411013017_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000","https://www.panini.es/media/catalog/product/cache/968d306fb1cf333067a665f96384b6e4/s/b/sbclu001_2.jpg","https://www.panini.es/media/catalog/product/cache/968d306fb1cf333067a665f96384b6e4/s/b/sbclu001_3.jpg"],
             "TiempoEntrega": "4 días",
-            "GastosEnvio": "Dentro de GAM: 2500. Fuera de GAM: 5620",
             "OpcionesEntrega": "Envío postal o recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/4_5_Estrellas.png"
@@ -195,7 +186,6 @@ const ListaProductos =
             "Stock": "Solo tienda física",
             "GaleriaImg": ["https://www.libreriainternacional.com/media/catalog/product/9/7/9781974721764_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000","https://www.libreriainternacional.com/media/catalog/product/9/7/9781974721764_2.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000","https://static.wikia.nocookie.net/pokemon/images/7/77/USUM011.jpg/revision/latest?cb=20191029232342"],
             "TiempoEntrega": "4 días",
-            "GastosEnvio": "Dentro de GAM: 2500. Fuera de GAM: 5620",
             "OpcionesEntrega": "Recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/5_Estrellas.png"
@@ -215,7 +205,6 @@ const ListaProductos =
             "Stock": "Solo tienda física",
             "GaleriaImg": ["https://m.media-amazon.com/images/I/71fD6iqykdL._SY466_.jpg","https://m.media-amazon.com/images/I/713hlX3hgRL._AC_UF894,1000_QL80_.jpg","https://sailormoonfannetwork.com/wp-content/uploads/2022/03/Sailormoonmangaguide.jpg"],
             "TiempoEntrega": "4 días",
-            "GastosEnvio": "Dentro de GAM: 2500. Fuera de GAM: 5620",
             "OpcionesEntrega": "Recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/5_Estrellas.png"
@@ -234,8 +223,7 @@ const ListaProductos =
             "ImagenDestacada": "https://www.libreriainternacional.com/media/catalog/product/9/7/9788467945867_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000",
             "Stock": "Solo tienda física",
             "GaleriaImg": ["https://www.libreriainternacional.com/media/catalog/product/9/7/9788467945867_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000","https://www.libreriainternacional.com/media/catalog/product/9/7/9788467945867_2.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000","https://www.libreriainternacional.com/media/catalog/product/9/7/9788467945867_3.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000"],
-            "TiempoEntrega": "4 días",
-            "GastosEnvio": "Dentro de GAM: 2500. Fuera de GAM: 5620",
+            "TiempoEntrega": "4 días",            
             "OpcionesEntrega": "Recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/4_5_Estrellas.png"
