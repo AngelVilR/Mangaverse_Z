@@ -1,99 +1,3 @@
-  function validarNumero(numero){
-    var expresion = /^\d{8}$/
-    
-    return expresion.test(numero);
-  }
-    
-
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
-/* (() => {
-  'use strict' */
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  /* const forms = document.querySelectorAll('.needs-validation') */
-
-  // Loop over them and prevent submission
-/*   Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-
-      const telefonoInput = form.querySelector('#Itelefono');
-      const Nvalido = validarNumero(telefonoInput.value);
-
-      telefonoInput.classList.remove('is-invalid', 'is-valid');
-      form.classList.remove('was-validated');
-
-      if (!form.checkValidity() || !Nvalido) {
-        event.preventDefault()
-        event.stopPropagation()
-
-        if(!Nvalido){
-          telefonoInput.classList.add('is-invalid');
-        }else{
-          telefonoInput.classList.add('is-valid');
-        }
- */
-        /* telefonoInput.classList.add('is-invalid'); */
-      /* } *//* else{
-        telefonoInput.classList.remove('is-invalid');
-      }
- */
-/*       form.classList.add('was-validated')
-    }, false)
-  })
-})()
-
- */
-
-
-
-/* function validarNumero(numero){
-  var expresion = /^\d{8}$/
-  var telefono = document.getElementById("Itelefono");
-
-  if(!expresion.test(numero)){
-    telefono.className = "is-invalid";
-  }else{
-    telefono.className = "is-valid";
-  }
-}
-  
-
-var boton = document.getElementById("enviar");
-
-boton.addEventListener("click", validarNumero(document.getElementById("Itelefono").value)); */
-function valiarTelefono(numero){
-var expresion = /^\d{8}$/
-
-if(expresion.test(numero)){
-  telefono.classList.remove('is-invalid');
-  alert("telefono valido")
-}else{
-  telefono.classList.add('is-invalid');
-  alert("telefono no valido")
-}
-  return expresion.test(numero);
-}
-
-
-
-function validarCorreo(email){
-  var expresion = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-  
-  if(expresion.test(email)){
-    correo.classList.remove('is-invalid');
-    alert("correo valido" + "true");
-    return true;
-    
-  }else{
-    correo.classList.add('is-invalid');
-    alert("correo no valido " + "false");
-    return false;
-    
-  }
-  alert(correo.value);
-}
-  
-
 var formulario = document.getElementsByClassName("formulario");
 
 var correo = document.getElementById("Iemail");
@@ -104,9 +8,40 @@ var motivo = document.getElementById("cmbMotivo");
 var mensaje = document.getElementById("Imensaje");
 
 
+function valiarTelefono(numero) {
+  var expresion = /^\d{8}$/
+
+  if (expresion.test(numero)) {
+    telefono.classList.remove('is-invalid');
+  } else {
+    telefono.classList.add('is-invalid');
+  }
+  return expresion.test(numero);
+}
+
+
+
+function validarCorreo(email){
+  var expresion = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  
+  if(expresion.test(email)){
+    correo.classList.remove('is-invalid');
+    return true;
+    
+  }else{
+    correo.classList.add('is-invalid');
+    return false;
+    
+  }
+  alert(correo.value);
+}
+  
+
+
+
+
 document.querySelector(".formulario").addEventListener("submit", (event) => {
   event.preventDefault();
- 
 
   let validacion = true;
 
@@ -141,72 +76,51 @@ document.querySelector(".formulario").addEventListener("submit", (event) => {
 });
 
 function validarNombre(texto){
-  if(!texto.value){
+  if(!texto.value.trim()){
     nombre.classList.add('is-invalid');
-    alert("nombre vacio");
     return false;
   }else{
     nombre.classList.remove('is-invalid');
-    alert("nombre aceptado");
     return true;
   }
 }
 
 
 function validarMensaje(texto){
-  if(!mensaje.value){
+  if(!mensaje.value.trim()){
     mensaje.classList.add('is-invalid');
-    alert("vacio");
     return false;
   }else{
     mensaje.classList.remove('is-invalid');
-    alert("aceptado");
     return true;
   }
 }
-
-
-/* function EliminarError(){
-correo.classList.remove('is-invalid');
-nombre.classList.remove('is-invalid');
-fecha.classList.remove('is-invalid');
-telefono.classList.remove('is-invalid');
-motivo.classList.remove('is-invalid');
-mensaje.classList.remove('is-invalid');
-} */
-
 
 function validarCombo(combo){
   if(combo.value === ""){
     motivo.classList.add('is-invalid');
-    alert("seleccione opcion");
     return false;
   }else{
     motivo.classList.remove('is-invalid');
-    alert("combo seleccionado");
     return true;
   }
 }
 
-
-
 function validarFecha(date){
   if(!date.value){
     fecha.classList.add('is-invalid');
-    alert("Debe digitar la fecha");
     return false;
   }else{
     if(calcularEdad(date) >= 18){
       fecha.classList.remove('is-invalid');
-      alert("mayor de 18");
       return true;
     }else{
-      alert("menor de 18");
+      fecha.classList.remove('is-invalid');
+      alert("Lo sentimos, las compras en la tienda online Mangaverse Z se limitan a personas mayores de 18 años");
       return false;
     }
   }
 }
-
 
 function calcularEdad(date){
   var fechaNacimiento = new Date(date.value);
