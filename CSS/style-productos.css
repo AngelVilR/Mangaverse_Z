@@ -25,16 +25,11 @@ main nav {
 .Caja_Cards_Princ {
     width: 100%;
     height: auto;
-    border: 1px solid rgb(65, 65, 65);
 }
 
 .Caja_Cards_Princ h3 {
     text-align: center;
-    border-bottom: 1px solid rgb(65, 65, 65);
-}
-
-.Caja_Cards_Body{
-    border-top: 1px solid rgb(65, 65, 65);
+    padding-top: 1%;
 }
 
 .Caja_Cards_Body button {
@@ -69,9 +64,31 @@ main nav {
 
 /* ----------------------------------------------------------------- */
 
-#ImagenLibro {
+#ContenedorTitulo{
+    width: 100%; 
+    min-height: 6em;
+    max-height: 6em;
+    border: 1px solid rgb(65, 65, 65);    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ContenedorImagen{
     width: 100%;
-    height: auto;
+    max-height: 500px;     
+    border: 1px solid rgb(65, 65, 65); 
+}
+
+#ContenedorImagen img{
+    width: 100%;
+    height: 500px;
+}
+
+#ContenedorCompras{
+    width: 100%;       
+    border: 1px solid rgb(65, 65, 65); 
 }
 
 /* ----------------------------------------------------------------- */
