@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>    
-    <!-- Agregar icono en la pestaña de la página -->
-  <link rel="shortcut icon" href="./IMG/Mangaverse_Z_V4_Pag.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos</title>
+  <!-- Agregar icono en la pestaña de la página -->
+  <link rel="shortcut icon" href="./IMG/Mangaverse_Z_V4_Pag.png"   />
   <!-- Link del bootstrap CSS-->
   <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
   <!-- Link del estilo de bootstrap estándar CSS -->
@@ -13,8 +14,9 @@
   <!-- Link del estilo de la página inicio -->
   <link rel="stylesheet" href="./CSS/style-Inicio.css">
   <!-- Link del estilo de la pagina productos -->
-   <link rel="stylesheet" href="./CSS/style-productos.css">
+  <link rel="stylesheet" href="./CSS/style-productos.css">
 </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
@@ -62,51 +64,53 @@
         <section id="SelecCategorias">
           <div class="mb-3">
             <label for="filter">Filtrar por categoría:</label>
-            <select id="filter" class="form-select">
-                <option value="all">Todos</option>
-                <!-- Opciones de categorías se añadirán dinámicamente aquí -->
+            <select id="FiltroXCategorias" class="form-select">
+              <option value="all">Todos</option>
+              <!-- Opciones de categorías se añadirán dinámicamente aquí -->
             </select>
-        </div>
+          </div>
         </section>
       </nav>
-  
+
       <nav>
         <section id="SelecIdioma">
           <div class="mb-3">
             <label for="filter">Filtrar por Idioma:</label>
-            <select id="filter" class="form-select">
-                <option value="all">Todos</option>
-                <!-- Opciones de categorías se añadirán dinámicamente aquí -->
+            <select id="FiltroXIdioma" class="form-select">
+              <option value="all">Todos</option>
+              <!-- Opciones de categorías se añadirán dinámicamente aquí -->
             </select>
-        </div>
+          </div>
         </section>
       </nav>
     </div>
 
-    
+
     <nav>
       <section id="ListaProductos">
         <div id="Lista-Libros" class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
           <!-- Inicio libro -->
-        <div class="col">
-          <div id="ContenedorLibro" class="card mb-3 Caja_Cards_Princ">
-            <h3 id="TituloLibro" class="card-header">Nombre libro</h3>          
-            <img id="ImagenLibro" src="./IMG/Imagen_No_Encontrada.png" alt="Imagen no encontrada" style="background-color: aqua;">
-            <div class="card-body Caja_Cards_Body">
-              <p id="PrecioLibro" class="card-text">&#x20a1;10000</p>
-              <a href="./Detalle-Producto.html"><button id="VerMas" type="button" class="btn btn-secondary Button_Detalle">Ver más detalles</button></a>
-              <button id="AgregarCarrito" type="button" class="btn btn-secondary Button_Compra">Agregar al carrito</button>
+          <div class="col">
+            <div id="ContenedorLibro" class="card mb-3 Caja_Cards_Princ">
+              <h3 id="TituloLibro" class="card-header">Nombre libro</h3>
+              <img id="ImagenLibro" src="./IMG/Imagen_No_Encontrada.png" alt="Imagen no encontrada">
+              <div class="card-body Caja_Cards_Body">
+                <p id="PrecioLibro" class="card-text">&#x20a1;10000</p>
+                <a href="./Detalle-Producto.html"><button id="VerMas" type="button"
+                    class="btn btn-secondary Button_Detalle">Ver más detalles</button></a>
+                <button id="AgregarCarrito" type="button" class="btn btn-secondary Button_Compra">Agregar al
+                  carrito</button>
+              </div>
             </div>
           </div>
-        </div>
-        <!-- Final libro -->
+          <!-- Final libro -->
         </div>
       </section>
     </nav>
 
   </main>
 
-      
+
   <footer class="text-center text-lg-start text-white" style="background-color: rgb(23,20,31)">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-between p-4" style="background-color: rgb(89,49,150)">
@@ -206,5 +210,10 @@
 
   <!-- Link del bootstrap JS-->
   <script src="./Bootstrap/js/bootstrap.min.js"></script>
+  <!-- JS para la lista de libros -->
+   <script src="./JS/ListaLibros.js"></script>
+   <!-- JSON -->
+    <script src="./JSON/ProductosJSON.js"></script>
 </body>
+
 </html>

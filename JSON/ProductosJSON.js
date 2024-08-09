@@ -1,5 +1,4 @@
-const ListaProductos =
-    [
+const ListaProductos = [
         {
             "ID": 1,
             "NombreLibro": "All Star Superman Deluxe Edition",
