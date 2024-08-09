@@ -1,58 +1,169 @@
+  function validarNumero(numero){
+    var expresion = /^\d{8}$/
+    
+    return expresion.test(numero);
+  }
+    
 
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+/* (() => {
+  'use strict' */
 
-   (() => {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
-        let isValid = form.checkValidity();
-  
-        // Check for custom validation on the phone number field
-        const telefonoField = form.querySelector('#Itelefono');
-        if (telefonoField) {
-          // Custom validation for phone number
-          const telefonoValue = telefonoField.value;
-          if (!/^\d+$/.test(telefonoValue)) {
-            telefonoField.setCustomValidity('Por favor, ingrese solo números.');
-            isValid = false;
-          } else {
-            telefonoField.setCustomValidity('');
-          }
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  /* const forms = document.querySelectorAll('.needs-validation') */
+
+  // Loop over them and prevent submission
+/*   Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+
+      const telefonoInput = form.querySelector('#Itelefono');
+      const Nvalido = validarNumero(telefonoInput.value);
+
+      telefonoInput.classList.remove('is-invalid', 'is-valid');
+      form.classList.remove('was-validated');
+
+      if (!form.checkValidity() || !Nvalido) {
+        event.preventDefault()
+        event.stopPropagation()
+
+        if(!Nvalido){
+          telefonoInput.classList.add('is-invalid');
+        }else{
+          telefonoInput.classList.add('is-valid');
         }
+ */
+        /* telefonoInput.classList.add('is-invalid'); */
+      /* } *//* else{
+        telefonoInput.classList.remove('is-invalid');
+      }
+ */
+/*       form.classList.add('was-validated')
+    }, false)
+  })
+})()
+
+ */
+
+
+
+/* function validarNumero(numero){
+  var expresion = /^\d{8}$/
+  var telefono = document.getElementById("Itelefono");
+
+  if(!expresion.test(numero)){
+    telefono.className = "is-invalid";
+  }else{
+    telefono.className = "is-valid";
+  }
+}
   
-        if (!isValid) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
+
+var boton = document.getElementById("enviar");
+
+boton.addEventListener("click", validarNumero(document.getElementById("Itelefono").value)); */
+function valiarTelefono(numero){
+var expresion = /^\d{8}$/
+
+if(expresion.test(numero)){
+  telefono.classList.remove('is-invalid');
+  alert("telefono valido")
+}else{
+  telefono.classList.add('is-invalid');
+  alert("telefono no valido")
+}
+  return expresion.test(numero);
+}
+
+
+
+function validarCorreo(email){
+  var expresion = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   
-        form.classList.add('was-validated');
-      }, false)
-    })
-  })() 
+  if(expresion.test(email)){
+    correo.classList.remove('is-invalid');
+    alert("correo valido" + "true");
+    return true;
+    
+  }else{
+    correo.classList.add('is-invalid');
+    alert("correo no valido " + "false");
+    return false;
+    
+  }
+  alert(correo.value);
+}
+  
+
+var formulario = document.getElementsByClassName("formulario");
+
+var correo = document.getElementById("Iemail");
+var nombre = document.getElementById("Inombre");
+var fecha = document.getElementById("Ifecha");
+var telefono = document.getElementById("Itelefono");
+var motivo = document.getElementById("cmbMotivo");
+var mensaje = document.getElementById("Imensaje");
 
 
+document.querySelector(".formulario").addEventListener("submit", (event) => {
+  event.preventDefault();
+ 
 
-/*   var campoTel = document.getElementById("Itelefono").value; */
+  let validacion = true;
 
-  function validaTelefono(){
-    if (!/^\d+$/.test(campoTel)) {
-      /* telefonoField.setCustomValidity('Telefono no valido'); */
-      alert("telefono no valido");
-      return
-      isValid = false;
-    } else {
-      /* telefonoField.setCustomValidity('Error'); */
-      alert("error");
-    }
+  if(!valiarTelefono(telefono.value.trim())){
+    validacion = false;
+  }
+  
+  if(!validarCorreo(correo.value.trim())){
+    validacion = false;
   }
 
-/*   var boton = document.getElementById("enviar");
-  boton.addEventListener("click", validaTelefono()); */
+  if(!validarNombre(nombre.value.trim())){
+    validacion = false;
+  }
 
-
-
+  if(!validarMensaje(mensaje)){
+    validacion = false;
+  }
   
+  if(!validacion){
+    event.preventDefault();
+  }
+});
+
+function validarNombre(texto){
+  if(!texto.value){
+    nombre.classList.add('is-invalid');
+    alert("nombre vacio");
+    return false;
+  }else{
+    nombre.classList.remove('is-invalid');
+    alert("nombre aceptado");
+    return true;
+  }
+}
+
+
+function validarMensaje(texto){
+  if(!mensaje.value){
+    mensaje.classList.add('is-invalid');
+    alert("vacio");
+    return false;
+  }else{
+    mensaje.classList.remove('is-invalid');
+    alert("aceptado");
+    return true;
+  }
+}
+
+
+/* function EliminarError(){
+correo.classList.remove('is-invalid');
+nombre.classList.remove('is-invalid');
+fecha.classList.remove('is-invalid');
+telefono.classList.remove('is-invalid');
+motivo.classList.remove('is-invalid');
+mensaje.classList.remove('is-invalid');
+} */
+
+
