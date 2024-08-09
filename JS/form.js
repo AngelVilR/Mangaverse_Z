@@ -197,6 +197,7 @@ function validarFecha(date){
     return false;
   }else{
     if(calcularEdad(date) >= 18){
+      fecha.classList.remove('is-invalid');
       alert("mayor de 18");
       return true;
     }else{
