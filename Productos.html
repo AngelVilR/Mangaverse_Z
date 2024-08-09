@@ -92,15 +92,23 @@
           <!-- Inicio libro -->
           <div class="col">
             <div id="ContenedorLibro" class="card mb-3 Caja_Cards_Princ">
-              <h3 id="TituloLibro" class="card-header">Nombre libro</h3>
-              <img id="ImagenLibro" src="./IMG/Imagen_No_Encontrada.png" alt="Imagen no encontrada">
-              <div class="card-body Caja_Cards_Body">
+              
+              <div id="ContenedorTitulo" class="card-header">
+                <h3 id="TituloLibro">Nombre libro</h3>
+              </div>
+
+              <div id="ContenedorImagen">
+                <img id="ImagenLibro" src="./IMG/Imagen_No_Encontrada.png" alt="Imagen no encontrada">
+              </div>
+
+              <div id="ContenedorCompras" class="card-body Caja_Cards_Body">
                 <p id="PrecioLibro" class="card-text">&#x20a1;10000</p>
                 <a href="./Detalle-Producto.html"><button id="VerMas" type="button"
                     class="btn btn-secondary Button_Detalle">Ver más detalles</button></a>
                 <button id="AgregarCarrito" type="button" class="btn btn-secondary Button_Compra">Agregar al
                   carrito</button>
               </div>
+
             </div>
           </div>
           <!-- Final libro -->
@@ -211,9 +219,11 @@
   <!-- Link del bootstrap JS-->
   <script src="./Bootstrap/js/bootstrap.min.js"></script>
   <!-- JS para la lista de libros -->
-   <script src="./JS/ListaLibros.js"></script>
-   <!-- JSON -->
-    <script src="./JSON/ProductosJSON.js"></script>
+  <script src="./JS/ListaLibros.js"></script>
+  <!-- JSON -->
+  <script src="./JSON/ProductosJSON.js"></script>
+  <!-- JQuery -->
+   <script src="./JS/JQuery/jquery-3.7.1.min.js"></script>
 </body>
 
 </html>
