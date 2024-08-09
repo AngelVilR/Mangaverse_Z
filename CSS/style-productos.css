@@ -1,16 +1,23 @@
-main nav{
-    margin: 1% 1%;
-    margin-bottom: 1.5em;
+main nav {
+    margin: 1em 1em;
+    margin-bottom: 1em;
 }
 
 /* ----------------------------------------------------------------- */
 
-#SelecCategorias label{
+#SelectoresContainer{
+    display: grid;    
+    grid-template-columns: repeat(2,1fr);    
+}
+
+#SelecCategorias label,
+#SelecIdioma label {
     margin-bottom: 0.5em;
 }
 
-#SelecCategorias select{
-    border: 1px solid rgb(0, 0, 0);
+#SelecCategorias select,
+#SelecIdioma select {
+    border: 1px solid rgb(0, 0, 0);    
 }
 
 /* ----------------------------------------------------------------- */
@@ -18,10 +25,16 @@ main nav{
 .Caja_Cards_Princ {
     width: 100%;
     height: auto;
+    border: 1px solid rgb(65, 65, 65);
 }
 
 .Caja_Cards_Princ h3 {
     text-align: center;
+    border-bottom: 1px solid rgb(65, 65, 65);
+}
+
+.Caja_Cards_Body{
+    border-top: 1px solid rgb(65, 65, 65);
 }
 
 .Caja_Cards_Body button {
@@ -36,7 +49,8 @@ main nav{
 
 /* ----------------------------------------------------------------- */
 
-.Button_Detalle, .Button_Compra {
+.Button_Detalle,
+.Button_Compra {
     border: 2px solid rgb(122, 122, 122);
     transition: all 100ms linear;
 }
@@ -44,11 +58,36 @@ main nav{
 .Button_Detalle:hover {
     background-color: rgb(89, 49, 150);
     color: white;
-    font-weight: bold;        
+    font-weight: bold;
 }
 
-.Button_Compra:hover{
+.Button_Compra:hover {
     background-color: rgb(3, 200, 52);
     color: black;
     font-weight: bold;
+}
+
+/* ----------------------------------------------------------------- */
+
+#ImagenLibro {
+    width: 100%;
+    height: auto;
+}
+
+/* ----------------------------------------------------------------- */
+
+@media (width <= 992px) {
+    main nav {
+        margin: 1em 1em;
+        margin-bottom: 1em;
+    }
+
+    #ImagenLibro {
+        width: 100%;
+        height: 500px;
+    }
+
+    #SelectoresContainer{
+     display: block;   
+    }
 }
