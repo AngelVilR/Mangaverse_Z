@@ -118,7 +118,7 @@ document.querySelector(".formulario").addEventListener("submit", (event) => {
     validacion = false;
   }
 
-  if(!validarNombre(nombre.value.trim())){
+  if(!validarNombre(nombre)){
     validacion = false;
   }
 
