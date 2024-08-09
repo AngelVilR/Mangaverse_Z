@@ -44,3 +44,18 @@ function ListaLibros(data) {
         ListaLibro.append(ContenedorLib);
     }
 }   
+
+function ListaLibrosXCategorias(){
+    var Select = $('#FiltroXCategorias');
+    var Categorias = [];
+
+    $.each(ListaProductos, function (index,libro) {
+        $.each(libro.Categorias, function (indez,Categorias) {
+            if (condition) {
+                
+            }
+        })
+    })
+
+
+}
