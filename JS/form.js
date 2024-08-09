@@ -192,7 +192,7 @@ function validarCombo(combo){
 
 function validarFecha(date){
   if(!date.value){
-    motivo.classList.add('is-invalid');
+    fecha.classList.add('is-invalid');
     alert("Debe digitar la fecha");
     return false;
   }else{
