@@ -125,7 +125,16 @@ document.querySelector(".formulario").addEventListener("submit", (event) => {
   if(!validarMensaje(mensaje)){
     validacion = false;
   }
-  
+
+  if(!validarCombo(motivo)){
+    validacion = false;
+  }
+
+  if(!validarFecha(fecha)){
+    validacion = false;
+  }
+
+
   if(!validacion){
     event.preventDefault();
   }
@@ -167,3 +176,45 @@ mensaje.classList.remove('is-invalid');
 } */
 
 
+function validarCombo(combo){
+  if(combo.value === ""){
+    motivo.classList.add('is-invalid');
+    alert("seleccione opcion");
+    return false;
+  }else{
+    motivo.classList.remove('is-invalid');
+    alert("combo seleccionado");
+    return true;
+  }
+}
+
+
+
+function validarFecha(date){
+  if(!date.value){
+    motivo.classList.add('is-invalid');
+    alert("Debe digitar la fecha");
+    return false;
+  }else{
+    if(calcularEdad(date) >= 18){
+      alert("mayor de 18");
+      return true;
+    }else{
+      alert("menor de 18");
+      return false;
+    }
+  }
+}
+
+
+function calcularEdad(date){
+  var fechaNacimiento = new Date(date.value);
+  var fechaActual = new Date();
+  
+  var edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+  if(fechaNacimiento.getMonth() >= fechaActual.getMonth()  &&  fechaNacimiento.getDate() >= fechaActual.getDate()){
+    edad--;
+  }
+
+  return edad;
+}
