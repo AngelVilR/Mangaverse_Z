@@ -7,16 +7,18 @@ main nav {
 
 #SelectoresContainer{
     display: grid;    
-    grid-template-columns: repeat(2,1fr);    
+    grid-template-columns: repeat(3,1fr);    
 }
 
 #SelecCategorias label,
-#SelecIdioma label {
+#SelecIdioma label,
+#SelecEditorial label {
     margin-bottom: 0.5em;
 }
 
 #SelecCategorias select,
-#SelecIdioma select {
+#SelecIdioma select,
+#SelecEditorial select {
     border: 1px solid rgb(0, 0, 0);    
 }
 
@@ -73,12 +75,15 @@ main nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    background-color: #E5D0F2;
 }
 
 #ContenedorImagen{
     width: 100%;
     max-height: 500px;     
     border: 1px solid rgb(65, 65, 65); 
+    
 }
 
 #ContenedorImagen img{
