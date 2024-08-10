@@ -78,11 +78,11 @@ function ListaLibros(data) {
               </div>
 
             <div id="ContenedorCompras" class="card-body Caja_Cards_Body">
-                <p id="PrecioLibro" class="card-text">&#x20a1;${Libro.Precio}</p>
-                <a href="./Detalle-Producto.html"><button id="VerMas" type="button"
-                    class="btn btn-secondary Button_Detalle"  onclick="DetalleLibro(${Libro.ID})">Ver más detalles</button></a>
+                <p id="PrecioLibro" class="card-text">&#x20a1;${Libro.Precio}</p>                
                 <button id="AgregarCarrito" type="button" class="btn btn-secondary Button_Compra">Agregar al
                   carrito</button>
+                  <button id="VerMas" type="button"
+                    class="btn btn-secondary Button_Detalle" onclick="DetalleLibro(${Libro.ID})" >Ver más detalles</button>
               </div>
           </div>        
         `

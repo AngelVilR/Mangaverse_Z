@@ -29,12 +29,12 @@
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active Botones_Navegacion " href="index.html">Inicio
+                            <a class="nav-link Botones_Navegacion " href="index.html">Inicio
                                 <span class="visually-hidden">(current)</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link Botones_Navegacion " href="Productos.html">Productos</a>
+                            <a class="nav-link active Botones_Navegacion " href="Productos.html">Productos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link Botones_Navegacion " href="Contacto.html">Contacto</a>
@@ -71,7 +71,7 @@
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
                             aria-label="Slide 3"></button>
                     </div>
-                    <div class="carousel-inner">
+                    <div id="GaleriaImg" class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="./IMG/Imagen_No_Encontrada.png" class="d-block w-100"
                                 alt="Imagen no encontrada #1">
@@ -102,10 +102,10 @@
         <nav class="Contenedor_ProductoInfo">
             <section id="ProductoInfo">
                 <div id="Caja_Info" class="card mb-3 Bordeado">
-                    <h3 class="card-header">Nombre del libro</h3>
+                    <h3 id="TituloProd" class="card-header">Nombre del libro</h3>
                     <div class="card-body">
                         <h5 class="card-title">Calificación</h5>
-                        <img src="./IMG/5_Estrellas.png" alt="Calificación en estrellas" width="120">                        
+                        <img id="CalificacionProd" src="" alt="" width="120">                        
                     </div>
 
                     <div class="Linea"></div>
@@ -130,18 +130,21 @@
                             <div id="myTabContent" class="tab-content">
                                 <div class="tab-pane fade active show" id="Caracteristicas" role="tabpanel">
                                     <ul>
-                                        <li><b>Autor: </b></li>
-                                        <li><b>Editorial: </b></li>
-                                        <li><b>ISBN: </b></li>
-                                        <li><b>Año de publicación: </b></li>
-                                        <li><b>Idioma: </b></li>
-                                        <li><b>Categorias: </b></li>                                        
+                                        <li id="AutorProd"><b>Autor: </b></li>
+                                        <li id="EditorialProd"><b>Editorial: </b></li>
+                                        <li id="ISBNProd"><b>ISBN: </b></li>
+                                        <li id="AnnoProd"><b>Año de publicación: </b></li>
+                                        <li id="IdiomaProd"><b>Idioma: </b></li>
+                                        <li id="CategoriasProd"><b>Categorias:</b></li>                                        
                                     </ul>
                                 </div>
                             </div>
 
                             <div id="myTabContent" class="tab-content">
                                 <div class="tab-pane fade" id="Descripcion">
+                                    <p id="DescripProd">
+                                        
+                                    </p>
                                     
                                 </div>
                             </div>
@@ -150,11 +153,11 @@
                             <div id="myTabContent" class="tab-content">
                                 <div class="tab-pane fade" id="Mas">
                                     <ul>
-                                        <li><b>Tiempo de entrega:</b> 4 días</li>
-                                        <li><b>Opciones de entrega:</b> Por envío postal o recogido en tienda</li>                                        
-                                        <li><b>Garantía del producto:</b> </li>
+                                        <li id="TiempoProd"><b>Tiempo de entrega:</b> 4 días</li>
+                                        <li id="EntregaOpcProd"><b>Opciones de entrega:</b> Por envío postal o recogido en tienda</li>                                        
+                                        <li id="GaranProd"><b>Garantía del producto:</b> </li>
                                         <li><b>Cambios o devoluciones:</b> <a href="./Preguntas-Frecuentes.html" target="_blank">Consultar aquí</a></li>
-                                        <li><a href="./Contacto.html" target="_blank">Contactos</a></li>
+                                        <li><a href="./Contacto.html" target="_blank">Contáctenos</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -168,8 +171,8 @@
         <nav class="Contenedor_AgregarCompra">
             <section id="AgregarCompra">
                 <div id="Caja_Comprar" class="card mb-3 Bordeado">
-                    <h2><b>&#x20a1;1000000</b></h2>
-                    <h4>Disponible o no</h4>
+                    <h2 id="PrecioProd"><b>&#x20a1;1000000</b></h2>
+                    <h4 id="Stock">Disponible o no</h4>
                     <div>
                         <div class="form-floating mb-3">
                             <input type="number" class="form-control" id="floatingInput" placeholder="1">
@@ -289,6 +292,13 @@
 
     <!-- Link del bootstrap JS-->
     <script src="./Bootstrap/js/bootstrap.min.js"></script>
+    <!-- JQuery -->
+    <script src="./JS/JQuery/jquery-3.7.1.min.js"></script>
+    ¿<!-- JSON Lista productos -->
+    <script src="./JSON/ProductosJSON.js"></script>
+    <!-- JS para el detalle producto -->
+     <script src="./JS/DetalleProd_Productos.js"></script>
+     
 </body>
 
 </html>
