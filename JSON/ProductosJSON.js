@@ -14,7 +14,7 @@ const ListaProductos = [
             "Stock": "Disponible en línea",
             "GaleriaImg": ["https://m.media-amazon.com/images/I/81oiYDSaoVL._SL1500_.jpg","https://m.media-amazon.com/images/I/81UsnOXb5zL._AC_UF1000,1000_QL80_.jpg","https://i5.walmartimages.com/seo/All-Star-Superman-Paperback-9781401232054_4d5856f7-91ed-432a-a0ca-583e6ffa7e8b_1.d253c8f89f3879735cafccc1c1fa5ab6.jpeg"], 
             "TiempoEntrega": "4 días",            
-            "OpcionesEntrega": "Envío postal",
+            "OpcionesEntrega": "Envío postal o recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/4_5_Estrellas.png"
         },
@@ -52,7 +52,7 @@ const ListaProductos = [
             "Stock": "Disponible en línea",
             "GaleriaImg": ["https://www.libreriainternacional.com/media/catalog/product/9/7/9788411015035_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000","https://www.panini.es/media/catalog/product/cache/a87cfc69c89e7921deea3a8e066ac416/s/b/sbema001y_0_1.jpg","https://www.panini.es/media/catalog/product/cache/a87cfc69c89e7921deea3a8e066ac416/s/b/sbema001y_1_1.jpg"],
             "TiempoEntrega": "4 días",
-            "OpcionesEntrega": "Envío postal",
+            "OpcionesEntrega": "Envío postal o recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/4_5_Estrellas.png"
         },
@@ -71,7 +71,7 @@ const ListaProductos = [
             "Stock": "Solo tienda física",
             "GaleriaImg": ["https://www.libreriainternacional.com/media/catalog/product/9/7/9781974743605_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000","https://cdn11.bigcommerce.com/s-89ffd/images/stencil/1280x1280/products/147451/541184/9784088834702_1898da2044c82ec5dffa9060ced64c64__59879.1716431806.jpg?c=2?imbypass=on","https://www.libreriainternacional.com/media/catalog/product/9/7/9781974743605_2.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000"],
             "TiempoEntrega": "4 días",
-            "OpcionesEntrega": "Recogido en tienda",
+            "OpcionesEntrega": "Envío postal o recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/5_Estrellas.png"
         },
@@ -90,7 +90,7 @@ const ListaProductos = [
             "Stock": "Disponible en línea",
             "GaleriaImg": ["https://m.media-amazon.com/images/I/81ZwggSh1zL._SY466_.jpg","https://store.crunchyroll.com/on/demandware.static/-/Sites-crunchyroll-master-catalog/default/dw8987453a/rightstuf/9781974725328_manga-jujutsu-kaisen-volume-14-back.jpg","https://www.libreriainternacional.com/media/catalog/product/9/7/9788467966909_4.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000"],
             "TiempoEntrega": "4 días",
-            "OpcionesEntrega": "Envío postal",
+            "OpcionesEntrega": "Envío postal o recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/5_Estrellas.png"
         },
@@ -147,7 +147,7 @@ const ListaProductos = [
             "Stock": "Disponible en línea",
             "GaleriaImg": ["https://www.libreriainternacional.com/media/catalog/product/9/7/9788411500609_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000","https://www.panini.es/media/catalog/product/cache/a87cfc69c89e7921deea3a8e066ac416/s/m/smust072_0.jpg","https://www.panini.es/media/catalog/product/cache/a87cfc69c89e7921deea3a8e066ac416/s/m/smust072_3.jpg"],
             "TiempoEntrega": "4 días",
-            "OpcionesEntrega": "Envío postal",
+            "OpcionesEntrega": "Envío postal o recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/4_5_Estrellas.png"
         },
@@ -185,7 +185,7 @@ const ListaProductos = [
             "Stock": "Solo tienda física",
             "GaleriaImg": ["https://www.libreriainternacional.com/media/catalog/product/9/7/9781974721764_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000","https://www.libreriainternacional.com/media/catalog/product/9/7/9781974721764_2.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000","https://64.media.tumblr.com/24a424d408f42c14b2d6872a64bbf4c5/tumblr_psakv3EugO1tvvsht_540.jpg"],
             "TiempoEntrega": "4 días",
-            "OpcionesEntrega": "Recogido en tienda",
+            "OpcionesEntrega": "Envío postal o recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/5_Estrellas.png"
         },
@@ -204,7 +204,7 @@ const ListaProductos = [
             "Stock": "Solo tienda física",
             "GaleriaImg": ["https://m.media-amazon.com/images/I/71fD6iqykdL._SY466_.jpg","https://m.media-amazon.com/images/I/713hlX3hgRL._AC_UF894,1000_QL80_.jpg","https://sailormoonfannetwork.com/wp-content/uploads/2022/03/Sailormoonmangaguide.jpg"],
             "TiempoEntrega": "4 días",
-            "OpcionesEntrega": "Recogido en tienda",
+            "OpcionesEntrega": "Envío postal o recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/5_Estrellas.png"
         },
@@ -223,7 +223,7 @@ const ListaProductos = [
             "Stock": "Solo tienda física",
             "GaleriaImg": ["https://www.libreriainternacional.com/media/catalog/product/9/7/9788467945867_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000","https://www.libreriainternacional.com/media/catalog/product/9/7/9788467945867_2.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000","https://www.libreriainternacional.com/media/catalog/product/9/7/9788467945867_3.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000"],
             "TiempoEntrega": "4 días",            
-            "OpcionesEntrega": "Recogido en tienda",
+            "OpcionesEntrega": "Envío postal o recogido en tienda",
             "Garantia": "24 horas",
             "Resenna": "./IMG/4_5_Estrellas.png"
         }
