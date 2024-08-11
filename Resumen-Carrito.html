@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="./CSS/style-Inicio.css">
 
   <!-- link style carrito -->
-  <link rel="stylesheet" href="./CSS/style-carrito.css">
+  <link rel="stylesheet" href="./CSS/style-ResumenCarrito.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
@@ -65,7 +65,7 @@
       <section id="Carrito">
         <nav class="ContenedorCarrito">
           <div id="Encabezado" class="d-flex justify-content-between align-items-center mb-5">
-            <h1>Su carrito</h1>
+            <h1>Resumen de su carrito</h1>
             <h6>Total Productos: 3 libros</h6>
           </div>
           <hr class="my-4">
@@ -87,11 +87,6 @@
             <div>
               <h6>Subtotal</h6>
             </div>
-
-            <!-- div para colocar el boton de eliminar -->
-            <div>
-            </div>
-
           </nav>
 
           <hr class="my-4">
@@ -103,7 +98,7 @@
             </div>
             <!-- Cantidad -->
             <div class="Cantidad_Caja">
-              <input type="number" class="form-control" id="CantidadProd" min="1" max="99">
+                <h6 id="CantidadProd">Cantidad</h6>
             </div>
             <!-- Precio -->
             <div>
@@ -113,17 +108,6 @@
             <div>
               <h6 id="SubtotalProd">&#x20a1;Subtotal</h6>
             </div>
-
-            <!-- Boton eliminar -->
-            <div>        
-                <div class="dropdown">
-                  <button class="dropbtn"><img id="TresPuntos" src="./IMG/tres-puntos.png" alt="Icono de tres puntos"></button>
-                  <div class="dropdown-content">
-                    <button id="EliminarProd" type="button"><i id="IconoTrash" class="bi bi-trash"></i>Eliminar</button>
-                  </div>
-                </div>            
-            </div>
-
           </nav>
 
           <hr class="my-4">
@@ -138,25 +122,11 @@
           </nav>
         </nav>        
 
-        <nav id="ButtonsFinalCarrito">
-          <div><a href="./Productos.html"><button type="button" class="btn Button_SeguirComprando">Seguir
-                comprando</button></a></div>
-          <div><a href="./Resumen-Carrito.html"><button type="button" class="btn Button_Compra">Continuar compra</button></a></div>
-        </nav>        
-
-
+        <nav id="ButtonsFinalCarrito">          
+          <div><a href="./Datos-Compra.html"><button type="button" class="btn Button_Compra">Procesar compra</button></a></div>
+        </nav>       
       </section>
-
-
-
-
     </nav>
-
-
-
-
-
-
   </main>
 
   <!-- Footer -->
@@ -256,9 +226,6 @@
     </div>
     <!-- Copyright -->
   </footer>
-
-
-
   <!-- Link del bootstrap JS-->
   <script src="./Bootstrap/js/bootstrap.min.js"></script>
 </body>

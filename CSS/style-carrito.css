@@ -1,93 +1,129 @@
-.ContenedorCarrito{
-    background-color: aqua;
-    border: 5px solid black;
+hr {
+  border: 1px solid rgb(154, 57, 211);
 }
 
-.Centrado{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1em;
+#ButtonsFinalCarrito {
+  margin: 2em 1em;
 }
 
-.Cantidad_Caja{
-    width: 100%;    
+.ContenedorCarrito {
+  margin: 2em 1em;
+  padding: 1em 0.5em;
+  border: 3px solid rgb(213, 141, 255);
+  border-radius: 15px;
+}
+
+.ColorTitulo h6 {
+  color: rgb(89, 49, 150);
+  font-weight: bold;
+}
+
+.Centrado {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1em;
+}
+
+.Cantidad_Caja {
+  width: 100%;
+  border: 1px solid black;
 }
 
 /* ----------------------------------------------------------------- */
 
 .dropbtn {
-    width: 100%;
-    background: white;
-    color: white;
-    padding: 0.3em 0.7em 0.4em;
-    border: 1px solid rgb(122, 122, 122);
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;    
-    background: white;    
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    right: 0;
-  }
-    
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .dropdown-content button:hover {
-    background-color: rgb(241, 15, 15);
-    color: white;
-    font-weight: bold;
+  width: 100%;
+  background: white;
+  color: white;
+  padding: 0.3em 0.7em 0.4em;
+  border: 1px solid rgb(122, 122, 122);
 }
-    
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown:hover .dropbtn {
-    background-color: rgb(217, 181, 255);    ;
-  }
 
-  #IconoTrash{
-    width: 100%;
-  }
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content button:hover {
+  background-color: rgb(241, 15, 15);
+  color: white;
+  font-weight: bold;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgb(217, 181, 255);
+  ;
+}
+
+#IconoTrash {
+  width: 100%;
+}
+
 /* ----------------------------------------------------------------- */
 
-#TotalDet{
-    text-align: right;
+#TotalDet {
+  text-align: right;
 }
 
-#ButtonsFinalCarrito{
-    display: flex;   
-    justify-content:space-between;           
+#ButtonsFinalCarrito {
+  display: flex;
+  justify-content: space-between;
 }
 
-.Button_Compra, .Button_Compra:hover{    
-    background-image: linear-gradient(rgb(163, 255, 127),rgb(26, 206, 9));
-    border: 1px solid rgb(122, 122, 122);
-    color: black;
-    font-weight: bold;
+.Button_Compra,
+.Button_Compra:hover {
+  background-image: linear-gradient(rgb(163, 255, 127), rgb(26, 206, 9));
+  border: 1px solid rgb(122, 122, 122);
+  color: black;
+  font-weight: bold;
 }
 
 
-.Button_SeguirComprando{        
-    color: black;
-    border: 1px solid rgb(122, 122, 122);
-    font-weight: bold;
+.Button_SeguirComprando {
+  color: black;
+  border: 1px solid rgb(122, 122, 122);
+  font-weight: bold;
 }
 
-.Button_SeguirComprando:hover{        
-    background-color: rgb(193, 153, 237);    
-    color: black;
-    font-weight: bold;
+.Button_SeguirComprando:hover {
+  background-color: rgb(193, 153, 237);
+  color: black;
+  font-weight: bold;
+}
+
+@media (width >=992px) {
+
+  .ContenedorCarrito,
+  #ButtonsFinalCarrito {
+    margin: 2.5em;    
+  }
+
+  .ContenedorCarrito{
+    padding: 2em 2em;
+  }
+
+  .Cantidad_Caja{
+    width: 40%;
+  }
+
 }
