@@ -1,0 +1,67 @@
+h1,
+h3 {
+    text-align: center;
+    margin: 0.5em 0em 1em;
+}
+
+main img {
+    width: 120px;
+    height: auto;
+}
+
+#InfoEmpresa {
+    text-align: center;
+}
+
+#InfoEmpresa, #EncFactura, #DetFactura, #TotalDet{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.EstiloFactura {
+    border: 1px solid black;
+    margin: 2em 1.5em;
+    box-shadow: 0px 0px 20px 2px rgb(131, 131, 131);
+}
+
+.EstiloFactura h1 {
+    margin-bottom: 1em;
+}
+
+.EstiloFactura div {
+    padding: 1.5em;
+}
+
+.FlexDetalle {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+}
+
+#Total {
+    font-size: larger;
+    text-align: center;
+}
+
+#ResumemDet p {
+    text-align: center;
+}
+
+#VolverInicio{
+    text-align: center;
+    margin: 3em 0em 2em;
+}
+
+.ButtonInicio {
+    color: black;
+    border: 1px solid rgb(122, 122, 122);
+    font-weight: bold;
+  }
+  
+  .ButtonInicio:hover {
+    background-color: rgb(193, 153, 237);
+    color: black;
+    font-weight: bold;
+  }
+
+
