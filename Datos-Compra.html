@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrito de compras</title>
   <!-- Agregar icono en la pestaña de la página -->
-  <link rel="shortcut icon" href="./IMG/Mangaverse_Z_V4_Pag.png"/>
+  <link rel="shortcut icon" href="./IMG/Mangaverse_Z_V4_Pag.png" />
   <!-- Link del bootstrap CSS-->
   <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
   <!-- Link del estilo de bootstrap estándar CSS -->
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="./CSS/style-Inicio.css">
 
   <!-- link style carrito -->
-  <link rel="stylesheet" href="./CSS/style-ResumenCarrito.css">
+  <link rel="stylesheet" href="./CSS/style-datosCompra.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
@@ -60,73 +60,89 @@
   </header>
 
   <main>
+    <h2>¡Ya casi terminamos!</h2>
+    <h3>Solo debes de llenar los siguientes campos requeridos</h3>
 
-    <nav>
-      <section id="Carrito">
-        <nav class="ContenedorCarrito">
-          <div id="Encabezado" class="d-flex justify-content-between align-items-center mb-5">
-            <h1>Resumen de tu carrito</h1>
-            <h6>Total Productos: 3 libros</h6>
-          </div>
-          <hr class="my-4">
+    <nav id="ContenedorPrincipal">
+      <nav>
+        <section id="ContactoCliente" class="SeparadoDatos">
+          <h4>Datos de contacto</h4>
 
-          <nav id="TitulosCarrito" class="Centrado ColorTitulo">
-            <!-- Nombre del producto -->
-            <div>
-              <h6>Nombre</h6>
-            </div>
-            <!-- Cantidad -->
-            <div>
-              <h6>Cantidad</h6>
-            </div>
-            <!-- Precio -->
-            <div>
-              <h6>Precio</h6>
-            </div>
-            <!-- Subtotal -->
-            <div>
-              <h6>Subtotal</h6>
+          <nav class="form-floating mb-3">
+            <input type="text" class="form-control" id="NombreCliente" placeholder="Nombre completo">
+            <label for="floatingInput">Nombre completo</label>
+          </nav>
+
+          <nav class="form-floating mb-3">
+            <input type="email" class="form-control" id="CorreoCliente" placeholder="ejemplo@gmail.com">
+            <label for="floatingInput">Correo electrónico</label>
+          </nav>
+
+          <nav class="form-floating mb-3">
+            <input type="number" class="form-control" id="TelefonoCliente" placeholder="12345678"
+              style="appearance: textfield; -webkit-appearance: none;">
+            <label for="floatingInput">Número de Teléfono</label>
+          </nav>
+
+          <nav class="form-floating mb-3">
+            <input type="number" class="form-control" id="PostalCliente" placeholder="1234"
+              style="appearance: textfield; -webkit-appearance: none; margin: 0;">
+            <label for="floatingInput">Código postal</label>
+          </nav>
+
+          <nav>
+            <label for="exampleTextarea" class="form-label mt-4"><b>Dirección de destino</b></label>
+            <textarea class="form-control" id="DireccionCliente" rows="3"></textarea>
+          </nav>
+
+        </section>
+      </nav>
+
+      <nav>
+        <section id="DatosTarjeta">
+          <h4>Datos de tu tarjeta de crédito o débito</h4>
+
+          <nav class="form-floating mb-3">
+            <input type="number" class="form-control" id="PostalCliente" placeholder="1234 5678 9123 4567"
+              style="appearance: textfield; -webkit-appearance: none;">
+            <label for="floatingInput">Número de tarjeta</label>
+          </nav>
+
+          <nav class="EspacioFechaVenc">
+            <label><b>Fecha de vencimiento</b></label>
+            <div id="ContenedorPrincipalMes_Anno">
+              <div>
+                <label for="exampleSelect1" class="form-label">Mes</label>
+                <select class="form-select" id="TarjetaMes">
+                  <option>1</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="exampleSelect2" class="form-label">Año</label>
+                <select class="form-select" id="TarjetaAnno">
+                  <option>2024</option>
+                </select>
+              </div>
+
             </div>
           </nav>
 
-          <hr class="my-4">
-
-          <nav id="DetalleProd" class="Centrado">
-            <!-- Nombre del producto -->
-            <div>
-              <h6>Nombre</h6>
-            </div>
-            <!-- Cantidad -->
-            <div class="Cantidad_Caja">
-                <h6 id="CantidadProd">Cantidad</h6>
-            </div>
-            <!-- Precio -->
-            <div>
-              <h6 id="PrecioProd">&#x20a1;Precio</h6>
-            </div>
-            <!-- Subtotal -->
-            <div>
-              <h6 id="SubtotalProd">&#x20a1;Subtotal</h6>
-            </div>
+          <nav class="form-floating mb-3">
+            <input type="number" class="form-control" id="PostalCliente" placeholder="1234 5678 9123 4567"
+              style="appearance: textfield; -webkit-appearance: none;">
+            <label for="floatingInput">Código de seguridad</label>
           </nav>
+                    
+        </section>
 
-          <hr class="my-4">
-
-          <nav id="TotalDet">
-            <div>
-              <h3>Total</h3>
-            </div>
-            <div>
-              <h3 id="Total_Pagar">&#x20a1;Total</h3>
-            </div>
-          </nav>
-        </nav>        
-
-        <nav id="ButtonsFinalCarrito">          
-          <div><a href=""><button type="button" class="btn Button_Compra">Procesar compra</button></a></div>
-        </nav>       
-      </section>
+        <nav id="ButtonFinalizar">          
+          <div><a href=""><button type="button" class="btn DisennoBtnFinalizar">Finalizar compra</button></a></div>
+        </nav>         
+      </nav>      
     </nav>
+
+
   </main>
 
   <!-- Footer -->
