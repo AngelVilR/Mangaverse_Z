@@ -4,6 +4,10 @@ h3 {
     margin: 0.5em 0em 1em;
 }
 
+b, h6{
+    color: rgb(89, 49, 150);
+}
+
 main img {
     width: 120px;
     height: auto;
@@ -13,7 +17,10 @@ main img {
     text-align: center;
 }
 
-#InfoEmpresa, #EncFactura, #DetFactura, #TotalDet{
+#InfoEmpresa,
+#EncFactura,
+#DetFactura,
+#TotalDet {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
 }
@@ -36,6 +43,7 @@ main img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1em;
+    text-align: center;
 }
 
 #Total {
@@ -47,7 +55,7 @@ main img {
     text-align: center;
 }
 
-#VolverInicio{
+#VolverInicio {
     text-align: center;
     margin: 3em 0em 2em;
 }
@@ -56,12 +64,53 @@ main img {
     color: black;
     border: 1px solid rgb(122, 122, 122);
     font-weight: bold;
-  }
-  
-  .ButtonInicio:hover {
+}
+
+.ButtonInicio:hover {
     background-color: rgb(193, 153, 237);
     color: black;
+    border: 2px solid rgb(122, 122, 122);
     font-weight: bold;
-  }
+}
 
 
+@media (width >=992px) {
+
+    #Factura {
+        width: 50%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #InfoEmpresa {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #InfoEmpresa h3,
+    #InfoEmpresa p {
+        text-align: right;
+    }
+
+    #InfoEmpresa img {
+        width: 130px;
+        height: auto;
+    }
+
+    #EncFactura{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1em;
+    }
+
+    #Total {
+        font-size: x-large;
+        text-align: center;
+    }
+
+    #VolverInicio {
+        text-align: center;
+        margin: 3em 0em;
+    }
+}

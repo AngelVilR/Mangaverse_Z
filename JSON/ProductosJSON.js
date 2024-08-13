@@ -39,7 +39,7 @@ const ListaProductos = [
         },
         {
             "ID": 3,
-            "NombreLibro": "Berserk Maximum Vol 01",
+            "NombreLibro": "Berserk Maximum Vol.01",
             "Autor": "Kentaro Miura",
             "Editorial": "PANINI MANGA",
             "ISBN": 9788411015035,
@@ -58,7 +58,7 @@ const ListaProductos = [
         },
         {
             "ID": 4,
-            "NombreLibro": "Dragon Ball Super Vol 20",
+            "NombreLibro": "Dragon Ball Super Vol.20",
             "Autor": "Akira Toriyama",
             "Editorial": "IVREA",
             "ISBN": 1974743608,
@@ -77,7 +77,7 @@ const ListaProductos = [
         },
         {
             "ID": 5,
-            "NombreLibro": "Jujutsu Kaisen Vol 14",
+            "NombreLibro": "Jujutsu Kaisen Vol.14",
             "Autor": "Gege Akutani",
             "Editorial": "Norma Editorial",
             "ISBN": 9788411013017,
@@ -88,7 +88,7 @@ const ListaProductos = [
             "Descripcion": "Mientras Sukuna, que tras haber obtenido la libertad de forma temporal se está comportando de un modo violento y cruel, ocasionando enormes daños en el barrio de Shibuya, Fushiguro recibe una herida mortal por un ataque sorpresa de un hechicero maldito y decide usar su último recurso. ¡Sukuna se ha dado cuenta de que Fushiguro ha empezado un “ritual de exorcismo” y…!",
             "ImagenDestacada": "https://m.media-amazon.com/images/I/81ZwggSh1zL._SY466_.jpg",
             "Stock": "Disponible en línea",
-            "GaleriaImg": ["https://m.media-amazon.com/images/I/81ZwggSh1zL._SY466_.jpg","https://store.crunchyroll.com/on/demandware.static/-/Sites-crunchyroll-master-catalog/default/dw8987453a/rightstuf/9781974725328_manga-jujutsu-kaisen-volume-14-back.jpg","https://www.libreriainternacional.com/media/catalog/product/9/7/9788467966909_4.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000"],
+            "GaleriaImg": ["https://m.media-amazon.com/images/I/81ZwggSh1zL._SY466_.jpg","https://store.crunchyroll.com/on/demandware.static/-/Sites-crunchyroll-master-catalog/default/dw8987453a/rightstuf/9781974725328_manga-jujutsu-kaisen-Volume-14-back.jpg","https://www.libreriainternacional.com/media/catalog/product/9/7/9788467966909_4.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=1320&width=1000"],
             "TiempoEntrega": "4 días",
             "OpcionesEntrega": "Envío postal o recogido en tienda",
             "Garantia": "24 horas",
@@ -172,7 +172,7 @@ const ListaProductos = [
         },
         {
             "ID": 10,
-            "NombreLibro": "Pokemon Sun And Moon Vol 12",
+            "NombreLibro": "Pokemon Sun And Moon Vol.12",
             "Autor": "Hidenori Kusaka",
             "Editorial": "Viz Media",
             "ISBN": 9781974721764,
@@ -191,7 +191,7 @@ const ListaProductos = [
         },
         {
             "ID": 11,
-            "NombreLibro": "Sailor Moon Takeuchi Collection Vol 01",
+            "NombreLibro": "Sailor Moon Takeuchi Collection Vol.01",
             "Autor": "Naoko Takeuchi",
             "Editorial": "KODANSHA COMICS",
             "ISBN": 9781646512010,
@@ -210,7 +210,7 @@ const ListaProductos = [
         },
         {
             "ID": 12,
-            "NombreLibro": "Solo Leveling Vol 02",
+            "NombreLibro": "Solo Leveling Vol.02",
             "Autor": "Chugong",
             "Editorial": "Norma Editorial",
             "ISBN": 8467945850,
