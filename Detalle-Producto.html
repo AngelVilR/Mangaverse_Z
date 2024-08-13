@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mangaverse Z</title>
     <!-- Agregar icono en la pestaña de la página -->
-  <link rel="shortcut icon" href="./IMG/Mangaverse_Z_V4_Pag.png" />
+    <link rel="shortcut icon" href="./IMG/Mangaverse_Z_V4_Pag.png"   />
     <!-- Link del bootstrap CSS-->
     <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
     <!-- Link del estilo de bootstrap estándar CSS -->
@@ -105,7 +105,7 @@
                     <h3 id="TituloProd" class="card-header">Nombre del libro</h3>
                     <div class="card-body">
                         <h5 class="card-title">Calificación</h5>
-                        <img id="CalificacionProd" src="" alt="" width="120">                        
+                        <img id="CalificacionProd" src="" alt="" width="120">
                     </div>
 
                     <div class="Linea"></div>
@@ -135,7 +135,7 @@
                                         <li id="ISBNProd"><b>ISBN: </b></li>
                                         <li id="AnnoProd"><b>Año de publicación: </b></li>
                                         <li id="IdiomaProd"><b>Idioma: </b></li>
-                                        <li id="CategoriasProd"><b>Categorias:</b></li>                                        
+                                        <li id="CategoriasProd"><b>Categorias:</b></li>
                                     </ul>
                                 </div>
                             </div>
@@ -143,9 +143,9 @@
                             <div id="myTabContent" class="tab-content">
                                 <div class="tab-pane fade" id="Descripcion">
                                     <p id="DescripProd">
-                                        
+
                                     </p>
-                                    
+
                                 </div>
                             </div>
 
@@ -154,9 +154,11 @@
                                 <div class="tab-pane fade" id="Mas">
                                     <ul>
                                         <li id="TiempoProd"><b>Tiempo de entrega:</b> 4 días</li>
-                                        <li id="EntregaOpcProd"><b>Opciones de entrega:</b> Por envío postal o recogido en tienda</li>                                        
+                                        <li id="EntregaOpcProd"><b>Opciones de entrega:</b> Por envío postal o recogido
+                                            en tienda</li>
                                         <li id="GaranProd"><b>Garantía del producto:</b> </li>
-                                        <li><b>Cambios o devoluciones:</b> <a href="./Preguntas-Frecuentes.html" target="_blank">Consultar aquí</a></li>
+                                        <li><b>Cambios o devoluciones:</b> <a href="./Preguntas-Frecuentes.html"
+                                                target="_blank">Consultar aquí</a></li>
                                         <li><a href="./Contacto.html" target="_blank">Contáctenos</a></li>
                                     </ul>
                                 </div>
@@ -175,11 +177,14 @@
                     <h4 id="Stock">Disponible o no</h4>
                     <div>
                         <div class="form-floating mb-3">
-                            <input type="number" class="form-control" id="floatingInput" placeholder="1" min="1" max="99">
+                            <input type="number" class="form-control" id="CantidadProducto" placeholder="1" min="1"
+                                max="99">
                             <label for="floatingInput">Cantidad</label>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-secondary Button_Compra">Agregar al carrito</button>
+                    <button id="AgregarProdCarrito" type="button" class="btn btn-secondary Button_Compra"
+                        onclick="AgregarProdCarrito()">Agregar al carrito</button>
+                        
                 </div>
             </section>
         </nav>
@@ -297,8 +302,10 @@
     ¿<!-- JSON Lista productos -->
     <script src="./JSON/ProductosJSON.js"></script>
     <!-- JS para el detalle producto -->
-     <script src="./JS/DetalleProd_Productos.js"></script>
-     
+    <script src="./JS/DetalleProd_Productos.js"></script>
+    <!-- JS para agregar el producto al carrito -->
+    <script src="./JS/Carrito_Carrito.js"></script>
+
 </body>
 
 </html>

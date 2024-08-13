@@ -68,7 +68,7 @@ function ListaLibros(data) {
         ContenedorLib.classList.add('col')
 
         Card = `        
-          <div id="ContenedorLibro" class="card mb-3 Caja_Cards_Princ">
+          <div id="ContenedorLibro" class="card mb-3 Caja_Cards_Princ Producto-Item">
             <div id="ContenedorTitulo" class="card-header">
                 <h3 id="TituloLibro">${Libro.NombreLibro}</h3>
               </div>

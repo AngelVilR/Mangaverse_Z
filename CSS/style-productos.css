@@ -10,9 +10,9 @@ main nav {
     grid-template-columns: repeat(3,1fr);    
 }
 
-#SelecCategorias label,
-#SelecIdioma label,
-#SelecEditorial label {
+#SelecCategorias p,
+#SelecIdioma p,
+#SelecEditorial p {
     margin-bottom: 0.5em;
 }
 

@@ -81,13 +81,8 @@ function MostrarDetProducto(id) {
         var Disponibilidad = document.getElementById('Stock');
         Disponibilidad.textContent = Libro.Stock;
 
-        /* 
-        <h2 id="PrecioProd"></h2>
-                    <h4 id="DisponibilidadProd">Disponible o no</h4>
-        */
-
-
-
-
+        /* Agregar carrito ProdDet */
+        var AgregarProd = document.getElementById('AgregarProdCarrito');
+        AgregarProd.dataset.idProd = Libro.ID;
     }
 }
