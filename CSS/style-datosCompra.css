@@ -28,6 +28,10 @@ main {
     margin: 1.5em;
 }
 
+#TipoDeEnvio{
+    gap: 1em;
+}
+
 #DatosTarjeta nav {
     margin: 1em 1.5em 2em;
 }
@@ -82,4 +86,6 @@ main {
     #ButtonFinalizar {        
         text-align: end;
     }
+
+
 }
