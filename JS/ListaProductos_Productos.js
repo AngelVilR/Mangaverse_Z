@@ -79,10 +79,9 @@ function ListaLibros(data) {
 
             <div id="ContenedorCompras" class="card-body Caja_Cards_Body">
                 <p id="PrecioLibro" class="card-text">&#x20a1;${Libro.Precio}</p>                
-                <button id="AgregarCarrito" type="button" class="btn btn-secondary Button_Compra">Agregar al
-                  carrito</button>
+                <button id="AgregarCarrito" type="button" class="btn btn-secondary Button_Compra">Agregar al carrito</button>
                   <button id="VerMas" type="button"
-                    class="btn btn-secondary Button_Detalle" onclick="DetalleLibro(${Libro.ID})" >Ver más detalles</button>
+                    class="btn btn-secondary Button_Detalle" onclick="DetalleLibro(${Libro.ID})">Ver más detalles</button>
               </div>
           </div>        
         `
