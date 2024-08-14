@@ -1,13 +1,13 @@
 /* Agregar el producto desde detalle */
 function AgregarProdCarritoDet() {
-    var oProd = CrearProd();
+    var oProd = CrearProdDet();
     if (!oProd) {
         return;
     }
-    GuardarProdLocal(oProd);
+    GuardarProdLocalDet(oProd);
 }
 
-function CrearProd() {
+function CrearProdDet() {
     var BtnProd = document.getElementById('AgregarProdCarrito');
     var IDProducto = BtnProd.dataset.idProd;
 
@@ -35,7 +35,7 @@ function CrearProd() {
     return oLibro;
 }
 
-function GuardarProdLocal(element) {
+function GuardarProdLocalDet(element) {
     var ListaProdComprar = new Array();
     if (localStorage.getItem('CompraProds')) {
         ListaProdComprar = JSON.parse(localStorage.getItem('CompraProds'));
@@ -59,8 +59,7 @@ function GuardarProdLocal(element) {
     }
 
     localStorage.setItem('CompraProds', JSON.stringify(ListaProdComprar));
-    /*console.log(JSON.parse(localStorage.getItem('ListaProdComprar')));
-    */
+    console.log(JSON.parse(localStorage.getItem('ListaProdComprar')));    
 }
 
 function ValidarCantidad(pCant) {
@@ -79,3 +78,62 @@ function ValidarCantidad(pCant) {
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 
 /* Agregar el producto desde el catálgo */
+function AgregarProdCarritoCat(component) {
+    var oProd = CrearProdCat(component);
+    if (!oProd) {
+        return;
+    }
+    GuardarProdLocalCat(oProd);
+}
+
+function CrearProdCat(component) {    
+    var ComponentHTML = $(component).closest('div.Producto-Item');
+
+    var IDProducto = component.dataset.idProd;
+
+    var Titulo = $(ComponentHTML).find('#TituloLibro').text();
+
+    var Cantidad = 1;
+
+    var Precio = $(ComponentHTML).find('#PrecioLibro').text();;
+    Precio = Precio.substring(1, Precio.length);
+
+    var Subtotal = Precio * Cantidad;
+
+    var oLibro = {
+        IDProducto,
+        Titulo,
+        Cantidad,
+        Precio,
+        Subtotal
+    };
+
+    return oLibro;
+}
+
+function GuardarProdLocalCat(element) {
+    var ListaProdComprar = new Array();
+    if (localStorage.getItem('CompraProds')) {
+        ListaProdComprar = JSON.parse(localStorage.getItem('CompraProds'));
+    }
+
+    if (ListaProdComprar.length > 0) {
+        let index = ListaProdComprar.findIndex((oTempLib) => oTempLib.IDProducto == element.IDProducto);
+
+        if (index != -1) {
+            ListaProdComprar[index].Cantidad += 1 ;
+            ListaProdComprar[index].Subtotal = ListaProdComprar[index].Cantidad * element.Precio;
+            $.notify("¡Se ha agregado el producto al carrito!", "success");
+        } else {
+            ListaProdComprar.push(element);
+            $.notify("¡Se ha agregado el producto al carrito!", "success");
+        }
+
+    } else {
+        ListaProdComprar.push(element);
+        $.notify("¡Se ha agregado el producto al carrito!", "success");
+    }
+
+    localStorage.setItem('CompraProds', JSON.stringify(ListaProdComprar));
+    console.log(JSON.parse(localStorage.getItem('ListaProdComprar')));    
+}
