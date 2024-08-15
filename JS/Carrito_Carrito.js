@@ -78,24 +78,21 @@ function ValidarCantidad(pCant) {
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 
 /* Agregar el producto desde el catálgo */
-function AgregarProdCarritoCat(component) {
-    var oProd = CrearProdCat(component);
-    if (!oProd) {
-        return;
-    }
+function AgregarProdCarritoCat(element) {
+    var oProd = CrearProdCat(element);
     GuardarProdLocalCat(oProd);
 }
 
-function CrearProdCat(component) {    
-    var ComponentHTML = $(component).closest('div.Producto-Item');
+function CrearProdCat(element) {    
+    var ComponentHTML = $(element).closest('div.Producto-Item');
 
-    var IDProducto = component.dataset.idProd;
+    var IDProducto = element.dataset.id;
 
-    var Titulo = $(ComponentHTML).find('#TituloLibro').text();
+    var Titulo = $(ComponentHTML).find('.Titulo_Item').text();
 
     var Cantidad = 1;
 
-    var Precio = $(ComponentHTML).find('#PrecioLibro').text();;
+    var Precio = $(ComponentHTML).find('.Precio_Item').text();;
     Precio = Precio.substring(1, Precio.length);
 
     var Subtotal = Precio * Cantidad;
@@ -137,3 +134,6 @@ function GuardarProdLocalCat(element) {
     localStorage.setItem('CompraProds', JSON.stringify(ListaProdComprar));
     console.log(JSON.parse(localStorage.getItem('ListaProdComprar')));    
 }
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+

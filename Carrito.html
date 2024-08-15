@@ -6,14 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrito de compras</title>
   <!-- Agregar icono en la pestaña de la página -->
-  <link rel="shortcut icon" href="./IMG/Mangaverse_Z_V4_Pag.png"/>
+  <link rel="shortcut icon" href="./IMG/Mangaverse_Z_V4_Pag.png" />
   <!-- Link del bootstrap CSS-->
   <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
   <!-- Link del estilo de bootstrap estándar CSS -->
   <link rel="stylesheet" href="./CSS/bootstrap.min.css">
   <!-- Link del estilo de la página inicio -->
   <link rel="stylesheet" href="./CSS/style-Inicio.css">
-
   <!-- link style carrito -->
   <link rel="stylesheet" href="./CSS/style-carrito.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -96,7 +95,8 @@
 
           <hr class="my-4">
 
-          <nav id="DetalleProd" class="Centrado">
+
+          <nav id="DetalleProd">
             <!-- Nombre del producto -->
             <div>
               <h6>Nombre</h6>
@@ -115,18 +115,16 @@
             </div>
 
             <!-- Boton eliminar -->
-            <div>        
-                <div class="dropdown">
-                  <button class="dropbtn"><img id="TresPuntos" src="./IMG/tres-puntos.png" alt="Icono de tres puntos"></button>
-                  <div class="dropdown-content">
-                    <button id="EliminarProd" type="button"><i id="IconoTrash" class="bi bi-trash"></i>Eliminar</button>
-                  </div>
-                </div>            
+            <div>
+              <div class="dropdown">
+                <button class="dropbtn"><img id="TresPuntos" src="./IMG/tres-puntos.png"
+                    alt="Icono de tres puntos"></button>
+                <div class="dropdown-content">
+                  <button id="EliminarProd" type="button"><i id="IconoTrash" class="bi bi-trash"></i>Eliminar</button>
+                </div>
+              </div>
             </div>
-
-          </nav>
-
-          <hr class="my-4">
+          </nav>          
 
           <nav id="TotalDet">
             <div>
@@ -136,13 +134,14 @@
               <h3 id="Total_Pagar">&#x20a1;Total</h3>
             </div>
           </nav>
-        </nav>        
+        </nav>
 
         <nav id="ButtonsFinalCarrito">
           <div><a href="./Productos.html"><button type="button" class="btn Button_SeguirComprando">Seguir
                 comprando</button></a></div>
-          <div><a href="./Datos-Compra.html"><button type="button" class="btn Button_Compra">Procesar compra</button></a></div>
-        </nav>        
+          <div><a href="./Datos-Compra.html"><button type="button" class="btn Button_Compra">Procesar
+                compra</button></a></div>
+        </nav>
 
 
       </section>
@@ -261,6 +260,8 @@
 
   <!-- Link del bootstrap JS-->
   <script src="./Bootstrap/js/bootstrap.min.js"></script>
+  <!-- Mostrar detalle carrito -->
+  <script src="./JS/DetCarrito_Carrito.js"></script>
 </body>
 
 </html>

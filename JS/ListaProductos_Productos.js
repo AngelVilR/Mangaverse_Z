@@ -70,7 +70,7 @@ function ListaLibros(data) {
         Card = `        
           <div id="ContenedorLibro" class="card mb-3 Caja_Cards_Princ Producto-Item">
             <div id="ContenedorTitulo" class="card-header">
-                <h3 id="TituloLibro">${Libro.NombreLibro}</h3>
+                <h3 id="TituloLibro" class="Titulo_Item">${Libro.NombreLibro}</h3>
               </div>
 
             <div id="ContenedorImagen">
@@ -78,10 +78,9 @@ function ListaLibros(data) {
               </div>
 
             <div id="ContenedorCompras" class="card-body Caja_Cards_Body">
-                <p id="PrecioLibro" class="card-text">&#x20a1;${Libro.Precio}</p>                
-                <button id="AgregarCarrito" type="button" class="btn btn-secondary Button_Compra" onclick="AgregarProdCarritoCat(this)" data-idProd="${Libro.ID}">Agregar al carrito</button>
-                  <button id="VerMas" type="button"
-                    class="btn btn-secondary Button_Detalle" onclick="DetalleLibro(${Libro.ID})">Ver más detalles</button>
+                <p id="PrecioLibro" class="card-text Precio_Item">&#x20a1;${Libro.Precio}</p>                
+                <button id="AgregarCarrito" type="button" class="btn btn-secondary Button_Compra" onclick="AgregarProdCarritoCat(this)" data-id="${Libro.ID}">Agregar al carrito</button>
+                  <button id="VerMas" type="button" class="btn btn-secondary Button_Detalle" onclick="DetalleLibro(${Libro.ID})">Ver más detalles</button>
               </div>
           </div>        
         `
