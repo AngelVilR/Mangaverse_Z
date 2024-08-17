@@ -6,7 +6,7 @@ var fecha = document.getElementById("Ifecha");
 var telefono = document.getElementById("Itelefono");
 var motivo = document.getElementById("cmbMotivo");
 var mensaje = document.getElementById("Imensaje");
-
+var rdbMasculino = document.getElementById('optionsRadios1')
 
 function valiarTelefono(numero) {
   var expresion = /^\d{8}$/
@@ -69,10 +69,20 @@ document.querySelector(".formulario").addEventListener("submit", (event) => {
     validacion = false;
   }
 
-
   if(!validacion){
     event.preventDefault();
+    return;
   }
+
+  Swal.fire({
+    position: "center",            
+    icon: "success",
+    title: "Se ha enviado el formulario de contacto",
+    showConfirmButton: false,
+    timer: 1500
+  });
+  VaciarInputs();
+
 });
 
 function validarNombre(texto){
@@ -116,7 +126,13 @@ function validarFecha(date){
       return true;
     }else{
       fecha.classList.remove('is-invalid');
-      alert("Lo sentimos, las compras en la tienda online Mangaverse Z se limitan a personas mayores de 18 años");
+      
+      Swal.fire({
+        position: "center",            
+        icon: "warning",
+        title: "Lo sentimos",
+        text: "Las compras en la tienda online Mangaverse Z se limitan a personas mayores de 18 años",
+      });
       return false;
     }
   }
@@ -132,4 +148,15 @@ function calcularEdad(date){
   }
 
   return edad;
+}
+
+
+function VaciarInputs() {
+  correo.value = "";
+  nombre.value = "";
+  fecha.value = undefined;
+  rdbMasculino.checked = true;
+  telefono.value = "";
+  motivo.value = "";
+  mensaje.value = "";
 }

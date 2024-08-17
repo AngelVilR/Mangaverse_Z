@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mangaverse Z</title>
   <!-- Agregar icono en la pestaña de la página -->
-  <link rel="shortcut icon" href="./IMG/Mangaverse_Z_V4_Pag.png" />
+  <link rel="shortcut icon" href="./IMG/Mangaverse_Z_V4_Pag.png"   />
   <!-- Link del bootstrap CSS-->
   <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
   <!-- Link del estilo de bootstrap estándar CSS -->
@@ -15,13 +15,14 @@
   <link rel="stylesheet" href="./CSS/style-Inicio.css">
   <!-- Link de style contacto -->
   <link rel="stylesheet" href="./CSS/style-contacto.css">
-
   <!-- link del leaflet -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
   <!-- Make sure you put this AFTER Leaflet's CSS -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- Link para las alertas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.4/dist/sweetalert2.min.css">
 </head>
 
 <body>
@@ -72,12 +73,12 @@
       <h3>Cualquier consulta ¡Te la responderemos lo más rápido posible!</h3>
 
       <h4><b>Correo</b></h4>
-      <p>                
+      <p>
         mangaversez777@gmail.com
       </p>
 
-      <h4><b>Teléfonos</b></h4>        
-      <p>        
+      <h4><b>Teléfonos</b></h4>
+      <p>
         +506 8312-3456
         <br><br>
         +506 2510-5678
@@ -94,70 +95,73 @@
       <aside>
         <h3><b>Formulario de contacto</b></h3>
         <form class="formulario  needs-validation" novalidate>
-          <!-- <fieldset> -->        
-            <div class="mb-3">
-              <label for="Iemail" class="form-label">Correo electronico</label>
-              <div class="input-group has-validation">
-                <input type="email" class="form-control" id="Iemail" aria-describedby="inputGroupPrepend" placeholder="correo@ejemplo.com" required>
-                <div class="invalid-feedback">
-                  Correo electrónico no válido
-                </div>
+          <!-- <fieldset> -->
+          <div class="mb-3">
+            <label for="Iemail" class="form-label">Correo electronico</label>
+            <div class="input-group has-validation">
+              <input type="email" class="form-control" id="Iemail" aria-describedby="inputGroupPrepend"
+                placeholder="correo@ejemplo.com" required>
+              <div class="invalid-feedback">
+                Correo electrónico no válido
               </div>
             </div>
-      
-            <div class="mb-3">
-              <label for="Inombre" class="form-label">Nombre completo</label>
-              <div class="input-group has-validation">
-                <input type="text" class="form-control" id="Inombre" aria-describedby="inputGroupPrepend" placeholder="Nombre completo" required>
-                <div class="invalid-feedback">
-                  Este campo es obligatorio
-                </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="Inombre" class="form-label">Nombre completo</label>
+            <div class="input-group has-validation">
+              <input type="text" class="form-control" id="Inombre" aria-describedby="inputGroupPrepend"
+                placeholder="Nombre completo" required>
+              <div class="invalid-feedback">
+                Este campo es obligatorio
               </div>
             </div>
-      
-            <div class="mb-3">
-              <label for="Ifecha" class="form-label">Fecha de nacimiento</label>
-              <div class="input-group has-validation">
-                <input type="date" class="form-control" id="Ifecha" aria-describedby="inputGroupPrepend" required>
-                <div class="invalid-feedback">
-                  Este campo es obligatorio
-                </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="Ifecha" class="form-label">Fecha de nacimiento</label>
+            <div class="input-group has-validation">
+              <input type="date" class="form-control" id="Ifecha" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                Este campo es obligatorio
               </div>
             </div>
-      
-            <label for="chk-box" class="form-label">Género</label>
+          </div>
+
+          <label for="chk-box" class="form-label">Género</label>
           <div class="mb-3 caja-rdb" id="chk-box">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1"
+                checked>
               <label class="form-check-label" for="optionsRadios1">
                 Masculino
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2" >
+              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
               <label class="form-check-label" for="optionsRadios2">
                 Femenino
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios3" value="option3"
-                >
+              <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
               <label class="form-check-label" for="optionsRadios3">
                 Otro
               </label>
             </div>
           </div>
-      
+
           <div class="mb-3">
             <label for="Itelefono" class="form-label">Teléfono</label>
             <div class="input-group has-validation">
-              <input type="tel" class="form-control" id="Itelefono" aria-describedby="inputGroupPrepend" placeholder="(+506) 88888888" required>
-              <div id="Errtelefono"  class="invalid-feedback">
+              <input type="tel" class="form-control" id="Itelefono" aria-describedby="inputGroupPrepend"
+                placeholder="(+506) 88888888" required>
+              <div id="Errtelefono" class="invalid-feedback">
                 Teléfono no válido
               </div>
             </div>
           </div>
-      
+
           <div class="mb-3">
             <label for="cmbMotivo" class="form-label">Motivo de contacto</label>
             <select class="form-select" id="cmbMotivo" required>
@@ -172,19 +176,20 @@
               Debe seleccionar una opción
             </div>
           </div>
-      
-            <div class="mb-3">
-              <label for="Imensaje" class="form-label">Mensaje</label>
-              <div class="input-group has-validation">
-                <textarea class="form-control" id="Imensaje" aria-describedby="inputGroupPrepend" rows="3" required></textarea>
-                <div class="invalid-feedback">
-                  Este campo es obligatorio
-                </div>
+
+          <div class="mb-3">
+            <label for="Imensaje" class="form-label">Mensaje</label>
+            <div class="input-group has-validation">
+              <textarea class="form-control" id="Imensaje" aria-describedby="inputGroupPrepend" rows="3"
+                required></textarea>
+              <div class="invalid-feedback">
+                Este campo es obligatorio
               </div>
             </div>
+          </div>
 
-            <button id="enviar" type="submit" class="btn btn-primary">Enviar</button>
-            <!-- </fieldset> -->
+          <button id="enviar" type="submit" class="btn btn-primary">Enviar</button>
+          <!-- </fieldset> -->
         </form>
       </aside>
     </section>
@@ -232,7 +237,8 @@
             <h6 class="text-uppercase fw-bold">Mangaverse Z</h6>
             <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
             <p>Tu tienda especializada en mangas y cómics en Costa Rica.
-              Visita nuestra tienda física o página web y sumérgete en el emocionante mundo del manga y cómics con Mangaverse Z.
+              Visita nuestra tienda física o página web y sumérgete en el emocionante mundo del manga y cómics con
+              Mangaverse Z.
             </p>
           </div>
           <!-- Grid column -->
@@ -292,12 +298,13 @@
 
 
   <!-- link js form -->
-   <script src="./JS/form.js"></script>
+  <script src="./JS/form.js"></script>
   <!-- link mapa.js -->
   <script src="./JS/mapa.js"></script>
-
   <!-- Link del bootstrap JS-->
   <script src="./Bootstrap/js/bootstrap.min.js"></script>
+  <!-- Alertas dulces -->
+  <script src="./JS/SweerAlerts/sweetalert2.all.min.js"></script>
 </body>
 
 </html>

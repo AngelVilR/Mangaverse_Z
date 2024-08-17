@@ -47,17 +47,33 @@ function GuardarProdLocalDet(element) {
         if (index != -1) {
             ListaProdComprar[index].Cantidad = element.Cantidad;
             ListaProdComprar[index].Subtotal = element.Cantidad * element.Precio;
-            $.notify("¡Se ha modificado la cantidad de este producto!", "success");
+            Swal.fire({
+                position: "center",            
+                icon: "info",
+                title: "¡Se ha modificado la cantidad de este producto!",
+                showConfirmButton: false,
+                timer: 1500
+              });
         } else {
             ListaProdComprar.push(element);
-            $.notify("¡Se ha agregado el producto al carrito!", "success");
+            Swal.fire({
+                position: "center",            
+                icon: "success",
+                title: "¡Se ha agregado el producto al carrito!",
+                showConfirmButton: false,
+                timer: 1500
+              });
         }
-
     } else {
         ListaProdComprar.push(element);
-        $.notify("¡Se ha agregado el producto al carrito!", "success");
+        Swal.fire({
+            position: "center",            
+            icon: "success",
+            title: "¡Se ha agregado el producto al carrito!",
+            showConfirmButton: false,
+            timer: 1500
+          });
     }
-
     localStorage.setItem('CompraProds', JSON.stringify(ListaProdComprar));
     console.log(JSON.parse(localStorage.getItem('ListaProdComprar')));    
 }
@@ -67,13 +83,24 @@ function ValidarCantidad(pCant) {
         if ((pCant > 0) && (pCant < 31)) {
             return true
         }
-        $.notify("¡La cantidad digitada no es válida!\nDebe de seleccionar una cantidad entre 1 a 99", "warn");
+        Swal.fire({
+            position: "center",            
+            icon: "error",
+            title: "¡La cantidad digitada no es válida!",
+            showConfirmButton: false,
+            timer: 1500
+          });        
         return false;
     } else {
-        $.notify("Debe de digitar una cantidad", "warn");
+        Swal.fire({
+            position: "center",            
+            icon: "warning",
+            title: "Debe de digitar una cantidad para agregar el producto",
+            showConfirmButton: false,
+            timer: 1500
+          });
         return false;
     }
-
 }
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 
@@ -120,17 +147,34 @@ function GuardarProdLocalCat(element) {
         if (index != -1) {
             ListaProdComprar[index].Cantidad += 1 ;
             ListaProdComprar[index].Subtotal = ListaProdComprar[index].Cantidad * element.Precio;
-            $.notify("¡Se ha agregado el producto al carrito!", "success");
+            Swal.fire({
+                position: "center",            
+                icon: "success",
+                title: "¡Se ha agregado el producto al carrito!",
+                showConfirmButton: false,
+                timer: 1500
+              });
         } else {
             ListaProdComprar.push(element);
-            $.notify("¡Se ha agregado el producto al carrito!", "success");
+            Swal.fire({
+                position: "center",            
+                icon: "success",
+                title: "¡Se ha agregado el producto al carrito!",
+                showConfirmButton: false,
+                timer: 1500
+              });
         }
 
     } else {
         ListaProdComprar.push(element);
-        $.notify("¡Se ha agregado el producto al carrito!", "success");
+        Swal.fire({
+            position: "center",            
+            icon: "success",
+            title: "¡Se ha agregado el producto al carrito!",
+            showConfirmButton: false,
+            timer: 1500
+          });
     }
-
     localStorage.setItem('CompraProds', JSON.stringify(ListaProdComprar));
     console.log(JSON.parse(localStorage.getItem('ListaProdComprar')));    
 }
