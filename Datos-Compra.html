@@ -108,6 +108,9 @@
                   placeholder="123456789"
                 />
                 <label for="floatingInput">Número de cédula</label>
+                <div class="invalid-feedback">
+                  Este campo es obligatorio
+                </div>
               </nav>
   
               <nav class="form-floating mb-3">
@@ -118,6 +121,9 @@
                   placeholder="Nombre completo"
                 />
                 <label for="floatingInput">Nombre completo</label>
+                <div class="invalid-feedback">
+                  Este campo es obligatorio
+                </div>
               </nav>
   
               <nav class="form-floating mb-3">
@@ -128,17 +134,23 @@
                   placeholder="ejemplo@gmail.com"
                 />
                 <label for="floatingInput">Correo electrónico</label>
+                <div class="invalid-feedback">
+                  Este campo es obligatorio
+                </div>
               </nav>
   
               <nav class="form-floating mb-3">
                 <input
-                  type="number"
+                  type="text"
                   class="form-control"
                   id="TelefonoCliente"
                   placeholder="12345678"
                   style="appearance: textfield; -webkit-appearance: none"
                 />
                 <label for="floatingInput">Número de Teléfono</label>
+                <div class="invalid-feedback">
+                  Este campo es obligatorio
+                </div>
               </nav>
   
               <nav id="TipoDeEnvio" class="form-floating mb-3 d-flex">
@@ -156,31 +168,39 @@
                 </div>
               </nav>
   
-              <nav class="form-floating mb-3">
-                <input
-                  type="number"
-                  class="form-control"
-                  id="PostalCliente"
-                  placeholder="1234"
-                  style="
-                    appearance: textfield;
-                    -webkit-appearance: none;
-                    margin: 0;
-                  "
-                />
-                <label for="floatingInput">Código postal</label>
-              </nav>
-  
-              <nav>
-                <label for="exampleTextarea" class="form-label mt-4"
-                  ><b>Dirección de destino</b></label
-                >
-                <textarea
-                  class="form-control"
-                  id="DireccionCliente"
-                  rows="3"
-                ></textarea>
-              </nav>
+              <div id="paquete">
+                <nav class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="PostalCliente"
+                    placeholder="1234"
+                    style="
+                      appearance: textfield;
+                      -webkit-appearance: none;
+                      margin: 0;
+                    "
+                  />
+                  <label for="floatingInput">Código postal</label>
+                  <div class="invalid-feedback">
+                    Este campo es obligatorio
+                  </div>
+                </nav>
+    
+                <nav>
+                  <label for="exampleTextarea" class="form-label mt-4"
+                    ><b>Dirección de destino</b></label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="DireccionCliente"
+                    rows="3"
+                  ></textarea>
+                  <div class="invalid-feedback">
+                    Este campo es obligatorio
+                  </div>
+                </nav>
+              </div>
 
             </form>
           </section>
@@ -192,13 +212,17 @@
 
             <nav class="form-floating mb-3">
               <input
-                type="number"
+                type="text"
                 class="form-control"
-                id="PostalCliente"
+                id="Ntarjeta"
                 placeholder="1234 5678 9123 4567"
                 style="appearance: textfield; -webkit-appearance: none"
+                maxlength="16"
               />
               <label for="floatingInput">Número de tarjeta</label>
+              <div class="invalid-feedback">
+                Este campo es obligatorio
+              </div>
             </nav>
 
             <nav class="EspacioFechaVenc">
@@ -207,6 +231,7 @@
                 <div>
                   <label for="exampleSelect1" class="form-label">Mes</label>
                   <select class="form-select" id="TarjetaMes">
+                    <option selected disabled value="">Mes</option>
                     <option>1</option>
                   </select>
                 </div>
@@ -214,6 +239,7 @@
                 <div>
                   <label for="exampleSelect2" class="form-label">Año</label>
                   <select class="form-select" id="TarjetaAnno">
+                    <option selected disabled value="">Año</option>
                     <option>2024</option>
                   </select>
                 </div>
@@ -222,23 +248,30 @@
 
             <nav class="form-floating mb-3">
               <input
-                type="number"
+                type="text"
                 class="form-control"
-                id="PostalCliente"
+                id="cvv"
                 placeholder="1234 5678 9123 4567"
                 style="appearance: textfield; -webkit-appearance: none"
               />
               <label for="floatingInput">Código de seguridad</label>
+              <div class="invalid-feedback">
+                Este campo es obligatorio
+              </div>
             </nav>
           </section>
 
           <nav id="ButtonFinalizar">
             <div>
-              <a href="./FacturaProds.html"
+              <!-- <a href="./FacturaProds.html"
                 ><button type="button" class="btn DisennoBtnFinalizar">
                   Finalizar compra
                 </button></a
-              >
+              > -->
+              <button type="button" class="btn DisennoBtnFinalizar" id="enviar">
+                Finalizar compra
+              </button>
+
             </div>
           </nav>
         </nav>
