@@ -75,7 +75,7 @@ function GuardarProdLocalDet(element) {
           });
     }
     localStorage.setItem('CompraProds', JSON.stringify(ListaProdComprar));
-    console.log(JSON.parse(localStorage.getItem('ListaProdComprar')));    
+    /* console.log(JSON.parse(localStorage.getItem('CompraProds')));    */ 
 }
 
 function ValidarCantidad(pCant) {
@@ -176,7 +176,7 @@ function GuardarProdLocalCat(element) {
           });
     }
     localStorage.setItem('CompraProds', JSON.stringify(ListaProdComprar));
-    console.log(JSON.parse(localStorage.getItem('ListaProdComprar')));    
+    /* console.log(JSON.parse(localStorage.getItem('CompraProds'))); */    
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */

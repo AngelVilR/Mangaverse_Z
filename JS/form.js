@@ -19,8 +19,6 @@ function valiarTelefono(numero) {
   return expresion.test(numero);
 }
 
-
-
 function validarCorreo(email){
   var expresion = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   
@@ -36,10 +34,6 @@ function validarCorreo(email){
   alert(correo.value);
 }
   
-
-
-
-
 document.querySelector(".formulario").addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -94,7 +88,6 @@ function validarNombre(texto){
     return true;
   }
 }
-
 
 function validarMensaje(texto){
   if(!mensaje.value.trim()){

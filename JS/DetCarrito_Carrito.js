@@ -32,24 +32,22 @@ function MostrarDetCarrito() {
       Tempdiv.classList.add('Centrado');
 
       FilaProdHTML = `        
-            <!-- Nombre del producto -->
             <div>
               <h6>${NombreLocal}</h6>
             </div>
-            <!-- Cantidad -->
+
             <div class="Cantidad_Caja">
               <input type="number" class="form-control" id="CantidadProd" value="${CantidadLocal}" min="1" max="30" onchange="ActualizarCantProd(this)" data-id="${elementY.IDProducto}">
             </div>
-            <!-- Precio -->
+
             <div>
               <h6 id="PrecioProd">&#x20a1;${PrecioLocal}</h6>
             </div>
-            <!-- Subtotal -->
+
             <div>
               <h6 id="SubtotalProd">&#x20a1;${SubtotalLocal}</h6>
             </div>
-
-            <!-- Boton eliminar -->
+            
             <div>        
                 <div class="dropdown">
                   <button class="dropbtn"><img id="TresPuntos" src="./IMG/tres-puntos.png" alt="Icono de tres puntos"></button>

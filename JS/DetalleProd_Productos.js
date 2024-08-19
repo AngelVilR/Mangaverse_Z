@@ -28,26 +28,26 @@ function MostrarDetProducto(id) {
         
         /* Información Productos */
         var Titulo = document.getElementById('TituloProd');
-        Titulo.textContent = Libro.NombreLibro;
+        Titulo.textContent = Libro.NombreLibro ? Libro.NombreLibro : 'No registrado';
 
         var Calif = document.getElementById('CalificacionProd');
         Calif.src = Libro.Resenna;
         Calif.alt = `Calificación del producto ${Libro.NombreLibro}`;
 
         var Autor = document.getElementById('AutorProd');
-        Autor.innerHTML = `<b>Autor: </b>${Libro.Autor}`;
+        Autor.innerHTML = `<b>Autor: </b>${Libro.Autor ? Libro.Autor : 'No registrado'}`;
 
         var Edit = document.getElementById('EditorialProd');
-        Edit.innerHTML = `<b>Editorial: </b>${Libro.Editorial}`;
+        Edit.innerHTML = `<b>Editorial: </b>${Libro.Editorial ? Libro.Editorial : 'No registrado'}`;
 
         var ISBN = document.getElementById('ISBNProd');
-        ISBN.innerHTML = `<b>ISBN: </b>${Libro.ISBN}`;
+        ISBN.innerHTML = `<b>ISBN: </b>${Libro.ISBN ? Libro.ISBN : 'No registrado'}`;
 
         var Anno = document.getElementById('AnnoProd');
-        Anno.innerHTML = `<b>Año de publicación: </b>${Libro.AnnoPublicacion}`;
+        Anno.innerHTML = `<b>Año de publicación: </b>${Libro.AnnoPublicacion ? Libro.AnnoPublicacion : 'No registrado'}`;
 
         var Idiom = document.getElementById('IdiomaProd');
-        Idiom.innerHTML = `<b>Idiom: </b>${Libro.Idioma}`;
+        Idiom.innerHTML = `<b>Idioma: </b>${Libro.Idioma ? Libro.Idioma : 'No registrado'}`;
 
         var Categ = document.getElementById('CategoriasProd');
         for (let i = 0; i < Libro.Categorias.length; i++) {
@@ -61,7 +61,7 @@ function MostrarDetProducto(id) {
         }
 
         var Descrip = document.getElementById('DescripProd');
-        Descrip.textContent = Libro.Descripcion;
+        Descrip.textContent = (Libro.Descripcion ? Libro.Descripcion : 'No posee descripción este producto');
 
         var TiemproEnt = document.getElementById('TiempoProd');
         TiemproEnt.innerHTML = `<b>Tiempo de entrega:</b> ${Libro.TiempoEntrega}`;

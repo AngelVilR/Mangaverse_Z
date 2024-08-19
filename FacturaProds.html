@@ -62,7 +62,8 @@
     <main>
         <nav>
             <section id="Factura" class="EstiloFactura">
-                <h1>Factura</h1>
+                <h1>¡Gracias por comprar!</h1>
+                <h2>Factura</h2>
 
                 <div id="InfoEmpresa">
                     <nav>
@@ -80,66 +81,68 @@
                 <div id="EncFactura">
                     <nav>
                         <h3>Información del cliente</h3>
-                        <p><b>Nombre del cliente: </b></p>
-                        <p><b>Correo electrónico: </b></p>
-                        <p><b>Teléfono:</b></p>                        
-                        <p><b>Código postal:</b></p>
-                        <p><b>Dirección destino:</b></p>
+                        <p id="IDClien"><b>Cédula del cliente: </b></p>
+                        <p id="NombreClien"><b>Nombre del cliente: </b></p>
+                        <p id="CorreoClien"><b>Correo electrónico: </b></p>
+                        <p id="TelefonoClien"><b>Teléfono:</b></p>
+                        <p id="PostalClien"><b>Código postal:</b></p>
+                        <p id="DirClien"><b>Dirección destino:</b></p>
                     </nav>
 
                     <nav>
                         <h3>Información de la compra</h3>
-                        <p><b>Fecha de compra:</b></p>
-                        <p><b>Recoger en tienda o enviarlo por correo</b></p>
-                        <p><b>Cantidad de productos comprados: </b></p>
+                        <p id="FechaClien"><b>Fecha de compra:</b></p>
+                        <p id="PaqClien"><b>Recoger en tienda o enviarlo por correo</b></p>
                     </nav>
                 </div>
 
                 <div id="DetFactura">
                     <h3>Detalle factura</h3>
-                    <nav id="TitulosDet" class="FlexDetalle">
-                        <nav>
-                            <h6>Nombre</h6>
-                          </nav>
-                          
-                          <nav>
-                            <h6>Cantidad</h6>
-                          </nav>
-                          
-                          <nav>
-                            <h6>Precio</h6>
-                          </nav>
-                          
-                          <nav>
-                            <h6>Subtotal</h6>
-                          </nav>
+                    <nav id="TitulosDet">
+                        <div class="FlexDetalle">
+                            <nav>
+                                <h6>Nombre</h6>
+                            </nav>
+    
+                            <nav>
+                                <h6>Cantidad</h6>
+                            </nav>
+    
+                            <nav>
+                                <h6>Precio</h6>
+                            </nav>
+    
+                            <nav>
+                                <h6>Subtotal</h6>
+                            </nav>
+                        </div>
                     </nav>
-                    
+
                     <!-- Titulos -->
-                    <nav id="ResumemDet" class="FlexDetalle">
-                        <nav>
+                    <nav id="ResumemDet">                        
+                        <!-- <nav>
                             <p>Dragon ball Z Vol 10</p>
-                          </nav>
-                          
-                          <nav>
+                        </nav>
+
+                        <nav>
                             <p>5</p>
-                          </nav>
-                          
-                          <nav>
+                        </nav>
+
+                        <nav>
                             <p>&#x20a1;1000</p>
-                          </nav>
-                          
-                          <nav>
+                        </nav>
+
+                        <nav>
                             <p>&#x20a1;1000</p>
-                          </nav>
+                        </nav> -->
                     </nav>
 
                     <nav id="TotalDet">
                         <div>
-                          <h3>Total</h3>
-                          <p id="Total">&#x20a1;10000</p>
+                            <h3>Total</h3>
+                            <p id="Total">&#x20a1;10000</p>
                         </div>
-                      </nav>
+                    </nav>
                 </div>
 
             </section>
@@ -148,8 +151,9 @@
         <nav>
             <section id="VolverInicio">
                 <div>
-                    <a href="./index.html"><button type="button" class="btn ButtonInicio">Volver al menú principal</button></a>
-                  </div>  
+                    <a href="./index.html"><button type="button" class="btn ButtonInicio" id="BtnInicio">Volver al menú
+                            principal</button></a>
+                </div>
             </section>
         </nav>
 
@@ -259,6 +263,8 @@
 
     <!-- Link del bootstrap JS-->
     <script src="./Bootstrap/js/bootstrap.min.js"></script>
+    <!-- Mostrar detalle factura -->
+     <script src="./JS/Factura.js"></script>
 </body>
 
 </html>
