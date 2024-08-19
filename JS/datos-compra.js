@@ -221,8 +221,7 @@ recoger.addEventListener("change", actualizarCampos())
 document.getElementById("enviar").addEventListener("click", () => {
   var validacion = true;
   validacion = aplicarValidaciones();
-  if (validacion) {
-    alert("todo bien")
+  if (validacion) {    
     GuardarInfoLocal();
     window.location.href = './FacturaProds.html'
   }
