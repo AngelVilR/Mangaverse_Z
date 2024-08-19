@@ -140,14 +140,28 @@ function actualizarCampos(){
   }
 }
 
+function tipoTarjeta(bin){
+  if(bin.length >= 6){
+      numero = bin.substring(0,6);
+      console.log(numero)
+      fetch(`https://data.handyapi.com/bin/${numero}`)
+      .then(response => response.json())
+      .then(data => {
+          console.log(data)
+          if(data.Scheme == "VISA"){
+              console.log("Visa");
+              
+          }
+          if(data.Scheme == "MASTERCARD"){
+              console.log("MasterCard");
+          }
+      })
+  }else{
+      /* result.innerHTML = '' */
+  }
+}
 
-
-envio.addEventListener("change",actualizarCampos);
-recoger.addEventListener("change",actualizarCampos)
-
-
-document.getElementById("enviar").addEventListener("click",() => {
-
+function aplicarValidaciones(){
   var validacion = true;
 
   if(!validarCedula(id.value)){
@@ -191,6 +205,25 @@ document.getElementById("enviar").addEventListener("click",() => {
   if(!validarAno(ano)){
     validacion = false;
   }
+
+  return validacion;
+}
+
+
+envio.addEventListener("change",actualizarCampos);
+recoger.addEventListener("change",actualizarCampos)
+
+
+document.getElementById("enviar").addEventListener("click",() => {
+
+  var validacion = true;
+
+  validacion = aplicarValidaciones();
+
+
+
+
+
 
   if(validacion){
     alert("todo bien")
@@ -263,3 +296,11 @@ cvv.addEventListener("keydown",function(event){
       event.preventDefault();
     }
 })
+
+
+tarjeta.addEventListener("blur", () =>{
+  tipoTarjeta(tarjeta.value.trim());
+})
+
+
+/* continuar metodos despues de aqui */
