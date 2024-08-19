@@ -69,6 +69,10 @@ main {
     text-align: center;
 }
 
+
+
+
+
 @media (width >=992px) {
     #ContenedorPrincipal {
         display: grid;
@@ -86,6 +90,5 @@ main {
     #ButtonFinalizar {        
         text-align: end;
     }
-
 
 }

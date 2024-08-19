@@ -138,7 +138,7 @@ function validarAno(year) {
 
 function actualizarCampos() {
   if (recoger.checked) {
-    paquete.style.display = 'none'
+    paquete.style.display = 'none';
   } else {
     paquete.style.display = 'block';
   }
@@ -154,14 +154,11 @@ function tipoTarjeta(bin) {
         console.log(data)
         if (data.Scheme == "VISA") {
           console.log("Visa");
-
         }
         if (data.Scheme == "MASTERCARD") {
           console.log("MasterCard");
         }
       })
-  } else {
-    /* result.innerHTML = '' */
   }
 }
 
@@ -215,8 +212,8 @@ function aplicarValidaciones() {
 
 /* Eventos */
 /* ---------------------------------------------------------------------------------------------- */
-envio.addEventListener("change", actualizarCampos());
-recoger.addEventListener("change", actualizarCampos())
+envio.addEventListener("change", actualizarCampos);
+recoger.addEventListener("change", actualizarCampos)
 
 document.getElementById("enviar").addEventListener("click", () => {
   var validacion = true;
