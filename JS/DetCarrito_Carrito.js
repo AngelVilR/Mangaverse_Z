@@ -1,7 +1,7 @@
 function ProcesarCompra() {
   var ListaCarrito = JSON.parse(localStorage.getItem('CompraProds'));
   var Validacion = true;
-  if (ListaCarrito) {
+  if (ListaCarrito && ListaCarrito.length != 0) {
     ListaCarrito.forEach(Prod => {
       const CantidadTemp = Prod.Cantidad;
       /* var Validacion = ValidarCantidad(CantidadTemp); */
