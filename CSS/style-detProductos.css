@@ -64,8 +64,33 @@ main nav {
     padding: 1em 0em;
 }
 
+#Comentarios h2{
+    text-align: center;
+}
+
+.DisplayFlex{
+    display: flex;
+    gap: 0.5em;
+}
+
+.DisplayFlex h6{
+    margin-top: 0.3em;
+}
+
+#ContendorPadre{    
+    margin: 0em;
+}
+
+.SeparadoComentarios{
+    padding: 1em;    
+}
+
+.SeparadoComentarios div{
+    margin-bottom: 0.5em;
+}
+
 @media (width >=992px) {
-    main {
+    .DisplayGrid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);        
         gap: 1em;

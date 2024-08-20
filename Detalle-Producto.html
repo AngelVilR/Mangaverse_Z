@@ -62,131 +62,143 @@
     </header>
 
     <main>
-        <nav class="Contenedor_CaruselImg">
-            <section id="CaruselImg">
-                <div id="carouselExampleIndicators" class="carousel slide Bordeado">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div id="GaleriaImg" class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./IMG/Imagen_No_Encontrada.png" class="d-block w-100"
-                                alt="Imagen no encontrada #1">
+        <nav class="DisplayGrid">
+            <nav class="Contenedor_CaruselImg">
+                <section id="CaruselImg">
+                    <div id="carouselExampleIndicators" class="carousel slide Bordeado">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
                         </div>
-                        <div class="carousel-item">
-                            <img src="./IMG/Imagen_No_Encontrada.png" class="d-block w-100"
-                                alt="Imagen no encontrada #2">
+                        <div id="GaleriaImg" class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./IMG/Imagen_No_Encontrada.png" class="d-block w-100"
+                                    alt="Imagen no encontrada #1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./IMG/Imagen_No_Encontrada.png" class="d-block w-100"
+                                    alt="Imagen no encontrada #2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./IMG/Imagen_No_Encontrada.png" class="d-block w-100"
+                                    alt="Imagen no encontrada #3">
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="./IMG/Imagen_No_Encontrada.png" class="d-block w-100"
-                                alt="Imagen no encontrada #3">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon Carusel_Items_Icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon Carusel_Items_Icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </section>
+            </nav>
+
+            <nav class="Contenedor_ProductoInfo">
+                <section id="ProductoInfo">
+                    <div id="Caja_Info" class="card mb-3 Bordeado">
+                        <h3 id="TituloProd" class="card-header">Nombre del libro</h3>
+                        <div class="card-body">
+                            <h5 class="card-title">Calificación</h5>
+                            <img id="CalificacionProd" src="" alt="" width="120">
+                        </div>
+
+                        <div class="Linea"></div>
+
+                        <div class="card-body">
+                            <div>
+                                <ul class="nav nav-tabs nav-pills" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#Caracteristicas"
+                                            aria-selected="true" role="tab"><b>Características</b></a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#Descripcion"
+                                            aria-selected="false" role="tab" tabindex="-1"><b>Descripción</b></a>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#Mas" aria-selected="false"
+                                            role="tab" tabindex="-1"><b>Más</b></a>
+                                    </li>
+                                </ul>
+
+                                <div id="myTabContent" class="tab-content">
+                                    <div class="tab-pane fade active show" id="Caracteristicas" role="tabpanel">
+                                        <ul>
+                                            <li id="AutorProd"><b>Autor: </b></li>
+                                            <li id="EditorialProd"><b>Editorial: </b></li>
+                                            <li id="ISBNProd"><b>ISBN: </b></li>
+                                            <li id="AnnoProd"><b>Año de publicación: </b></li>
+                                            <li id="IdiomaProd"><b>Idioma: </b></li>
+                                            <li id="CategoriasProd"><b>Categorias:</b></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div id="myTabContent" class="tab-content">
+                                    <div class="tab-pane fade" id="Descripcion">
+                                        <p id="DescripProd">
+
+                                        </p>
+
+                                    </div>
+                                </div>
+
+
+                                <div id="myTabContent" class="tab-content">
+                                    <div class="tab-pane fade" id="Mas">
+                                        <ul>
+                                            <li id="TiempoProd"><b>Tiempo de entrega:</b> 4 días</li>
+                                            <li id="EntregaOpcProd"><b>Opciones de entrega:</b> Por envío postal o
+                                                recogido
+                                                en tienda</li>
+                                            <li id="GaranProd"><b>Garantía del producto:</b> </li>
+                                            <li><b>Cambios o devoluciones:</b> <a href="./Preguntas-Frecuentes.html"
+                                                    target="_blank">Consultar aquí</a></li>
+                                            <li><a href="./Contacto.html" target="_blank">Contáctenos</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon Carusel_Items_Icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon Carusel_Items_Icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </section>
-        </nav>
+                </section>
+            </nav>
 
-        <nav class="Contenedor_ProductoInfo">
-            <section id="ProductoInfo">
-                <div id="Caja_Info" class="card mb-3 Bordeado">
-                    <h3 id="TituloProd" class="card-header">Nombre del libro</h3>
-                    <div class="card-body">
-                        <h5 class="card-title">Calificación</h5>
-                        <img id="CalificacionProd" src="" alt="" width="120">
-                    </div>
-
-                    <div class="Linea"></div>
-
-                    <div class="card-body">
+            <nav class="Contenedor_AgregarCompra">
+                <section id="AgregarCompra">
+                    <div id="Caja_Comprar" class="card mb-3 Bordeado">
+                        <h2 id="PrecioProd"><b>&#x20a1;1000000</b></h2>
+                        <h4 id="Stock">Disponible o no</h4>
                         <div>
-                            <ul class="nav nav-tabs nav-pills" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link active" data-bs-toggle="tab" href="#Caracteristicas"
-                                        aria-selected="true" role="tab"><b>Características</b></a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link" data-bs-toggle="tab" href="#Descripcion" aria-selected="false"
-                                        role="tab" tabindex="-1"><b>Descripción</b></a>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link" data-bs-toggle="tab" href="#Mas" aria-selected="false"
-                                        role="tab" tabindex="-1"><b>Más</b></a>
-                                </li>
-                            </ul>
-
-                            <div id="myTabContent" class="tab-content">
-                                <div class="tab-pane fade active show" id="Caracteristicas" role="tabpanel">
-                                    <ul>
-                                        <li id="AutorProd"><b>Autor: </b></li>
-                                        <li id="EditorialProd"><b>Editorial: </b></li>
-                                        <li id="ISBNProd"><b>ISBN: </b></li>
-                                        <li id="AnnoProd"><b>Año de publicación: </b></li>
-                                        <li id="IdiomaProd"><b>Idioma: </b></li>
-                                        <li id="CategoriasProd"><b>Categorias:</b></li>
-                                    </ul>
-                                </div>
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control Bordeado" id="CantidadProducto" placeholder="1"
+                                    min="1" max="99">
+                                <label for="floatingInput">Cantidad</label>
                             </div>
-
-                            <div id="myTabContent" class="tab-content">
-                                <div class="tab-pane fade" id="Descripcion">
-                                    <p id="DescripProd">
-
-                                    </p>
-
-                                </div>
-                            </div>
-
-
-                            <div id="myTabContent" class="tab-content">
-                                <div class="tab-pane fade" id="Mas">
-                                    <ul>
-                                        <li id="TiempoProd"><b>Tiempo de entrega:</b> 4 días</li>
-                                        <li id="EntregaOpcProd"><b>Opciones de entrega:</b> Por envío postal o recogido
-                                            en tienda</li>
-                                        <li id="GaranProd"><b>Garantía del producto:</b> </li>
-                                        <li><b>Cambios o devoluciones:</b> <a href="./Preguntas-Frecuentes.html"
-                                                target="_blank">Consultar aquí</a></li>
-                                        <li><a href="./Contacto.html" target="_blank">Contáctenos</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
                         </div>
+                        <button id="AgregarProdCarrito" type="button" class="btn btn-secondary Button_Compra"
+                            onclick="AgregarProdCarritoDet()">Agregar al carrito</button>
                     </div>
-                </div>
-            </section>
+                </section>
+            </nav>
         </nav>
 
-        <nav class="Contenedor_AgregarCompra">
-            <section id="AgregarCompra">
-                <div id="Caja_Comprar" class="card mb-3 Bordeado">
-                    <h2 id="PrecioProd"><b>&#x20a1;1000000</b></h2>
-                    <h4 id="Stock">Disponible o no</h4>
-                    <div>
-                        <div class="form-floating mb-3">
-                            <input type="number" class="form-control" id="CantidadProducto" placeholder="1" min="1"
-                                max="99">
-                            <label for="floatingInput">Cantidad</label>
-                        </div>
-                    </div>
-                    <button id="AgregarProdCarrito" type="button" class="btn btn-secondary Button_Compra"
-                        onclick="AgregarProdCarritoDet()">Agregar al carrito</button>
-                </div>
+        <nav>
+            <section id="Comentarios">
+                <h2>Opiniones de los clientes sobre este producto</h2>
+                <nav id="ContendorPadre" class="DisplayGrid">
+                    <!-- Comentario Hija que se encuentran en DetalleProd_Productos.js -->
+                </nav>
             </section>
         </nav>
 
@@ -196,99 +208,104 @@
     <footer class="text-center text-lg-start text-white" style="background-color: rgb(23,20,31)">
         <!-- Section: Social media -->
         <section class="d-flex justify-content-between p-4" style="background-color: rgb(89,49,150)">
-          <!-- Left -->
-          <div class="me-5">
-            <span><b>¡Conoce nuestras redes sociales!</b></span>
-          </div>
-          <!-- Left -->
-    
-          <!-- Right -->
-          <div>
-            <a href="https://www.whatsapp.com/?lang=es_LA" class="me-4" target="_blank">
-              <img src="./IMG/whatsapp.png" alt="Icono de whatsapp">
-            </a>
-            <a href="https://www.facebook.com/?locale=es_LA" class=" me-4" target="_blank">
-              <img src="./IMG/facebook.png" alt="Icono de facebook">
-            </a>
-            <a href="https://x.com/?lang=es" class=" me-4" target="_blank">
-              <img src="./IMG/X (Twitter).png" alt="Icono de X (Twitter)" target="_blank">
-            </a>
-            <a href="https://www.instagram.com/" class=" me-4" target="_blank">
-              <img src="./IMG/instagram.png" alt="Icono de instagram">
-            </a>
-          </div>
-          <!-- Right -->
+            <!-- Left -->
+            <div class="me-5">
+                <span><b>¡Conoce nuestras redes sociales!</b></span>
+            </div>
+            <!-- Left -->
+
+            <!-- Right -->
+            <div>
+                <a href="https://www.whatsapp.com/?lang=es_LA" class="me-4" target="_blank">
+                    <img src="./IMG/whatsapp.png" alt="Icono de whatsapp">
+                </a>
+                <a href="https://www.facebook.com/?locale=es_LA" class=" me-4" target="_blank">
+                    <img src="./IMG/facebook.png" alt="Icono de facebook">
+                </a>
+                <a href="https://x.com/?lang=es" class=" me-4" target="_blank">
+                    <img src="./IMG/X (Twitter).png" alt="Icono de X (Twitter)" target="_blank">
+                </a>
+                <a href="https://www.instagram.com/" class=" me-4" target="_blank">
+                    <img src="./IMG/instagram.png" alt="Icono de instagram">
+                </a>
+            </div>
+            <!-- Right -->
         </section>
         <!-- Section: Social media -->
-    
+
         <!-- Section: Links  -->
         <section class="">
-          <div class="container text-center text-md-start mt-5">
-            <!-- Grid row -->
-            <div class="row mt-3">
-              <!-- Grid column -->
-              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                <!-- Content -->
-                <h6 class="text-uppercase fw-bold">Mangaverse Z</h6>
-                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-                <p>Tu tienda especializada en mangas y cómics en Costa Rica.
-                  Visita nuestra tienda física o página web y sumérgete en el emocionante mundo del manga y cómics con Mangaverse Z.
-                </p>
-              </div>
-              <!-- Grid column -->
-    
-              <!-- Grid column -->
-              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold">Contenido</h6>
-                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-                <p>
-                  <a href="./index.html" class="text-white">Inicio</a>
-                </p>
-                <p>
-                  <a href="./Productos.html" class="text-white">Productos</a>
-                </p>
-                <p>
-                  <a href="./Contacto.html" class="text-white">Contacto</a>
-                </p>
-                <p>
-                  <a href="./Preguntas-Frecuentes.html" class="text-white">Preguntas frecuentes</a>
-                </p>
-                <p>
-                  <a href="./Acerca-de.html" class="text-white">Acerca de</a>
-                </p>
-              </div>
-              <!-- Grid column -->
-    
-              <!-- Grid column -->
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold">Contacto</h6>
-                <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-                <p><i class="fas fa-home mr-3"></i>Dirección: City Mall Alajuela, segundo piso junto a Almacenes Gollo.</p>
-                <p><i class="fas fa-envelope mr-3"></i>mangaversez777@gmail.com</p>
-                <p><i class="fas fa-phone mr-3"></i> +506 8312 3456</p>
-                <p><i class="fas fa-print mr-3"></i> +506 2510 5678</p>
-              </div>
-              <!-- Grid column -->
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold">Mangaverse Z</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>Tu tienda especializada en mangas y cómics en Costa Rica.
+                            Visita nuestra tienda física o página web y sumérgete en el emocionante mundo del manga y
+                            cómics con Mangaverse Z.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Contenido</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>
+                            <a href="./index.html" class="text-white">Inicio</a>
+                        </p>
+                        <p>
+                            <a href="./Productos.html" class="text-white">Productos</a>
+                        </p>
+                        <p>
+                            <a href="./Contacto.html" class="text-white">Contacto</a>
+                        </p>
+                        <p>
+                            <a href="./Preguntas-Frecuentes.html" class="text-white">Preguntas frecuentes</a>
+                        </p>
+                        <p>
+                            <a href="./Acerca-de.html" class="text-white">Acerca de</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold">Contacto</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p><i class="fas fa-home mr-3"></i>Dirección: City Mall Alajuela, segundo piso junto a Almacenes
+                            Gollo.</p>
+                        <p><i class="fas fa-envelope mr-3"></i>mangaversez777@gmail.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> +506 8312 3456</p>
+                        <p><i class="fas fa-print mr-3"></i> +506 2510 5678</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
             </div>
-            <!-- Grid row -->
-          </div>
         </section>
         <!-- Section: Links  -->
-    
+
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-          © 2020 Copyright:
-          <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            © 2020 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
         </div>
-    
+
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-          © 2024 Copyright:
-          <p class="text-white">Mangaverse Z</p>
+            © 2024 Copyright:
+            <p class="text-white">Mangaverse Z</p>
         </div>
         <!-- Copyright -->
-      </footer>
+    </footer>
 
 
 

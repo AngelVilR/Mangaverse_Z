@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (IDProd) {
         MostrarDetProducto(IDProd);
+        MostrarComentarios(IDProd);
     }
 });
 
@@ -25,7 +26,7 @@ function MostrarDetProducto(id) {
             <img src="${Libro.GaleriaImg[2] ? Libro.GaleriaImg[2] : "./IMG/Imagen_No_Encontrada.png"}" class="d-block w-100" alt="Imagen #3 de ${Libro.NombreLibro}">
         </div>        
         `;
-        
+
         /* Información Productos */
         var Titulo = document.getElementById('TituloProd');
         Titulo.textContent = Libro.NombreLibro ? Libro.NombreLibro : 'No registrado';
@@ -84,5 +85,34 @@ function MostrarDetProducto(id) {
         /* Agregar carrito ProdDet */
         var AgregarProd = document.getElementById('AgregarProdCarrito');
         AgregarProd.dataset.idProd = Libro.ID;
+    }
+}
+
+function MostrarComentarios(id) {
+    var Libro = ListaProductos.find((obj) => id == obj.ID)
+    if (Libro) {
+        var ComentarioPadre = document.getElementById('ContendorPadre');
+        Libro.Comentarios.forEach(element => {
+            var ComentarioHijo = document.createElement('nav');
+            ComentarioHijo.classList.add('Bordeado');
+            ComentarioHijo.classList.add('SeparadoComentarios')
+
+            var Txt = `
+            <div class="DisplayFlex">
+                    <img src="${element.foto}" alt="Imagen del usuario que ha comentado">
+                    <h6>${element.nombre}</h6>
+            </div>
+            
+            <div>
+                    <img src="${element.calificacion}" alt="Imagen de 5 Estrellas" width="120">
+            </div>
+
+            <div>
+                <p>${element.Comentario}</p>
+            </div>
+            `;
+            ComentarioHijo.innerHTML = Txt;
+            ComentarioPadre.append(ComentarioHijo);
+        });
     }
 }
