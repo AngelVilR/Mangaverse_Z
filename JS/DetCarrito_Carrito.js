@@ -4,17 +4,14 @@ function ProcesarCompra() {
   if (ListaCarrito && ListaCarrito.length != 0) {
     ListaCarrito.forEach(Prod => {
       const CantidadTemp = Prod.Cantidad;
-      /* var Validacion = ValidarCantidad(CantidadTemp); */
-      /* if (Validacion) {
-        window.location.href = './Datos-Compra.html';        
-      } */
-      if(!ValidarCantidad(CantidadTemp)){
+      if (!ValidarCantidad(CantidadTemp)) {
         Validacion = false;
-        
+
       }
     });
+
     if (Validacion) {
-      window.location.href = './Datos-Compra.html';        
+      window.location.href = './Datos-Compra.html';
     }
 
   } else {
@@ -67,7 +64,7 @@ function MostrarDetCarrito() {
             </div>
 
             <div class="Cantidad_Caja">
-              <input type="number" class="form-control" id="CantidadProd" value="${CantidadLocal}" min="1" max="99" onchange="ActualizarCantProd(this)" data-id="${elementY.IDProducto}">
+              <input type="number" class="form-control" id="CantidadProd" value="${CantidadLocal}" min="1" max="99" onchange="ActualizarCantProd(this)" onkeydown="NoNegativos(event)" data-id="${elementY.IDProducto}">
             </div>
 
             <div>
@@ -137,37 +134,22 @@ function ActualizarCantProd(element) {
   var CantidadNew = element.value;
   var CarritoLocal = JSON.parse(localStorage.getItem('CompraProds'));
 
-  if (CantidadNew == 0 && CantidadNew.trim() != '') {
-    Swal.fire({
-      title: "Eliminar producto",
-      text: "¿Estás seguro de querer eliminar este producto de tú carrito de compras?",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#d33",
-      cancelButtonColor: "#3085d6",
-      confirmButtonText: "¡Sí, quiero eliminarlo!"
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire({
-          title: "Eliminado",
-          text: "¡El producto ha sido eliminado de tú carrito correctamente!",
-          icon: "success"
-        });
-        EliminarProd(idProd);
-        return;
-      }
-    });
-  }
+  if (CantidadNew <= 0 || CantidadNew.trim() != '') {
+    EliminarProd(idProd);
+    return;
+  } else {
 
-  if (CarritoLocal) {
-    let index = CarritoLocal.findIndex((oProd) => oProd.IDProducto == idProd);
-    CarritoLocal[index].Cantidad = CantidadNew;
-    CarritoLocal[index].Subtotal = CantidadNew * CarritoLocal[index].Precio;
-  }
+    if (CarritoLocal) {
+      let index = CarritoLocal.findIndex((oProd) => oProd.IDProducto == idProd);
+      CarritoLocal[index].Cantidad = CantidadNew;
+      CarritoLocal[index].Subtotal = CantidadNew * CarritoLocal[index].Precio;
+    }
 
-  localStorage.setItem('CompraProds', JSON.stringify(CarritoLocal));
-  MostrarDetCarrito();
+    localStorage.setItem('CompraProds', JSON.stringify(CarritoLocal));
+    MostrarDetCarrito();
+  }
 }
+
 
 function ValidarCantidad(pCant) {
   if (pCant) {
@@ -192,4 +174,23 @@ function ValidarCantidad(pCant) {
     });
     return false;
   }
+}
+
+
+function NoNegativos(event) {
+  if (
+    event.key === 'Backspace' ||
+    event.key === 'Delete' ||
+    event.key === 'ArrowLeft' ||
+    event.key === 'ArrowRight' ||
+    event.key === 'Tab'
+  ) {
+    return;
+  }
+
+  if (!/^\d{1,2}$/.test(event.key)) {
+    event.preventDefault();
+    console.log("Funciona");
+  } 
+
 }
