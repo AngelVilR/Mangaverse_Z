@@ -108,7 +108,8 @@ function EliminarProd(pIdProd) {
     showCancelButton: true,
     confirmButtonColor: "#d33",
     cancelButtonColor: "#3085d6",
-    confirmButtonText: "¡Sí, quiero eliminarlo!"
+    confirmButtonText: "¡Sí, quiero eliminarlo!",
+    cancelButtonText: "Cancelar"
   }).then((result) => {
     if (result.isConfirmed) {
       Swal.fire({
@@ -126,7 +127,16 @@ function EliminarProd(pIdProd) {
       MostrarDetCarrito();
     }
   });
+}
 
+function EliminarProdCant(pIdProd) {
+  var CarritoLocal = JSON.parse(localStorage.getItem('CompraProds'));
+  if (CarritoLocal) {
+    let index = CarritoLocal.findIndex((i) => i.IDProducto == pIdProd);;
+    CarritoLocal.splice(index, 1);
+  }
+  localStorage.setItem('CompraProds', JSON.stringify(CarritoLocal));
+  MostrarDetCarrito();
 }
 
 function ActualizarCantProd(element) {
@@ -134,9 +144,30 @@ function ActualizarCantProd(element) {
   var CantidadNew = element.value;
   var CarritoLocal = JSON.parse(localStorage.getItem('CompraProds'));
 
-  if (CantidadNew <= 0 || CantidadNew.trim() != '') {
-    EliminarProd(idProd);
-    return;
+  if (CantidadNew == 0 || CantidadNew > 99) {
+    Swal.fire({
+      title: "Error",
+      text: "¿La cantidad digitada no es válida ¿Deseas eliminar el producto o cambiar la cantidad?",
+      icon: "error",
+      showCancelButton: true,
+      confirmButtonColor: "#d33",
+      cancelButtonColor: "#3085d6",
+      confirmButtonText: "¡Quiero eliminarla!",
+      cancelButtonText: "¡Quiero cambiarla!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Eliminado",
+          text: "¡El producto ha sido eliminado de tú carrito correctamente!",
+          icon: "success"
+        });
+        EliminarProdCant(idProd);
+        return;
+      } else {
+        element.value = 1;
+        return;
+      }
+    });
   } else {
 
     if (CarritoLocal) {
@@ -149,7 +180,6 @@ function ActualizarCantProd(element) {
     MostrarDetCarrito();
   }
 }
-
 
 function ValidarCantidad(pCant) {
   if (pCant) {
@@ -176,7 +206,6 @@ function ValidarCantidad(pCant) {
   }
 }
 
-
 function NoNegativos(event) {
   if (
     event.key === 'Backspace' ||
@@ -191,6 +220,6 @@ function NoNegativos(event) {
   if (!/^\d{1,2}$/.test(event.key)) {
     event.preventDefault();
     console.log("Funciona");
-  } 
+  }
 
 }
