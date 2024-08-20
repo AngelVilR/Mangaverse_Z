@@ -64,7 +64,7 @@ function MostrarDetCarrito() {
             </div>
 
             <div class="Cantidad_Caja">
-              <input type="number" class="form-control" id="CantidadProd" value="${CantidadLocal}" min="1" max="99" onchange="ActualizarCantProd(this)" onkeydown="NoNegativos(event)" data-id="${elementY.IDProducto}">
+              <input type="number" class="form-control" id="CantidadProd" value="${CantidadLocal}" min="1" max="99" onchange="ActualizarCantProd(this)" onkeydown="NoNegativos(event)" oninput="limiteDigitos(this)" data-id="${elementY.IDProducto}">
             </div>
 
             <div>
@@ -222,4 +222,18 @@ function NoNegativos(event) {
     console.log("Funciona");
   }
 
+}
+
+function limiteDigitos(inputElement) {
+  inputElement.addEventListener('input', function() {
+    const value = this.value;
+    
+    // Asegurarse de que el valor sea un número y no esté vacío
+    if (value !== '' && !isNaN(value)) {
+      // Limitar el valor a la longitud máxima de dígitos
+      if (value.length > 2) {
+        this.value = value.slice(0, 2);
+      }
+    }
+  });
 }
