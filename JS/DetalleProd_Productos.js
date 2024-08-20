@@ -86,3 +86,37 @@ function MostrarDetProducto(id) {
         AgregarProd.dataset.idProd = Libro.ID;
     }
 }
+
+
+
+function NoNegativos(event) {
+    if (
+      event.key === 'Backspace' ||
+      event.key === 'Delete' ||
+      event.key === 'ArrowLeft' ||
+      event.key === 'ArrowRight' ||
+      event.key === 'Tab'
+    ) {
+      return;
+    }
+  
+    if (!/^\d{1,2}$/.test(event.key)) {
+      event.preventDefault();
+      console.log("Funciona");
+    }
+  
+  }
+  
+  function limiteDigitos(inputElement) {
+    inputElement.addEventListener('input', function() {
+      const value = this.value;
+      
+      // Asegurarse de que el valor sea un número y no esté vacío
+      if (value !== '' && !isNaN(value)) {
+        // Limitar el valor a la longitud máxima de dígitos
+        if (value.length > 2) {
+          this.value = value.slice(0, 2);
+        }
+      }
+    });
+  }
