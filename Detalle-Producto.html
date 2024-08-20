@@ -174,21 +174,31 @@
                 </section>
             </nav>
 
-        <nav class="Contenedor_AgregarCompra">
-            <section id="AgregarCompra">
-                <div id="Caja_Comprar" class="card mb-3 Bordeado">
-                    <h2 id="PrecioProd"><b>&#x20a1;1000000</b></h2>
-                    <h4 id="Stock">Disponible o no</h4>
-                    <div>
-                        <div class="form-floating mb-3">
-                            <input type="number" class="form-control" id="CantidadProducto" placeholder="1" min="1"
-                                max="99">
-                            <label for="floatingInput">Cantidad</label>
+            <nav class="Contenedor_AgregarCompra">
+                <section id="AgregarCompra">
+                    <div id="Caja_Comprar" class="card mb-3 Bordeado">
+                        <h2 id="PrecioProd"><b>&#x20a1;1000000</b></h2>
+                        <h4 id="Stock">Disponible o no</h4>
+                        <div>
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control Bordeado" id="CantidadProducto" placeholder="1"
+                                    min="1" max="99">
+                                <label for="floatingInput">Cantidad</label>
+                            </div>
                         </div>
+                        <button id="AgregarProdCarrito" type="button" class="btn btn-secondary Button_Compra"
+                            onclick="AgregarProdCarritoDet()">Agregar al carrito</button>
                     </div>
-                    <button id="AgregarProdCarrito" type="button" class="btn btn-secondary Button_Compra"
-                        onclick="AgregarProdCarritoDet()">Agregar al carrito</button>
-                </div>
+                </section>
+            </nav>
+        </nav>
+
+        <nav>
+            <section id="Comentarios">
+                <h2>Opiniones de los clientes sobre este producto</h2>
+                <nav id="ContendorPadre" class="DisplayGrid">
+                    <!-- Comentario Hija que se encuentran en DetalleProd_Productos.js -->
+                </nav>
             </section>
         </nav>
 

@@ -88,7 +88,6 @@ function MostrarDetProducto(id) {
     }
 }
 
-<<<<<<< HEAD
 function MostrarComentarios(id) {
     var Libro = ListaProductos.find((obj) => id == obj.ID)
     if (Libro) {
@@ -117,38 +116,3 @@ function MostrarComentarios(id) {
         });
     }
 }
-=======
-
-
-function NoNegativos(event) {
-    if (
-      event.key === 'Backspace' ||
-      event.key === 'Delete' ||
-      event.key === 'ArrowLeft' ||
-      event.key === 'ArrowRight' ||
-      event.key === 'Tab'
-    ) {
-      return;
-    }
-  
-    if (!/^\d{1,2}$/.test(event.key)) {
-      event.preventDefault();
-      console.log("Funciona");
-    }
-  
-  }
-  
-  function limiteDigitos(inputElement) {
-    inputElement.addEventListener('input', function() {
-      const value = this.value;
-      
-      // Asegurarse de que el valor sea un número y no esté vacío
-      if (value !== '' && !isNaN(value)) {
-        // Limitar el valor a la longitud máxima de dígitos
-        if (value.length > 2) {
-          this.value = value.slice(0, 2);
-        }
-      }
-    });
-  }
->>>>>>> 344c38f5a075ebba786b989248caed6a32cc4b03
