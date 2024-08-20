@@ -80,7 +80,7 @@ function GuardarProdLocalDet(element) {
 
 function ValidarCantidad(pCant) {
     if (pCant) {
-        if ((pCant > 0) && (pCant < 31)) {
+        if ((pCant > 0) && (pCant < 99)) {
             return true
         }
         Swal.fire({
@@ -102,6 +102,7 @@ function ValidarCantidad(pCant) {
         return false;
     }
 }
+
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 
 /* Agregar el producto desde el catálgo */

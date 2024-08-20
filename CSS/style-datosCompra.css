@@ -28,7 +28,7 @@ main {
     margin: 1.5em;
 }
 
-#TipoDeEnvio{
+#TipoDeEnvio {
     gap: 1em;
 }
 
@@ -38,8 +38,9 @@ main {
 
 #ContenedorPrincipalMes_Anno {
     display: flex;
-    justify-content: space-around;
+    gap: 2.5em;
     margin: 0em;
+    justify-content: center;
 }
 
 #ContenedorPrincipalMes_Anno div {
@@ -51,13 +52,13 @@ main {
 }
 
 
-.DisennoBtnFinalizar {        
-    border: 1px solid rgb(87,87,87);
-    color: black;        
+.DisennoBtnFinalizar {
+    border: 1px solid rgb(87, 87, 87);
+    color: black;
     transition: all 60ms linear;
 }
 
-.DisennoBtnFinalizar:hover {        
+.DisennoBtnFinalizar:hover {
     background-image: linear-gradient(rgb(163, 255, 127), rgb(26, 206, 9));
     border: 2px solid rgb(87, 87, 87);
     color: black;
@@ -69,9 +70,37 @@ main {
     text-align: center;
 }
 
+.IconosTarjetas {
+    margin: 1em 0em;
+    text-align: center;
+}
 
+.IconosTarjetas img {
+    width: 50%;
+    height: auto;
+}
 
+#cvv {
+    width: 100%;
+}
 
+/* ------------------------------------------------- */
+@keyframes scale-up-center {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.scale-up-center {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+/* ------------------------------------------------- */
 
 @media (width >=992px) {
     #ContenedorPrincipal {
@@ -80,15 +109,33 @@ main {
     }
 
     #ContactoCliente {
-        margin-left: 2em;
+        margin: 2em 4em;
     }
 
     #DatosTarjeta {
-        margin-right: 2em;
+        width: 80%;
+        margin: 2em 4em;
     }
 
-    #ButtonFinalizar {        
+    #ButtonFinalizar {
         text-align: end;
+        margin-right: 5.5em;
     }
 
+    .DisplayFlex {
+        display: flex;
+    }
+
+    .QuitarMargin {
+        margin: 0em 0em;
+    }
+
+    .IconosTarjetas {
+        margin: 1em 0em;
+    }
+
+    .IconosTarjetas img {
+        width: 92px;
+        height: auto;
+    }    
 }

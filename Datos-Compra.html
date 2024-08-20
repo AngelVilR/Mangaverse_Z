@@ -145,11 +145,11 @@
         </section>
       </nav>
 
-      <nav>
+      <nav class="Centrado">
         <section id="DatosTarjeta">
           <h4>Datos de tu tarjeta de crédito o débito</h4>
 
-          <nav class="DisplayFlex">
+          <div class="DisplayFlex QuitarMargin CentrarInputsTarjetas">
             <nav class="form-floating mb-3">
               <input type="text" class="form-control" id="Ntarjeta" placeholder="1234 5678 9123 4567"
                 style="appearance: textfield; -webkit-appearance: none" maxlength="16" />
@@ -160,15 +160,12 @@
               </div>
             </nav>
 
-            <!-- <nav>
-              <div><img src="./IMG/Imagen MasterCard.jpg" alt="Imagen del tipo de tarjeta" width="50"></div>
-            </nav> -->
-          </nav>
+            <div id="ImagenTTarjeta" class="IconosTarjetas">              
+            </div>
 
+          </div>
 
-
-
-          <nav class="EspacioFechaVenc">
+          <nav class="EspacioFechaVenc CentrarInputsTarjetas">
             <label><b>Fecha de vencimiento</b></label>
             <div id="ContenedorPrincipalMes_Anno">
               <div>
@@ -187,10 +184,10 @@
             </div>
           </nav>
 
-          <nav class="form-floating mb-3">
+          <nav class="form-floating mb-3 CentrarInputsTarjetas">
             <input type="text" class="form-control" id="cvv" placeholder="1234 5678 9123 4567"
               style="appearance: textfield; -webkit-appearance: none" />
-            <label for="floatingInput">Código de seguridad</label>
+            <label for="cvv">Código de seguridad</label>
             <div class="invalid-feedback">
               Este campo es obligatorio
             </div>
@@ -199,15 +196,9 @@
 
         <nav id="ButtonFinalizar">
           <div>
-            <!-- <a href="./FacturaProds.html"
-                ><button type="button" class="btn DisennoBtnFinalizar">
-                  Finalizar compra
-                </button></a
-              > -->
             <button type="button" class="btn DisennoBtnFinalizar" id="enviar">
               Finalizar compra
             </button>
-
           </div>
         </nav>
       </nav>

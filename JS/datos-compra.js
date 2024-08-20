@@ -138,25 +138,28 @@ function validarAno(year) {
 
 function actualizarCampos() {
   if (recoger.checked) {
-    paquete.style.display = 'none';
+    paquete.style.display = 'none';        
+    paquete.classList.remove('scale-up-center')
+    
   } else {
     paquete.style.display = 'block';
+    paquete.classList.add('scale-up-center')          
   }
 }
 
 function tipoTarjeta(bin) {
-  if (bin.length >= 6) {
-    numero = bin.substring(0, 6);
-    console.log(numero)
+  var ImgTarjetaHTML = document.getElementById('ImagenTTarjeta');
+  ImgTarjetaHTML.innerHTML = '';
+  if (bin.length >= 6) {    
+    numero = bin.substring(0, 6);    
     fetch(`https://data.handyapi.com/bin/${numero}`)
       .then(response => response.json())
-      .then(data => {
-        console.log(data)
-        if (data.Scheme == "VISA") {
-          console.log("Visa");
+      .then(data => {        
+        if (data.Scheme == "VISA") {          
+          ImgTarjetaHTML.innerHTML = `<img src="./IMG/Imagen Visa.jpg" alt="Imagen del tipo de tarjeta"></img>`          
         }
         if (data.Scheme == "MASTERCARD") {
-          console.log("MasterCard");
+          ImgTarjetaHTML.innerHTML = `<img src="./IMG/Imagen Mastercard.jpg" alt="Imagen del tipo de tarjeta"></img>`          
         }
       })
   }

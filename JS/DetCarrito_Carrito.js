@@ -1,3 +1,26 @@
+function ProcesarCompra() {
+  var ListaCarrito = JSON.parse(localStorage.getItem('CompraProds'));
+  if (ListaCarrito) {
+    ListaCarrito.forEach(Prod => {
+      const CantidadTemp = Prod.Cantidad;
+      var Validacion = ValidarCantidad(CantidadTemp);
+      if (Validacion) {
+        window.location.href = './Datos-Compra.html';        
+      }
+      
+    });
+
+  } else {
+    Swal.fire({
+      position: "center",
+      icon: "error",
+      title: "¡Debe de tener productos en el carrito para continuar!",
+      showConfirmButton: false,
+      timer: 1500
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   MostrarDetCarrito();
 });
@@ -37,7 +60,7 @@ function MostrarDetCarrito() {
             </div>
 
             <div class="Cantidad_Caja">
-              <input type="number" class="form-control" id="CantidadProd" value="${CantidadLocal}" min="1" max="30" onchange="ActualizarCantProd(this)" data-id="${elementY.IDProducto}">
+              <input type="number" class="form-control" id="CantidadProd" value="${CantidadLocal}" min="1" max="99" onchange="ActualizarCantProd(this)" data-id="${elementY.IDProducto}">
             </div>
 
             <div>
@@ -126,7 +149,7 @@ function ActualizarCantProd(element) {
         EliminarProd(idProd);
         return;
       }
-    });        
+    });
   }
 
   if (CarritoLocal) {
@@ -137,4 +160,29 @@ function ActualizarCantProd(element) {
 
   localStorage.setItem('CompraProds', JSON.stringify(CarritoLocal));
   MostrarDetCarrito();
+}
+
+function ValidarCantidad(pCant) {
+  if (pCant) {
+    if ((pCant > 0) && (pCant < 100)) {
+      return true
+    }
+    Swal.fire({
+      position: "center",
+      icon: "error",
+      title: "¡La cantidad digitada no es válida!",
+      showConfirmButton: false,
+      timer: 1500
+    });
+    return false;
+  } else {
+    Swal.fire({
+      position: "center",
+      icon: "warning",
+      title: "Debe de digitar una cantidad para agregar el producto",
+      showConfirmButton: false,
+      timer: 1500
+    });
+    return false;
+  }
 }
