@@ -1,0 +1,129 @@
+/* -------------------------------------------------------- */
+/* Estilos en generales para todos los dispositivos */
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 1em 0em;
+    text-align: center;
+}
+
+.EspacioBordes {
+    margin: 2em 1.5em 1em;
+}
+
+.EstiloImagenes img {
+    width: 100%;
+    height: auto;
+    margin: 0em;
+    padding: 0em;
+}
+
+/* -------------------------------------------------------- */
+/* Estilo para la info de la tienda */
+
+#ConocerTienda {
+    background-color: aqua;
+}
+
+.CajaMiniCards nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10em;
+    margin: 1.5em 0em;
+    background-color: red;
+}
+
+/* -------------------------------------------------------- */
+#ProductosMasVendidos {
+    background-color: chartreuse;
+}
+
+/* Estilo de los productos que son los mismos que los del cátalogo */
+.Caja_Cards_Princ {
+    width: 100%;
+    height: auto;
+}
+
+.Caja_Cards_Princ h3 {
+    text-align: center;
+    padding-top: 1%;
+}
+
+.Caja_Cards_Body button {
+    width: 100%;
+    margin-bottom: 3%;
+}
+
+.Caja_Cards_Body p {
+    text-align: center;
+    font-size: 27px;
+}
+
+.Button_Detalle{
+    border: 2px solid rgb(122, 122, 122);
+    transition: all 100ms linear;
+}
+
+.Button_Detalle:hover {
+    background-color: rgb(89, 49, 150);
+    color: white;
+    font-weight: bold;
+}
+
+#ContenedorTitulo{
+    width: 100%; 
+    min-height: 6em;
+    max-height: 6em;
+    border: 1px solid rgb(65, 65, 65);    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #E5D0F2;
+}
+
+#ContenedorImagen{
+    width: 100%;
+    max-height: 500px;     
+    border: 1px solid rgb(65, 65, 65); 
+    
+}
+
+#ContenedorImagen img{
+    width: 100%;
+    height: 500px;
+}
+
+#ContenedorCompras{
+    width: 100%;       
+    border: 1px solid rgb(65, 65, 65); 
+}
+
+.EspacioBordesParaProds {
+    margin: 1em 1em;
+}
+
+/* ----------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------- */
+/* Diseño para la PC */
+@media (width <= 992px) {    
+    #ImagenLibro {
+        width: 100%;
+        height: 500px;
+    }
+}
