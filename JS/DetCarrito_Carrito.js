@@ -1,14 +1,21 @@
 function ProcesarCompra() {
   var ListaCarrito = JSON.parse(localStorage.getItem('CompraProds'));
+  var Validacion = true;
   if (ListaCarrito) {
     ListaCarrito.forEach(Prod => {
       const CantidadTemp = Prod.Cantidad;
-      var Validacion = ValidarCantidad(CantidadTemp);
-      if (Validacion) {
+      /* var Validacion = ValidarCantidad(CantidadTemp); */
+      /* if (Validacion) {
         window.location.href = './Datos-Compra.html';        
+      } */
+      if(!ValidarCantidad(CantidadTemp)){
+        Validacion = false;
+        
       }
-      
     });
+    if (Validacion) {
+      window.location.href = './Datos-Compra.html';        
+    }
 
   } else {
     Swal.fire({
