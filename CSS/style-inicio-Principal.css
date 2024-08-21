@@ -10,6 +10,13 @@ main p {
     color: rgb(0, 0, 0);
 }
 
+#Carrusel{
+    width: 100%;
+    height: 22em;
+    margin: 0em;
+    padding: 0em;
+}
+
 #InformacionPagInicio {
     margin: 2em 0em 0em;
 }
@@ -157,11 +164,91 @@ main p {
     animation-timeline: --image;
     animation-name: show;
     
-    animation-range: entry 25% cover 40%;
+    animation-range: entry 25% cover 20%;
     animation-fill-mode: both;
 }
+/* ----------------------------------------------------------------- */
+/* Estilo para las cartas especiales */
+#ProdsClasicos {
+    background: url('https://erikstore.com/blog/wp-content/uploads/2024/06/MEJORES-ANIMES-DE-TODOS-LOS-TIEMPOS.jpg');
+    background-color: rgba(148, 7, 148, 0.575);
+    background-blend-mode: darken;
+    border: 15px solid rgb(219, 100, 248);
+    border-style: double;
+    transition: all 1s;
 
+    h4 {
+        color: white;
+        font-weight: bold;
+        font-size: xx-large;
+        transition: all 0.3s;
+    }
+}
 
+#ProdsNuevos {
+    background: url('https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/02/mixcollage-10-feb-2024-10-14-pm-191.jpg');
+    background-size: cover;
+    background-color: rgba(148, 7, 148, 0.575);
+    background-blend-mode: darken;
+    border: 15px solid rgb(219, 100, 248);
+    border-style: double;
+    transition: all 1s;
+
+    h4 {
+        color: white;
+        font-weight: bold;
+        font-size: xx-large;
+        transition: all 0.3s;
+    }
+}
+
+.Oferta {
+    background: url('https://previews.123rf.com/images/rogistok/rogistok1611/rogistok161100132/67100813-el-%C3%A9xito-financiero-de-negocios-con-el-dinero-el-arte-pop-retro-ilustraci%C3%B3n-de-c%C3%B3mic-loter%C3%ADa-y-un.jpg') center center;
+    background-size: cover;
+    background-color: rgba(49, 226, 55, 0.774);
+    background-blend-mode: darken;
+    border: 15px solid rgb(121, 253, 125);
+    border-style: double;
+
+    h4 {
+        color: white;
+        font-weight: bold;
+        font-size: xx-large;
+        transition: all 0.3s;
+    }
+}
+
+.Evento {
+    background: url('https://media.wired.com/photos/62d7615394f7f03fb5e0c44e/master/pass/Comic-Con-Is-Back-Culture-1163223301.jpg') center center;
+    background-size: cover;
+    background-color: rgb(216, 3, 3,0.699);
+    background-blend-mode: darken;
+    border: 15px solid rgb(255, 113, 113);
+    border-style: double;
+
+    h4 {
+        color: white;
+        font-weight: bold;
+        font-size: xx-large;
+        transition: all 0.3s;
+    }
+}
+
+.Sorteo {
+    background: url('https://cdn2.unrealengine.com/key-art-en-3840x2160-5b1043d620f9.png') center center;
+    background-size: cover;
+    background-color: rgba(34, 90, 212, 0.699);
+    background-blend-mode: darken;
+    border: 15px solid rgb(135, 255, 255);
+    border-style: double;
+
+    h4 {
+        color: white;
+        font-weight: bold;
+        font-size: xx-large;
+        transition: all 0.3s;
+    }
+}
 
 /* ----------------------------------------------------------------- */
 /* Diseño para la PC */
@@ -196,6 +283,7 @@ main p {
 
 
     #ProdsClasicos {
+        background: none;
         background-color: white;
         border: 15px solid rgb(89, 49, 150);
         border-style: double;
@@ -223,6 +311,7 @@ main p {
     }
 
     #ProdsNuevos {
+        background: none;
         background-color: white;
         border: 15px solid rgb(89, 49, 150);
         border-style: double;
@@ -253,10 +342,15 @@ main p {
     .Oferta,
     .Evento,
     .Sorteo {
+        background: none;        
         border: 15px solid rgb(89, 49, 150);
         border-style: double;
         transition: all 1s;
         background-color: white;
+
+        h4{
+            color: black;
+        }
     }
 
     .Oferta:hover {
@@ -264,6 +358,8 @@ main p {
         background-size: cover;
         background-color: rgba(49, 226, 55, 0.774);
         background-blend-mode: darken;
+        border: 15px solid rgb(121, 253, 125);
+        border-style: double;
 
         h4 {
             color: white;
@@ -278,6 +374,8 @@ main p {
         background-size: cover;
         background-color: rgb(216, 3, 3,0.699);
         background-blend-mode: darken;
+        border: 15px solid rgb(255, 113, 113);
+        border-style: double;
 
         h4 {
             color: white;
@@ -292,6 +390,8 @@ main p {
         background-size: cover;
         background-color: rgba(34, 90, 212, 0.699);
         background-blend-mode: darken;
+        border: 15px solid rgb(135, 255, 255);
+        border-style: double;
 
         h4 {
             color: white;
@@ -299,6 +399,17 @@ main p {
             font-size: xx-large;
             transition: all 0.3s;
         }
+    }
+
+    .AnimacionXBloques{
+        view-timeline-name: --image;
+        view-timeline-axis: block;
+    
+        animation-timeline: --image;
+        animation-name: show;
+        
+        animation-range: entry 25% cover 40%;
+        animation-fill-mode: both;
     }
 
 
