@@ -156,10 +156,10 @@ function tipoTarjeta(bin) {
       .then(response => response.json())
       .then(data => {        
         if (data.Scheme == "VISA") {          
-          ImgTarjetaHTML.innerHTML = `<img src="./IMG/Imagen Visa.jpg" alt="Imagen del tipo de tarjeta"></img>`          
+          ImgTarjetaHTML.innerHTML = `<img src="./IMG/Imagen_Visa.jpg" alt="Imagen del logo de las tarjetas de Visa"></img>`          
         }
         if (data.Scheme == "MASTERCARD") {
-          ImgTarjetaHTML.innerHTML = `<img src="./IMG/Imagen Mastercard.jpg" alt="Imagen del tipo de tarjeta"></img>`          
+          ImgTarjetaHTML.innerHTML = `<img src="./IMG/Imagen_Mastercard.jpg" alt="Imagen del logo de las tarjetas de Mastercard"></img>`          
         }
       })
   }
