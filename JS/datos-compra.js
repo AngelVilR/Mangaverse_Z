@@ -159,7 +159,7 @@ function tipoTarjeta(bin) {
           ImgTarjetaHTML.innerHTML = `<img src="./IMG/Imagen_Visa.jpg" alt="Imagen del logo de Visa"></img>`          
         }
         if (data.Scheme == "MASTERCARD") {
-          ImgTarjetaHTML.innerHTML = `<img src="./IMG/Imagen_MasterCard.jpg" alt="Imagen del logo de Mastercard"></img>`          
+          ImgTarjetaHTML.innerHTML = `<img src="./IMG/Imagen_MasterCard(1).jpg" alt="Imagen del logo de Mastercard"></img>`          
         }
       })
   }
