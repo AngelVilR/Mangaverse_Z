@@ -182,7 +182,7 @@
                         <div>
                             <div class="form-floating mb-3">
                                 <input type="number" class="form-control Bordeado" id="CantidadProducto" placeholder="1"
-                                    min="1" max="99">
+                                    min="1" max="99" onkeydown="NoNegativos(event)" oninput="limiteDigitos(this)">
                                 <label for="floatingInput">Cantidad</label>
                             </div>
                         </div>

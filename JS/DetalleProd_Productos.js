@@ -116,3 +116,31 @@ function MostrarComentarios(id) {
         });
     }
 }
+
+function NoNegativos(event) {
+    if (
+      event.key === 'Backspace' ||
+      event.key === 'Delete' ||
+      event.key === 'ArrowLeft' ||
+      event.key === 'ArrowRight' ||
+      event.key === 'Tab'
+    ) {
+      return;
+    }
+  
+    if (!/^\d{1,2}$/.test(event.key)) {
+      event.preventDefault();    
+    }
+  
+  }
+  
+  function limiteDigitos(inputElement) {
+    inputElement.addEventListener('input', function() {
+      const value = this.value;        
+      if (value !== '' && !isNaN(value)) {      
+        if (value.length > 2) {
+          this.value = value.slice(0, 2);
+        }
+      }
+    });
+  }
