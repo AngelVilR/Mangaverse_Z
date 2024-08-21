@@ -1,12 +1,17 @@
 /* -------------------------------------------------------- */
 /* Estilos en generales para todos los dispositivos */
-h1,
-h2,
-h3,
-h4,
-p {
+main h1,
+main h2,
+main h3,
+main h4,
+main p {
     margin: 1em 0em;
     text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+#InformacionPagInicio {
+    margin: 2em 0em 0em;
 }
 
 .EspacioBordes {
@@ -20,27 +25,40 @@ p {
     padding: 0em;
 }
 
-/* -------------------------------------------------------- */
-/* Estilo para la info de la tienda */
-
-#ConocerTienda {
-    background-color: aqua;
+#ProductosMasVendidos{
+    background-color: rgba(125, 60, 223, 0.849);
+    padding-bottom: 2em;
 }
 
+#ProductosMasVendidos h1{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-shadow: 6px 5px black;
+    padding: 1em 0em 0em;
+}
+
+#ConocerTienda h1, #ConocerTienda h2, #ConocerTienda h3, #Grafico h1 ,#Final h1{
+    text-shadow: 3px 1px rgb(220, 144, 255);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+#Final b a{
+    color: rgb(184, 67, 252);
+}
+
+/* -------------------------------------------------------- */
+/* Estilo para la info de la tienda */
 .CajaMiniCards nav {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 10em;
+    height: 17em;
     margin: 1.5em 0em;
-    background-color: red;
 }
 
 /* -------------------------------------------------------- */
-#ProductosMasVendidos {
-    background-color: chartreuse;
-}
 
 /* Estilo de los productos que son los mismos que los del cátalogo */
 .Caja_Cards_Princ {
@@ -63,7 +81,7 @@ p {
     font-size: 27px;
 }
 
-.Button_Detalle{
+.Button_Detalle {
     border: 2px solid rgb(122, 122, 122);
     transition: all 100ms linear;
 }
@@ -74,34 +92,35 @@ p {
     font-weight: bold;
 }
 
-#ContenedorTitulo{
-    width: 100%; 
+#ContenedorTitulo {
+    width: 100%;
     min-height: 6em;
     max-height: 6em;
-    border: 1px solid rgb(65, 65, 65);    
-    
+    border: 1px solid rgb(65, 65, 65);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     background-color: #E5D0F2;
 }
 
-#ContenedorImagen{
+#ContenedorImagen {
     width: 100%;
-    max-height: 500px;     
-    border: 1px solid rgb(65, 65, 65); 
-    
+    max-height: 500px;
+    border: 1px solid rgb(65, 65, 65);
+
 }
 
-#ContenedorImagen img{
+#ContenedorImagen img {
     width: 100%;
     height: 500px;
 }
 
-#ContenedorCompras{
-    width: 100%;       
-    border: 1px solid rgb(65, 65, 65); 
+#ContenedorCompras {
+    width: 100%;
+    border: 1px solid rgb(65, 65, 65);
+    padding-bottom: 1em;
 }
 
 .EspacioBordesParaProds {
@@ -109,21 +128,179 @@ p {
 }
 
 /* ----------------------------------------------------------------- */
+/* Estilo para el grafico */
+#CajaGrafico {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    margin: auto;
+}
 
+/* ----------------------------------------------------------------- */
+/* Animacion para las imagenes */
+@keyframes show{
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
 
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
 
+.AnimacionXBloques{
+    view-timeline-name: --image;
+    view-timeline-axis: block;
 
-
-
-
+    animation-timeline: --image;
+    animation-name: show;
+    
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
+}
 
 
 
 /* ----------------------------------------------------------------- */
 /* Diseño para la PC */
-@media (width <= 992px) {    
+@media (width >=992px) {
+    main p {
+        font-size: 22px;
+    }
+
     #ImagenLibro {
         width: 100%;
         height: 500px;
     }
+
+    .EstiloImagenes img {
+        width: 100%;
+        height: 24em;
+        margin: 0em;
+        padding: 0em;
+    }
+
+    .DisplayFlex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2em;
+    }
+
+    .CajaMiniCards nav {
+        width: 100%;
+        height: 25em;
+    }
+
+
+    #ProdsClasicos {
+        background-color: white;
+        border: 15px solid rgb(89, 49, 150);
+        border-style: double;
+        transition: all 1s;
+
+        h4 {
+            color: black;
+        }
+    }
+
+    #ProdsClasicos:hover {
+        background: url('https://erikstore.com/blog/wp-content/uploads/2024/06/MEJORES-ANIMES-DE-TODOS-LOS-TIEMPOS.jpg');
+        background-color: rgba(148, 7, 148, 0.575);
+        background-blend-mode: darken;
+        border: 15px solid rgb(219, 100, 248);
+        border-style: double;
+        transition: all 1s;
+
+        h4 {
+            color: white;
+            font-weight: bold;
+            font-size: xx-large;
+            transition: all 0.3s;
+        }
+    }
+
+    #ProdsNuevos {
+        background-color: white;
+        border: 15px solid rgb(89, 49, 150);
+        border-style: double;
+        transition: all 1s;
+
+        h4 {
+            color: black;
+        }
+    }
+
+    #ProdsNuevos:hover {
+        background: url('https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/02/mixcollage-10-feb-2024-10-14-pm-191.jpg');
+        background-size: cover;
+        background-color: rgba(148, 7, 148, 0.575);
+        background-blend-mode: darken;
+        border: 15px solid rgb(219, 100, 248);
+        border-style: double;
+        transition: all 1s;
+
+        h4 {
+            color: white;
+            font-weight: bold;
+            font-size: xx-large;
+            transition: all 0.3s;
+        }
+    }
+
+    .Oferta,
+    .Evento,
+    .Sorteo {
+        border: 15px solid rgb(89, 49, 150);
+        border-style: double;
+        transition: all 1s;
+        background-color: white;
+    }
+
+    .Oferta:hover {
+        background: url('https://previews.123rf.com/images/rogistok/rogistok1611/rogistok161100132/67100813-el-%C3%A9xito-financiero-de-negocios-con-el-dinero-el-arte-pop-retro-ilustraci%C3%B3n-de-c%C3%B3mic-loter%C3%ADa-y-un.jpg') center center;
+        background-size: cover;
+        background-color: rgba(49, 226, 55, 0.774);
+        background-blend-mode: darken;
+
+        h4 {
+            color: white;
+            font-weight: bold;
+            font-size: xx-large;
+            transition: all 0.3s;
+        }
+    }
+
+    .Evento:hover {
+        background: url('https://media.wired.com/photos/62d7615394f7f03fb5e0c44e/master/pass/Comic-Con-Is-Back-Culture-1163223301.jpg') center center;
+        background-size: cover;
+        background-color: rgb(216, 3, 3,0.699);
+        background-blend-mode: darken;
+
+        h4 {
+            color: white;
+            font-weight: bold;
+            font-size: xx-large;
+            transition: all 0.3s;
+        }
+    }
+
+    .Sorteo:hover {
+        background: url('https://cdn2.unrealengine.com/key-art-en-3840x2160-5b1043d620f9.png') center center;
+        background-size: cover;
+        background-color: rgba(34, 90, 212, 0.699);
+        background-blend-mode: darken;
+
+        h4 {
+            color: white;
+            font-weight: bold;
+            font-size: xx-large;
+            transition: all 0.3s;
+        }
+    }
+
+
+
 }
