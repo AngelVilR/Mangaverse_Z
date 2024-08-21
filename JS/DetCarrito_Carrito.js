@@ -218,19 +218,15 @@ function NoNegativos(event) {
   }
 
   if (!/^\d{1,2}$/.test(event.key)) {
-    event.preventDefault();
-    console.log("Funciona");
+    event.preventDefault();    
   }
 
 }
 
 function limiteDigitos(inputElement) {
   inputElement.addEventListener('input', function() {
-    const value = this.value;
-    
-    // Asegurarse de que el valor sea un número y no esté vacío
-    if (value !== '' && !isNaN(value)) {
-      // Limitar el valor a la longitud máxima de dígitos
+    const value = this.value;        
+    if (value !== '' && !isNaN(value)) {      
       if (value.length > 2) {
         this.value = value.slice(0, 2);
       }
