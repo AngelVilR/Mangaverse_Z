@@ -364,7 +364,25 @@ const ListaProductos = [
         "OpcionesEntrega": "Envío postal o recogido en tienda",
         "Garantia": "24 horas",
         "Resenna": "./IMG/5_Estrellas.png",
-        "Comentarios": [{}, {}, {}]
+        "Comentarios": [
+            {
+            "foto": "./IMG/usuario.png",
+            "nombre": "Angel Rodriguez",
+            "calificacion": "./IMG/5_Estrellas.png",
+            "Comentario": "Una lectura divertida."
+        },
+        {
+            "foto": "./IMG/usuario.png",
+            "nombre": "Joshua Gonzalez",
+            "calificacion": "./IMG/5_Estrellas.png",
+            "Comentario": "Me encanta cómo Moon llegó al final"
+        },
+        {
+            "foto": "./IMG/usuario.png",
+            "nombre": "Luis Viquez",
+            "calificacion": "./IMG/5_Estrellas.png",
+            "Comentario": "Compré esto para mi hija y le encantó."
+        }]
     },
     {
         "ID": 11,
@@ -387,21 +405,21 @@ const ListaProductos = [
         "Comentarios": [
             {
                 "foto": "./IMG/usuario.png",
-                "nombre": "Angel Rodriguez",
+                "nombre": "Hector Gonzalez",
                 "calificacion": "./IMG/5_Estrellas.png",
-                "Comentario": "Una lectura divertida."
+                "Comentario": "¡Ilustración clara, manga muy entretenido y estoy profundamente enamorada de este libro!"
             },
             {
                 "foto": "./IMG/usuario.png",
-                "nombre": "Joshua Gonzalez",
+                "nombre": "Samuel Badilla",
                 "calificacion": "./IMG/5_Estrellas.png",
-                "Comentario": "Me encanta cómo Moon llegó al final"
+                "Comentario": "¡Me muero por leerlo!"
             },
             {
                 "foto": "./IMG/usuario.png",
-                "nombre": "Luis Viquez",
+                "nombre": "Mario Avila",
                 "calificacion": "./IMG/5_Estrellas.png",
-                "Comentario": "Compré esto para mi hija y le encantó."
+                "Comentario": "Hermosas imágenes en cada uno de los mangas"
             }
         ]
     },
