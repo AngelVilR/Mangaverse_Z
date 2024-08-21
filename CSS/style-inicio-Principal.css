@@ -10,7 +10,7 @@ main p {
     color: rgb(0, 0, 0);
 }
 
-#Carrusel{
+#Carrusel {
     width: 100%;
     height: 22em;
     margin: 0em;
@@ -32,25 +32,29 @@ main p {
     padding: 0em;
 }
 
-#ProductosMasVendidos{
+#ProductosMasVendidos {
     background-color: rgba(125, 60, 223, 0.849);
     padding-bottom: 2em;
 }
 
-#ProductosMasVendidos h1{
+#ProductosMasVendidos h1 {
     color: rgb(255, 255, 255);
     font-weight: bold;
     text-shadow: 6px 5px black;
     padding: 1em 0em 0em;
 }
 
-#ConocerTienda h1, #ConocerTienda h2, #ConocerTienda h3, #Grafico h1 ,#Final h1{
+#ConocerTienda h1,
+#ConocerTienda h2,
+#ConocerTienda h3,
+#Grafico h1,
+#Final h1 {
     text-shadow: 3px 1px rgb(220, 144, 255);
     font-weight: bold;
     letter-spacing: 1.5px;
 }
 
-#Final b a{
+#Final b a {
     color: rgb(184, 67, 252);
 }
 
@@ -145,34 +149,192 @@ main p {
 
 /* ----------------------------------------------------------------- */
 /* Animacion para las imagenes */
-@keyframes show{
-    from{
+@keyframes show {
+    from {
         opacity: 0;
         scale: 25%;
     }
 
-    to{
+    to {
         opacity: 1;
         scale: 100%;
     }
 }
 
-.AnimacionXBloques{
+@-webkit-keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slide-in-fwd-center {
+    0% {
+        -webkit-transform: translateZ(-1400px);
+        transform: translateZ(-1400px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-fwd-center {
+    0% {
+        -webkit-transform: translateZ(-1400px);
+        transform: translateZ(-1400px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slide-in-fwd-bottom {
+    0% {
+        -webkit-transform: translateZ(-1400px) translateY(800px);
+        transform: translateZ(-1400px) translateY(800px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-fwd-bottom {
+    0% {
+        -webkit-transform: translateZ(-1400px) translateY(800px);
+        transform: translateZ(-1400px) translateY(800px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        opacity: 1;
+    }
+}
+
+.AnimacionXBloques {
     view-timeline-name: --image;
     view-timeline-axis: block;
 
     animation-timeline: --image;
     animation-name: show;
-    
+
     animation-range: entry 25% cover 20%;
     animation-fill-mode: both;
 }
+
+.AnimacionParaClasico {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: slide-in-left;
+
+    animation-range: entry 30% cover 35%;
+    animation-fill-mode: both;
+}
+
+.AnimacionParaNuevo {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: slide-in-right;
+
+    animation-range: entry 30% cover 35%;
+    animation-fill-mode: both;
+}
+
+.AnimacionParaGraficos {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: slide-in-fwd-bottom;
+
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
+}
+
+.AnimacionOfertaEventoSorteo {
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+
+    animation-timeline: --image;
+    animation-name: slide-in-fwd-center;
+
+    animation-range: entry 30% cover 35%;
+    animation-fill-mode: both;
+}
+
 /* ----------------------------------------------------------------- */
 /* Estilo para las cartas especiales */
 #ProdsClasicos {
-    background: url('https://erikstore.com/blog/wp-content/uploads/2024/06/MEJORES-ANIMES-DE-TODOS-LOS-TIEMPOS.jpg');
+    background: url('https://pm1.aminoapps.com/6269/a9aa51a2dcc6c5bd5e4f8beb4defb7059cd6fa26_hq.jpg');
     background-color: rgba(148, 7, 148, 0.575);
-    background-blend-mode: darken;
+    background-blend-mode: darken;         
+    background-size: cover;
     border: 15px solid rgb(219, 100, 248);
     border-style: double;
     transition: all 1s;
@@ -186,8 +348,8 @@ main p {
 }
 
 #ProdsNuevos {
-    background: url('https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/02/mixcollage-10-feb-2024-10-14-pm-191.jpg');
-    background-size: cover;
+    background: url('https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/02/mixcollage-10-feb-2024-10-14-pm-191.jpg') no-repeat center;
+    background-size: cover;    
     background-color: rgba(148, 7, 148, 0.575);
     background-blend-mode: darken;
     border: 15px solid rgb(219, 100, 248);
@@ -221,7 +383,7 @@ main p {
 .Evento {
     background: url('https://media.wired.com/photos/62d7615394f7f03fb5e0c44e/master/pass/Comic-Con-Is-Back-Culture-1163223301.jpg') center center;
     background-size: cover;
-    background-color: rgb(216, 3, 3,0.699);
+    background-color: rgb(216, 3, 3, 0.699);
     background-blend-mode: darken;
     border: 15px solid rgb(255, 113, 113);
     border-style: double;
@@ -295,8 +457,8 @@ main p {
     }
 
     #ProdsClasicos:hover {
-        background: url('https://erikstore.com/blog/wp-content/uploads/2024/06/MEJORES-ANIMES-DE-TODOS-LOS-TIEMPOS.jpg');
-        background-color: rgba(148, 7, 148, 0.575);
+        background: url('https://pm1.aminoapps.com/6269/a9aa51a2dcc6c5bd5e4f8beb4defb7059cd6fa26_hq.jpg');
+        background-color: rgba(148, 7, 148, 0.575);        
         background-blend-mode: darken;
         border: 15px solid rgb(219, 100, 248);
         border-style: double;
@@ -342,13 +504,13 @@ main p {
     .Oferta,
     .Evento,
     .Sorteo {
-        background: none;        
+        background: none;
         border: 15px solid rgb(89, 49, 150);
         border-style: double;
         transition: all 1s;
         background-color: white;
 
-        h4{
+        h4 {
             color: black;
         }
     }
@@ -372,7 +534,7 @@ main p {
     .Evento:hover {
         background: url('https://media.wired.com/photos/62d7615394f7f03fb5e0c44e/master/pass/Comic-Con-Is-Back-Culture-1163223301.jpg') center center;
         background-size: cover;
-        background-color: rgb(216, 3, 3,0.699);
+        background-color: rgb(216, 3, 3, 0.699);
         background-blend-mode: darken;
         border: 15px solid rgb(255, 113, 113);
         border-style: double;
@@ -401,14 +563,69 @@ main p {
         }
     }
 
-    .AnimacionXBloques{
+    .AnimacionXBloques {
+        view-timeline-name: --image;
+        view-timeline-axis: block;
+
+        animation-timeline: --image;
+        animation-name: show;
+
+        animation-range: entry 25% cover 40%;
+        animation-fill-mode: both;
+    }
+
+    .AnimacionXBloques {
         view-timeline-name: --image;
         view-timeline-axis: block;
     
         animation-timeline: --image;
         animation-name: show;
-        
-        animation-range: entry 25% cover 40%;
+    
+        animation-range: entry 25% cover 30%;
+        animation-fill-mode: both;
+    }
+    
+    .AnimacionParaClasico {
+        view-timeline-name: --image;
+        view-timeline-axis: block;
+    
+        animation-timeline: --image;
+        animation-name: slide-in-left;
+    
+        animation-range: entry 30% cover 35%;
+        animation-fill-mode: both;
+    }
+    
+    .AnimacionParaNuevo {
+        view-timeline-name: --image;
+        view-timeline-axis: block;
+    
+        animation-timeline: --image;
+        animation-name: slide-in-right;
+    
+        animation-range: entry 30% cover 35%;
+        animation-fill-mode: both;
+    }
+    
+    .AnimacionParaGraficos {
+        view-timeline-name: --image;
+        view-timeline-axis: block;
+    
+        animation-timeline: --image;
+        animation-name: slide-in-fwd-bottom;
+    
+        animation-range: entry 25% cover 30%;
+        animation-fill-mode: both;
+    }
+    
+    .AnimacionOfertaEventoSorteo {
+        view-timeline-name: --image;
+        view-timeline-axis: block;
+    
+        animation-timeline: --image;
+        animation-name: slide-in-fwd-center;
+    
+        animation-range: entry 30% cover 35%;
         animation-fill-mode: both;
     }
 
