@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     MostrarFactura();
+    localStorage.removeItem('CompraProds');
+    localStorage.removeItem('Facturas');
 })
 
 function MostrarFactura() {
