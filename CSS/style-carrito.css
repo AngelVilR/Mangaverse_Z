@@ -26,6 +26,9 @@ hr {
 
 .Cantidad_Caja {
   width: 100%;
+}
+
+.Cantidad_Caja input{
   border: 1px solid black;
 }
 

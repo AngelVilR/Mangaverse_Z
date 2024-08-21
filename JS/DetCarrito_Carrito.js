@@ -152,7 +152,7 @@ function ActualizarCantProd(element) {
       showCancelButton: true,
       confirmButtonColor: "#d33",
       cancelButtonColor: "#3085d6",
-      confirmButtonText: "¡Quiero eliminarla!",
+      confirmButtonText: "¡Quiero eliminarlo!",
       cancelButtonText: "¡Quiero cambiarla!"
     }).then((result) => {
       if (result.isConfirmed) {
